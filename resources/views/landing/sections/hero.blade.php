@@ -86,7 +86,7 @@
             <!-- Hero Image Showcase -->
             <div class="relative">
                 <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-700">
-                    <img src="https://images.unsplash.com/photo-1547981609-4b6bf67db7ff?w=900" alt="Dome of the Rock Old City Jerusalem" class="w-full h-[440px] object-cover hover:scale-105 transition duration-500">
+                    <img src="{{ asset('images/dome-of-rock.jpg') }}" alt="Dome of the Rock Old City Jerusalem" class="w-full h-[440px] object-cover hover:scale-105 transition duration-500" style="object-position: center 25%;">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
                     <div class="absolute bottom-6 left-6 right-6">
                         <span class="px-3 py-1 rounded-full bg-emerald-500/80 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider">

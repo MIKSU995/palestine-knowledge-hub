@@ -73,7 +73,7 @@
         {{-- FEATURED ARTICLE (Show when no search/category filter active) --}}
         @if($featured && !request()->filled('search') && !request()->filled('category') && $articles->currentPage() === 1)
         @php
-            $featuredImg = $featured->thumbnail ? (str_starts_with($featured->thumbnail, 'http') ? $featured->thumbnail : asset('storage/'.$featured->thumbnail)) : 'https://images.unsplash.com/photo-1547981609-4b6bf67db7ff?w=1200';
+            $featuredImg = $featured->thumbnail ? (str_starts_with($featured->thumbnail, 'http') ? $featured->thumbnail : asset('storage/'.$featured->thumbnail)) : asset('images/dome-of-rock.jpg');
             $featuredReadTime = max(1, ceil(str_word_count(strip_tags($featured->content)) / 200));
         @endphp
         <div class="mb-12 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 grid lg:grid-cols-12">
@@ -126,14 +126,14 @@
             @php
                 $readTime = max(1, ceil(str_word_count(strip_tags($article->content)) / 200));
                 $fallbackImages = [
-                    'history-heritage' => 'https://images.unsplash.com/photo-1547981609-4b6bf67db7ff?w=700',
-                    'culture-arts' => 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=700',
-                    'geography-maps' => 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=700',
-                    'human-rights-law' => 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700',
-                    'educational-guides' => 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=700',
+                    'history-heritage' => asset('images/dome-of-rock.jpg'),
+                    'culture-arts'     => asset('images/dome-of-rock.jpg'),
+                    'geography-maps'   => asset('images/dome-of-rock.jpg'),
+                    'human-rights-law' => asset('images/dome-of-rock.jpg'),
+                    'educational-guides' => asset('images/dome-of-rock.jpg'),
                 ];
                 $categorySlug = $article->category->slug ?? 'history-heritage';
-                $defaultImg = $fallbackImages[$categorySlug] ?? 'https://images.unsplash.com/photo-1547981609-4b6bf67db7ff?w=700';
+                $defaultImg = $fallbackImages[$categorySlug] ?? asset('images/dome-of-rock.jpg');
                 $imgUrl = $article->thumbnail ? (str_starts_with($article->thumbnail, 'http') ? $article->thumbnail : asset('storage/'.$article->thumbnail)) : $defaultImg;
             @endphp
 

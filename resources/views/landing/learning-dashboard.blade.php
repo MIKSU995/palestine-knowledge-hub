@@ -5,17 +5,99 @@
 @section('content')
 
 {{-- Hero --}}
-<section class="bg-slate-900 text-white py-12 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div>
-            <span class="px-3.5 py-1.5 rounded-full bg-purple-500/20 text-purple-300 font-bold text-xs uppercase tracking-wider">📊 Learning Dashboard</span>
-            <h1 class="text-3xl font-extrabold mt-2">Welcome back, {{ $user->name }}!</h1>
-            <p class="text-slate-400 mt-1 text-sm">Track your Palestine learning journey, quiz results, and earned badges.</p>
-        </div>
-        <a href="{{ route('quiz') }}" class="flex-shrink-0 px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-2xl font-bold text-sm transition">
-            ▶ Take a Quiz
-        </a>
+<section class="relative overflow-hidden" style="min-height: 380px;">
+
+    {{-- Background Image --}}
+    <div class="absolute inset-0">
+        <img
+            src="{{ asset('images/dome-of-rock.jpg') }}"
+            alt="Dome of the Rock – Jerusalem"
+            class="w-full h-full object-cover object-center"
+            style="object-position: center 30%;">
     </div>
+
+    {{-- Dark gradient overlay --}}
+    <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(0,0,0,0.72) 0%, rgba(15,23,42,0.60) 50%, rgba(0,0,0,0.80) 100%);"></div>
+
+    {{-- Animated shimmer line --}}
+    <div class="absolute top-0 left-0 right-0 h-px" style="background: linear-gradient(90deg, transparent, rgba(167,243,208,0.6), transparent); animation: shimmer 3s infinite;"></div>
+
+    {{-- Content --}}
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 py-16 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-8">
+
+        {{-- Left: Welcome info --}}
+        <div class="flex-1">
+            {{-- Badge --}}
+            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-5"
+                  style="background:rgba(139,92,246,0.25); border:1px solid rgba(167,139,250,0.4); color:#c4b5fd; backdrop-filter:blur(8px);">
+                📊 Learning Dashboard
+            </span>
+
+            {{-- Greeting --}}
+            <h1 class="text-4xl lg:text-5xl font-extrabold text-white leading-tight" style="text-shadow: 0 2px 16px rgba(0,0,0,0.5);">
+                Welcome back,<br>
+                <span style="background: linear-gradient(90deg, #6ee7b7, #a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">
+                    {{ $user->name }}!
+                </span>
+            </h1>
+
+            <p class="mt-4 text-slate-300 text-base max-w-lg leading-relaxed" style="text-shadow: 0 1px 4px rgba(0,0,0,0.4);">
+                Track your Palestine learning journey, quiz results, and earned badges.
+                <span class="block mt-1 text-slate-400 text-sm italic">🕌 "Al-Quds will never be forgotten."</span>
+            </p>
+
+            {{-- Quick stats bar --}}
+            <div class="flex flex-wrap gap-4 mt-7">
+                <div class="flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold"
+                     style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.18); backdrop-filter:blur(10px); color:#fff;">
+                    📝 <span>{{ $attempts->count() }} Attempts</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold"
+                     style="background:rgba(16,185,129,0.2); border:1px solid rgba(52,211,153,0.3); backdrop-filter:blur(10px); color:#6ee7b7;">
+                    ✅ <span>{{ $totalCompletedQuizzes }} Passed</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold"
+                     style="background:rgba(245,158,11,0.2); border:1px solid rgba(251,191,36,0.3); backdrop-filter:blur(10px); color:#fde68a;">
+                    📊 <span>{{ $avgScore }}% Avg</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold"
+                     style="background:rgba(99,102,241,0.2); border:1px solid rgba(129,140,248,0.3); backdrop-filter:blur(10px); color:#c7d2fe;">
+                    🏅 <span>{{ count($badges) }} Badges</span>
+                </div>
+            </div>
+        </div>
+
+        {{-- Right: CTA --}}
+        <div class="flex flex-col items-center gap-3 flex-shrink-0">
+            <a href="{{ route('quiz') }}"
+               class="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl text-white font-bold text-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+               style="background: linear-gradient(135deg, #7c3aed, #4f46e5); box-shadow: 0 4px 24px rgba(124,58,237,0.5);">
+                ▶ Take a Quiz
+            </a>
+            <a href="{{ route('articles') }}"
+               class="inline-flex items-center gap-2 px-7 py-3 rounded-2xl font-semibold text-sm transition-all duration-300 hover:-translate-y-1"
+               style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.25); backdrop-filter:blur(10px); color:#fff;">
+                📚 Browse Articles
+            </a>
+            {{-- Image credit --}}
+            <p class="text-xs text-slate-400 mt-1 opacity-60">📍 Dome of the Rock, Jerusalem</p>
+        </div>
+
+    </div>
+
+    {{-- Bottom fade --}}
+    <div class="absolute bottom-0 left-0 right-0 h-16" style="background: linear-gradient(to bottom, transparent, #f8fafc);"></div>
+
+    <style>
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        .dark section .absolute:last-child {
+            background: linear-gradient(to bottom, transparent, #020617) !important;
+        }
+    </style>
+
 </section>
 
 <section class="py-10 bg-slate-50 dark:bg-slate-950 min-h-screen">

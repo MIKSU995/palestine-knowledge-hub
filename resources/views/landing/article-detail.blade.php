@@ -98,7 +98,7 @@
 
 {{-- ================= CONTENT ================= --}}
 
-<section class="bg-slate-100 py-16">
+<section class="bg-slate-100 py-16" style="background:#f1f5f9;">
 
 <div class="max-w-7xl mx-auto px-6">
 
@@ -108,7 +108,7 @@
 
 <div class="lg:col-span-8">
 
-<div class="bg-white rounded-3xl overflow-hidden shadow-xl">
+<div class="bg-white rounded-3xl overflow-hidden shadow-xl" style="background:#ffffff; color:#1e293b;">
 
 @if($article->thumbnail)
 
@@ -123,7 +123,7 @@ class="w-full h-[550px] object-cover hover:scale-105 duration-700">
 
 @endif
 
-<div class="p-10 lg:p-14">
+<div class="p-10 lg:p-14" style="color:#1e293b;">
 
 <div class="flex flex-wrap gap-3 mb-8">
 
@@ -171,9 +171,9 @@ By <strong>{{ $article->user->name }}</strong>
 
 <hr class="my-10">
 
-<div class="prose prose-lg lg:prose-xl max-w-none prose-headings:text-slate-800 prose-p:text-gray-700 prose-p:leading-9 prose-img:rounded-2xl">
+<div class="prose prose-lg lg:prose-xl max-w-none prose-headings:text-slate-800 prose-p:text-gray-700 prose-p:leading-9 prose-img:rounded-2xl" style="color:#374151; max-width:none;">
 
-{!! nl2br(e($article->content)) !!}
+    <div style="color:#374151; font-size:1.125rem; line-height:1.9; font-family:inherit;">{!! nl2br(e($article->content)) !!}</div>
 
 </div>
 
@@ -210,7 +210,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
 {{-- ================= POPULAR ARTICLES ================= --}}
 
-<div class="bg-white rounded-3xl shadow-xl p-8">
+<div class="bg-white rounded-3xl shadow-xl p-8" style="background:#ffffff; color:#1e293b;">
 
     <div class="flex items-center justify-between mb-6">
 
@@ -283,7 +283,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
 {{-- ================= CATEGORIES ================= --}}
 
-<div class="bg-white rounded-3xl shadow-xl p-8">
+<div class="bg-white rounded-3xl shadow-xl p-8" style="background:#ffffff; color:#1e293b;">
 
     <h3 class="text-2xl font-bold text-slate-800 mb-6">
 
@@ -318,7 +318,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
 {{-- ================= SHARE ================= --}}
 
-<div class="bg-white rounded-3xl shadow-xl p-8">
+<div class="bg-white rounded-3xl shadow-xl p-8" style="background:#ffffff; color:#1e293b;">
 
     <h3 class="text-2xl font-bold text-slate-800 mb-6">
 
@@ -440,7 +440,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
 @if($previousArticle || $nextArticle)
 
-<section class="bg-slate-100 pb-12">
+<section class="bg-slate-100 pb-12" style="background:#f1f5f9;">
 
     <div class="max-w-7xl mx-auto px-6">
 
@@ -450,7 +450,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
             @if($previousArticle)
 
             <a href="{{ route('articles.show',$previousArticle->slug) }}"
-               class="group bg-white rounded-3xl shadow-lg p-8 hover:shadow-2xl transition">
+               class="group bg-white rounded-3xl shadow-lg p-8 hover:shadow-2xl transition" style="background:#ffffff; color:#1e293b; display:block;">
 
                 <p class="text-sm text-gray-500">
 
@@ -477,7 +477,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
             @if($nextArticle)
 
             <a href="{{ route('articles.show',$nextArticle->slug) }}"
-               class="group bg-white rounded-3xl shadow-lg p-8 text-right hover:shadow-2xl transition">
+               class="group bg-white rounded-3xl shadow-lg p-8 text-right hover:shadow-2xl transition" style="background:#ffffff; color:#1e293b; display:block;">
 
                 <p class="text-sm text-gray-500">
 
@@ -510,7 +510,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
 <div class="max-w-7xl mx-auto px-6">
 
-<div class="bg-white rounded-3xl shadow-xl p-10">
+<div class="bg-white rounded-3xl shadow-xl p-10" style="background:#ffffff; color:#1e293b;">
 
 <div class="flex items-center gap-6">
 
@@ -557,13 +557,13 @@ Palestine through trusted educational resources.
 
 {{-- ================= RELATED ARTICLES ================= --}}
 
-<section class="bg-slate-100 pb-24">
+<section class="bg-slate-100 pb-24" style="background:#f1f5f9;">
 
 <div class="max-w-7xl mx-auto px-6">
 
 <div class="flex items-center justify-between mb-10">
 
-<h2 class="text-4xl font-bold">
+<h2 class="text-4xl font-bold" style="color:#1e293b;">
 
 Related Articles
 
@@ -584,7 +584,7 @@ View All →
 @forelse($relatedArticles as $related)
 
 <div
-class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2" style="background:#ffffff; color:#1e293b;">
 
 @if($related->thumbnail)
 
@@ -608,7 +608,7 @@ class="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs">
 </span>
 
 <h3
-class="text-2xl font-bold mt-4">
+class="text-2xl font-bold mt-4" style="color:#1e293b;">
 
 {{ $related->title }}
 
@@ -637,7 +637,7 @@ Read More →
 
 <div class="col-span-3">
 
-<div class="bg-white rounded-3xl shadow-lg p-16 text-center">
+<div class="bg-white rounded-3xl shadow-lg p-16 text-center" style="background:#ffffff; color:#1e293b;">
 
 <h3 class="text-2xl font-bold">
 

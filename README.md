@@ -1,59 +1,100 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🇵🇸 Palestine Knowledge Hub
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern, full-stack educational web platform built with **Laravel 11, Tailwind CSS, Leaflet.js, and SQLite** dedicated to preserving, organizing, and exploring Palestinian history, geography, visual archives, cultural arts, and educational resources.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🌟 Key Features & 6 Pillars
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 1. 📖 CONTENT
+- **Articles & Publications**: In-depth research papers, historical essays, and cultural studies with reading time indicators, category filters, and bookmarking.
+- **Interactive Timeline**: Era-filtered historical milestones from Canaanite antiquity to modern international law.
+- **Geography & Interactive Maps**: Powered by **Leaflet.js**, featuring historic cities (Jerusalem, Gaza, Hebron, Nablus, Jaffa, Haifa, Bethlehem) with interactive fly-to coordinates and detailed location cards.
+- **Visual Heritage Gallery**: Masonry grid with category filters and interactive Lightbox modal preview for high-resolution historical photos.
+- **Educational Resources**: Filterable repository for academic PDFs, infographics, documents, and primary sources with direct downloads.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 2. ⚡ USER EXPERIENCE (UX)
+- **Global Command Palette (`Ctrl + K`)**: Instant search across articles, timeline events, maps, gallery photos, and educational resources.
+- **Saved Bookmarks**: Synchronized user bookmarking with guest `localStorage` fallback.
+- **Dark Mode**: Smooth dark mode toggle with system preference detection and local storage persistence.
+- **Reading Progress Bar**: Fixed top progress bar tracking article reading progress.
 
-## Learning Laravel
+### 3. 🎯 LEARNING ENGINE
+- **Interactive Quizzes**: Multi-question quizzes with real-time score calculation and detailed answer explanations.
+- **Learning Dashboard**: User achievement metrics, earned learning badges, and complete quiz history.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 4. 👥 COMMUNITY & ENGAGEMENT
+- **Comment Threads**: Nested article discussions with admin moderation.
+- **Reactions & Likes**: Real-time AJAX like counters for articles.
+- **Content Reporting**: Flagging system for community moderation.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 5. 🛡️ ADMIN / CMS
+- **CMS Dashboard**: Stat cards, recent reports badge, and publication velocity tracking.
+- **Content Management**: Full CRUD for Articles and Categories with image uploads and status controls.
+- **Moderation Panel**: One-click comment approval/rejection and report resolution.
+- **User Management**: Role administration (`Admin` / `User`) and account management.
 
-## Laravel Sponsors
+### 6. ⚙️ ENGINEERING
+- **Database & Seeder**: Configured with SQLite database and `ComprehensivePalestineSeeder` pre-populating authentic data.
+- **Dynamic Sitemap (`/sitemap.xml`)**: Automated XML sitemap generator for SEO.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🚀 Quick Start Guide
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Prerequisites
+- **PHP** >= 8.2
+- **Composer**
+- **Node.js** & **npm**
 
-## Contributing
+### Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/MIKSU995/palestine-knowledge-hub.git
+   cd palestine-knowledge-hub
+   ```
 
-## Code of Conduct
+2. **Install PHP dependencies**:
+   ```bash
+   composer install
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. **Install & build frontend assets**:
+   ```bash
+   npm install
+   npm run build
+   ```
 
-## Security Vulnerabilities
+4. **Environment Setup**:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+5. **Run Migrations & Seeders**:
+   ```bash
+   php artisan migrate:fresh --seed
+   php artisan storage:link
+   ```
 
-## License
+6. **Start Local Development Server**:
+   ```bash
+   php artisan serve
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+7. Open your browser at `http://127.0.0.1:8000`
+
+---
+
+## 🔑 Demo Admin Credentials
+
+- **URL**: `http://127.0.0.1:8000/login`
+- **Email**: `admin@palestinehub.com`
+- **Password**: `admin123`
+
+---
+
+## 📜 License
+
+This project is open-source under the [MIT License](LICENSE).

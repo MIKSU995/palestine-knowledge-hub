@@ -189,7 +189,7 @@ class LandingController extends Controller
                 'lng' => 35.2137,
                 'category' => 'Historic Capital',
                 'description' => 'The spiritual, historical, and cultural heart of Palestine. Home to Al-Aqsa Mosque and the Dome of the Rock.',
-                'image' => 'https://images.unsplash.com/photo-1547981609-4b6bf67db7ff?w=600'
+                'image' => asset('images/cities/jerusalem.jpg')
             ],
             [
                 'name' => 'Gaza City',
@@ -197,7 +197,7 @@ class LandingController extends Controller
                 'lng' => 34.4668,
                 'category' => 'Coastal Region',
                 'description' => 'A ancient coastal city with thousands of years of trade, port history, and resilient community spirit.',
-                'image' => 'https://images.unsplash.com/photo-1590076215667-874d96a58e81?w=600'
+                'image' => asset('images/cities/gaza.jpg')
             ],
             [
                 'name' => 'Ramallah',
@@ -205,7 +205,7 @@ class LandingController extends Controller
                 'lng' => 35.2034,
                 'category' => 'Cultural & Administrative Hub',
                 'description' => 'A vibrant center for Palestinian arts, education, government, and economic development in the West Bank.',
-                'image' => 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600'
+                'image' => asset('images/cities/ramallah.jpg')
             ],
             [
                 'name' => 'Hebron (Al-Khalil)',
@@ -213,7 +213,7 @@ class LandingController extends Controller
                 'lng' => 35.0998,
                 'category' => 'Heritage Site',
                 'description' => 'One of the oldest continuously inhabited cities in the world, famed for traditional glassblowing and pottery.',
-                'image' => 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600'
+                'image' => asset('images/cities/hebron.jpg')
             ],
             [
                 'name' => 'Nablus',
@@ -221,7 +221,7 @@ class LandingController extends Controller
                 'lng' => 35.2621,
                 'category' => 'Trade & Artisan Center',
                 'description' => 'Renowned for its historic olive oil soap industry, traditional Knafeh sweet, and ancient Old City alleys.',
-                'image' => 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=600'
+                'image' => asset('images/cities/nablus.jpg')
             ],
             [
                 'name' => 'Haifa',
@@ -229,7 +229,7 @@ class LandingController extends Controller
                 'lng' => 34.9896,
                 'category' => 'Port City',
                 'description' => 'Historic coastal port on Mount Carmel known for multicultural history, terraced gardens, and maritime culture.',
-                'image' => 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600'
+                'image' => asset('images/cities/haifa.jpg')
             ],
             [
                 'name' => 'Jaffa (Yafa)',
@@ -237,7 +237,7 @@ class LandingController extends Controller
                 'lng' => 34.7570,
                 'category' => 'Historic Port & Citadel',
                 'description' => 'Famous as the "Bride of the Sea", historic port of Palestine renowned worldwide for its orange orchards and literature.',
-                'image' => 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600'
+                'image' => asset('images/cities/jaffa.jpg')
             ],
             [
                 'name' => 'Bethlehem',
@@ -245,7 +245,7 @@ class LandingController extends Controller
                 'lng' => 35.2024,
                 'category' => 'Sacred Site',
                 'description' => 'Global pilgrimage center housing the Church of the Nativity, famous for mother-of-pearl and olive wood handicrafts.',
-                'image' => 'https://images.unsplash.com/photo-1548625361-1859c25f49d8?w=600'
+                'image' => asset('images/cities/bethlehem.jpg')
             ]
         ];
 

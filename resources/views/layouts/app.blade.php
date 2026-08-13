@@ -44,7 +44,6 @@
         .glass-panel {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
-
         }
         .dark .glass-panel {
             background: rgba(17, 24, 39, 0.85);

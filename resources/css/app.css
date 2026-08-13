@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+/* Class-based dark mode for Tailwind v4 */
+@variant dark (.dark &);
+
+@source "../../resources/views/**/*.blade.php";
+@source "../../resources/js/**/*.js";

@@ -22,7 +22,17 @@ class Gallery extends Model
 
     public function getImageUrlAttribute()
     {
-        return $this->media_url ?? $this->thumbnail_url ?? 'https://images.unsplash.com/photo-1547981609-4b6bf67db7ff?w=1000';
+        $url = $this->media_url ?? $this->thumbnail_url;
+        if (!$url) {
+            return asset('images/cities/jerusalem.jpg');
+        }
+        if (str_starts_with($url, 'http://') || str_starts_with($url, 'https://')) {
+            return $url;
+        }
+        if (str_starts_with($url, 'images/')) {
+            return asset($url);
+        }
+        return asset('storage/' . $url);
     }
 
     public function likes()

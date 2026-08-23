@@ -31,9 +31,16 @@
             <div class="bg-slate-50 dark:bg-slate-800/60 rounded-3xl p-6 border border-slate-200 dark:border-slate-700/60 hover:border-emerald-500 dark:hover:border-emerald-500 transition duration-300 flex flex-col justify-between group">
                 <div>
                     <div class="flex items-center justify-between gap-2 text-xs mb-3">
-                        <span class="px-2.5 py-1 rounded-lg bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 font-bold">
-                            {{ $news->source ?? 'News' }}
-                        </span>
+                        <div class="flex items-center gap-1.5">
+                            <span class="px-2.5 py-1 rounded-lg bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 font-bold">
+                                {{ $news->source ?? 'News' }}
+                            </span>
+                            @if(($news->category ?? '') == 'Berita Indonesia')
+                            <span class="px-2 py-0.5 rounded-md bg-red-100 dark:bg-red-950/80 text-red-700 dark:text-red-300 font-bold text-[10px]">🇮🇩 ID</span>
+                            @else
+                            <span class="px-2 py-0.5 rounded-md bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 font-bold text-[10px]">🌐 Global</span>
+                            @endif
+                        </div>
                         <span class="text-slate-400">
                             {{ optional($news->published_at)->diffForHumans() }}
                         </span>

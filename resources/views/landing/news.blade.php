@@ -31,12 +31,20 @@
             <!-- Category Filter Tabs -->
             <div class="flex flex-wrap gap-2">
                 <a href="{{ route('news.index') }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition {{ !request('category') || request('category') == 'All' ? 'bg-emerald-600 text-white shadow-md' : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
-                    All News
+                    Semua Berita (All)
+                </a>
+                <a href="{{ route('news.index', ['category' => 'Berita Indonesia', 'search' => request('search')]) }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-1.5 {{ request('category') == 'Berita Indonesia' ? 'bg-emerald-600 text-white shadow-md' : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
+                    <span>🇮🇩 Berita Indonesia</span>
+                </a>
+                <a href="{{ route('news.index', ['category' => 'Berita Internasional', 'search' => request('search')]) }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-1.5 {{ request('category') == 'Berita Internasional' ? 'bg-emerald-600 text-white shadow-md' : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
+                    <span>🌐 Berita Internasional</span>
                 </a>
                 @foreach($categories as $cat)
+                @if(!in_array($cat, ['Berita Indonesia', 'Berita Internasional']))
                 <a href="{{ route('news.index', ['category' => $cat, 'search' => request('search')]) }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition {{ request('category') == $cat ? 'bg-emerald-600 text-white shadow-md' : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
                     {{ $cat }}
                 </a>
+                @endif
                 @endforeach
             </div>
 
@@ -70,9 +78,16 @@
                 <div>
                     <!-- Meta Badge & Date -->
                     <div class="flex items-center justify-between gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold">
-                            {{ $news->source }}
-                        </span>
+                        <div class="flex items-center gap-2">
+                            <span class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold">
+                                {{ $news->source }}
+                            </span>
+                            @if($news->category == 'Berita Indonesia')
+                            <span class="px-2 py-0.5 rounded-md bg-red-100 dark:bg-red-950/80 text-red-700 dark:text-red-300 font-bold text-[10px]">🇮🇩 Indonesia</span>
+                            @else
+                            <span class="px-2 py-0.5 rounded-md bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 font-bold text-[10px]">🌐 Global</span>
+                            @endif
+                        </div>
                         <span class="text-slate-400 font-medium">
                             {{ optional($news->published_at)->diffForHumans() }}
                         </span>

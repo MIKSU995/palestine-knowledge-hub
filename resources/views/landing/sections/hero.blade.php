@@ -84,30 +84,8 @@
 
             </div>
 
-            <!-- Hero Image Showcase with Floating Elements -->
+            <!-- Hero Image Showcase -->
             <div class="relative group">
-                <!-- Floating Glass Card 1 -->
-                <div class="hidden sm:flex absolute -top-6 -left-6 z-20 items-center gap-3 p-4 rounded-2xl bg-slate-900/90 border border-emerald-500/30 backdrop-blur-xl shadow-2xl animate-float-slow">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                    </div>
-                    <div>
-                        <p class="text-xs text-slate-400 font-medium">Educational Base</p>
-                        <p class="text-sm font-bold text-white">Verified History</p>
-                    </div>
-                </div>
-
-                <!-- Floating Glass Card 2 -->
-                <div class="hidden sm:flex absolute -bottom-6 -right-6 z-20 items-center gap-3 p-4 rounded-2xl bg-slate-900/90 border border-teal-500/30 backdrop-blur-xl shadow-2xl animate-float-medium">
-                    <div class="w-10 h-10 rounded-xl bg-teal-600/20 text-teal-400 flex items-center justify-center">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
-                    </div>
-                    <div>
-                        <p class="text-xs text-slate-400 font-medium">Interactive Layer</p>
-                        <p class="text-sm font-bold text-white">Live GIS Maps</p>
-                    </div>
-                </div>
-
                 <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-700/80 group-hover:border-emerald-500/50 transition duration-500">
                     <img src="{{ asset('images/dome-of-rock.jpg') }}" alt="Dome of the Rock Old City Jerusalem" class="w-full h-[440px] object-cover group-hover:scale-105 transition duration-700" style="object-position: center 25%;">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90"></div>

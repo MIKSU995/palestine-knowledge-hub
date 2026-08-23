@@ -115,7 +115,7 @@
 <div class="overflow-hidden">
 
 <img
-src="{{ asset('storage/'.$article->thumbnail) }}"
+src="{{ str_starts_with($article->thumbnail, 'http') ? $article->thumbnail : (str_starts_with($article->thumbnail, 'images/') ? asset($article->thumbnail) : asset('storage/'.$article->thumbnail)) }}"
 alt="{{ $article->title }}"
 class="w-full h-[550px] object-cover hover:scale-105 duration-700">
 
@@ -236,7 +236,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
             @if($popular->thumbnail)
 
                 <img
-                    src="{{ asset('storage/'.$popular->thumbnail) }}"
+                    src="{{ str_starts_with($popular->thumbnail, 'http') ? $popular->thumbnail : (str_starts_with($popular->thumbnail, 'images/') ? asset($popular->thumbnail) : asset('storage/'.$popular->thumbnail)) }}"
                     class="w-24 h-20 rounded-xl object-cover group-hover:scale-105 duration-300">
 
             @endif
@@ -591,7 +591,7 @@ class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl tra
 <div class="overflow-hidden">
 
 <img
-src="{{ asset('storage/'.$related->thumbnail) }}"
+src="{{ str_starts_with($related->thumbnail, 'http') ? $related->thumbnail : (str_starts_with($related->thumbnail, 'images/') ? asset($related->thumbnail) : asset('storage/'.$related->thumbnail)) }}"
 class="w-full h-56 object-cover group-hover:scale-110 duration-500">
 
 </div>

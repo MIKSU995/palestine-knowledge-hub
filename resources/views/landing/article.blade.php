@@ -73,7 +73,7 @@
         {{-- FEATURED ARTICLE (Show when no search/category filter active) --}}
         @if($featured && !request()->filled('search') && !request()->filled('category') && $articles->currentPage() === 1)
         @php
-            $featuredImg = $featured->thumbnail ? (str_starts_with($featured->thumbnail, 'http') ? $featured->thumbnail : asset('storage/'.$featured->thumbnail)) : asset('images/dome-of-rock.jpg');
+            $featuredImg = $featured->thumbnail ? (str_starts_with($featured->thumbnail, 'http') ? $featured->thumbnail : (str_starts_with($featured->thumbnail, 'images/') ? asset($featured->thumbnail) : asset('storage/'.$featured->thumbnail))) : asset('images/dome-of-rock.jpg');
             $featuredReadTime = max(1, ceil(str_word_count(strip_tags($featured->content)) / 200));
         @endphp
         <div class="mb-12 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 grid lg:grid-cols-12">
@@ -141,7 +141,7 @@
                 ];
                 $categorySlug = $article->category->slug ?? 'history-heritage';
                 $defaultImg = $fallbackImages[$categorySlug] ?? asset('images/dome-of-rock.jpg');
-                $imgUrl = $article->thumbnail ? (str_starts_with($article->thumbnail, 'http') ? $article->thumbnail : asset('storage/'.$article->thumbnail)) : $defaultImg;
+                $imgUrl = $article->thumbnail ? (str_starts_with($article->thumbnail, 'http') ? $article->thumbnail : (str_starts_with($article->thumbnail, 'images/') ? asset($article->thumbnail) : asset('storage/'.$article->thumbnail))) : $defaultImg;
             @endphp
 
             <article class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col justify-between group">

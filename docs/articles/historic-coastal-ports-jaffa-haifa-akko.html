@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="fAAMISC80msWUBOlqK5n78mFdXjwmaOoNEfWt32D">
+
+    <title>Historic Coastal Ports: Jaffa, Haifa, and Akko on the Mediterranean</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Palestine Knowledge Hub is an authentic educational platform providing real-time news, historical timelines, geography maps, archives, quizzes, and open-access learning resources about Palestine.">
+    <meta name="keywords" content="Palestine, Palestine History, Jerusalem, Al-Aqsa, Gaza, Tatreez, Nakba 1948, Palestine Map, Educational Resources, Palestine News">
+
+    <!-- Open Graph / Social Cards -->
+    <meta property="og:title" content="Historic Coastal Ports: Jaffa, Haifa, and Akko on the Mediterranean">
+    <meta property="og:description" content="Explore Palestine through trusted educational resources, real-time news, historical timelines, and interactive maps.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1547981609-4b6bf67db7ff?w=1200">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS for Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+
+    <!-- Dark Mode Init Script (Prevents flash) -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
+    <script type="module" src="http://[::1]:5175/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5175/resources/css/app.css" /><script type="module" src="http://[::1]:5175/resources/js/app.js"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .dark .glass-panel {
+            background: rgba(17, 24, 39, 0.85);
+            backdrop-filter: blur(12px);
+        }
+
+        /* Continuous Ambient Motion Animations */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(1.5deg); }
+        }
+        @keyframes floatMedium {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-8px) scale(1.03); }
+        }
+        @keyframes ambientGlow {
+            0%, 100% { opacity: 0.35; transform: scale(1) translate(0, 0); }
+            50% { opacity: 0.75; transform: scale(1.15) translate(20px, -20px); }
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes shimmerBorder {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animate-float-slow {
+            animation: floatSlow 7s ease-in-out infinite;
+        }
+        .animate-float-medium {
+            animation: floatMedium 5s ease-in-out infinite;
+        }
+        .animate-ambient-glow {
+            animation: ambientGlow 10s ease-in-out infinite;
+        }
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+        .glow-shimmer {
+            background-size: 200% 200%;
+            animation: shimmerBorder 6s linear infinite;
+        }
+    </style>
+    </head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-200">
+
+    <!-- Reading Progress Bar -->
+    <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-emerald-500 via-emerald-600 to-red-600 z-[9999] transition-all duration-150" style="width: 0%"></div>
+
+    <!-- Main Navigation Header -->
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 transition-colors duration-200">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex items-center justify-between h-20">
+
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+
+                <div class="relative w-11 h-11 rounded-2xl bg-slate-950 dark:bg-slate-800 flex items-center justify-center text-white font-extrabold text-xl shadow-md group-hover:scale-105 transition-transform overflow-hidden border border-slate-700">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-600 via-slate-900 to-red-600 opacity-90"></div>
+                    <span class="relative z-10 font-black tracking-tighter text-white">P</span>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                            Palestine <span class="text-emerald-600 dark:text-emerald-400">Hub</span>
+                        </h1>
+                        <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-red-100 text-red-700 dark:bg-red-950/60 dark:text-red-400 uppercase">
+                            Edu
+                        </span>
+                    </div>
+
+                    <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                        Knowledge & Real-Time Platform
+                    </p>
+                </div>
+            </a>
+
+            <!-- Navigation Links (Desktop) -->
+            <div class="hidden lg:flex items-center gap-6">
+
+                <a href="index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
+                    Home
+                </a>
+
+                <a href="news.html" class="relative text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition flex items-center gap-1.5 ">
+                    <span>Real-Time News</span>
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                    </span>
+                </a>
+
+                <a href="timeline.html" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
+                    Timeline
+                </a>
+
+                <a href="maps.html" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
+                    Maps
+                </a>
+
+                <a href="articles.html" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition text-emerald-600 dark:text-emerald-400 font-bold">
+                    Articles
+                </a>
+
+                <a href="gallery.html" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
+                    Gallery
+                </a>
+
+                <a href="resources.html" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
+                    Resources
+                </a>
+
+                <a href="quiz.html" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
+                    Quiz
+                </a>
+
+            </div>
+
+            <!-- Right Tools & User Actions -->
+            <div class="flex items-center gap-3">
+
+                <!-- Global Search Trigger -->
+                <button onclick="openSearchModal()" class="p-2.5 rounded-xl text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white bg-slate-100 dark:bg-slate-800 transition flex items-center gap-2 text-xs font-medium">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    <span class="hidden sm:inline">Search</span>
+                    <kbd class="hidden md:inline px-1.5 py-0.5 text-[10px] bg-slate-200 dark:bg-slate-700 rounded text-slate-600 dark:text-slate-300">Ctrl K</kbd>
+                </button>
+
+                <!-- Dark Mode Toggle -->
+                <button onclick="toggleDarkMode()" aria-label="Toggle dark mode" class="p-2.5 rounded-xl text-slate-500 hover:text-amber-500 dark:text-slate-400 dark:hover:text-amber-400 bg-slate-100 dark:bg-slate-800 transition">
+                    <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    <svg class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                </button>
+
+                <!-- Saved Bookmarks Button -->
+                <a href="bookmarks.html" class="p-2.5 rounded-xl text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 bg-slate-100 dark:bg-slate-800 transition" title="Bookmarks">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                </a>
+
+                <!-- User Dropdown / Auth Link -->
+                                <a href="/login" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
+                    Log in
+                </a>
+                
+                
+                <!-- Mobile Menu Button -->
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-4 space-y-3">
+        <a href="index.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Home</a>
+        <a href="news.html" class="block font-semibold text-red-600 dark:text-red-400">Real-Time News Live</a>
+        <a href="timeline.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Timeline</a>
+        <a href="maps.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Maps</a>
+        <a href="articles.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Articles</a>
+        <a href="gallery.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Gallery</a>
+        <a href="resources.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Resources</a>
+        <a href="quiz.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Quiz</a>
+        <a href="bookmarks.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Bookmarks</a>
+    </div>
+
+</nav>
+    <!-- Flash Notifications -->
+    
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+
+
+
+<section class="relative overflow-hidden bg-gradient-to-r from-green-800 via-green-700 to-emerald-600">
+
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 py-20">
+
+        
+        <nav class="text-green-100 text-sm mb-8">
+
+            <a href="" class="hover:text-white">
+                Home
+            </a>
+
+            <span class="mx-2">/</span>
+
+            <a href="articles.html" class="hover:text-white">
+                Articles
+            </a>
+
+            <span class="mx-2">/</span>
+
+            <span class="text-white">
+
+                Historic Coastal Ports: Jaffa, Haifa, and Akko on the Mediterranean
+
+            </span>
+
+        </nav>
+
+        
+        <span class="inline-flex items-center px-5 py-2 rounded-full bg-white/20 backdrop-blur text-white font-medium">
+
+            Geography &amp; Maps
+
+        </span>
+
+        
+        <h1 class="mt-8 text-4xl lg:text-6xl font-extrabold text-white leading-tight max-w-5xl">
+
+            Historic Coastal Ports: Jaffa, Haifa, and Akko on the Mediterranean
+
+        </h1>
+
+        
+        <div class="flex flex-wrap items-center gap-6 mt-10 text-green-100">
+
+            <div class="flex items-center gap-2">
+
+                <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold">
+
+                    S
+
+                </div>
+
+                <span>
+
+                    Super Admin
+
+                </span>
+
+            </div>
+
+            <span>
+
+                03 August 2026
+
+            </span>
+
+            <span>
+
+                👁 1,121
+
+            </span>
+
+            <span>
+
+                📖 1 min read
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="bg-slate-100 py-16" style="background:#f1f5f9;">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+
+
+<div class="lg:col-span-8">
+
+<div class="bg-white rounded-3xl overflow-hidden shadow-xl" style="background:#ffffff; color:#1e293b;">
+
+
+<div class="overflow-hidden">
+
+<img
+src="images/cities/jaffa.jpg"
+alt="Historic Coastal Ports: Jaffa, Haifa, and Akko on the Mediterranean"
+class="w-full h-[550px] object-cover hover:scale-105 duration-700">
+
+</div>
+
+
+<div class="p-10 lg:p-14" style="color:#1e293b;">
+
+<div class="flex flex-wrap gap-3 mb-8">
+
+<span class="px-4 py-2 rounded-full bg-green-100 text-green-700">
+
+Geography &amp; Maps
+
+</span>
+
+<span class="px-4 py-2 rounded-full bg-slate-100">
+
+03 Aug 2026
+
+</span>
+
+</div>
+
+<h2 class="text-4xl font-bold text-slate-800 leading-tight">
+
+Historic Coastal Ports: Jaffa, Haifa, and Akko on the Mediterranean
+
+</h2>
+
+<div class="mt-6 flex flex-wrap gap-5 text-gray-500 text-sm">
+
+<span>
+
+By <strong>Super Admin</strong>
+
+</span>
+
+<span>
+
+👁 1,121 Views
+
+</span>
+
+<span>
+
+📖 1 min read
+
+</span>
+
+</div>
+
+<hr class="my-10">
+
+<div class="prose prose-lg lg:prose-xl max-w-none prose-headings:text-slate-800 prose-p:text-gray-700 prose-p:leading-9 prose-img:rounded-2xl" style="color:#374151; max-width:none;">
+
+    <div style="color:#374151; font-size:1.125rem; line-height:1.9; font-family:inherit;">For centuries, the coastal cities of Palestine served as vital maritime hubs connecting the Levant to Europe and Africa. Jaffa (Yafa), the ancient &quot;Bride of the Sea&quot;, was renowned worldwide in the 19th and early 20th century for exporting millions of crates of famous Jaffa oranges. Akko (Acre) retains formidable Ottoman sea walls that repelled Napoleon in 1799, while Haifa grew into a modern commercial port and rail terminal along Mount Carmel.</div>
+
+</div>
+
+<hr class="my-10">
+
+<div class="flex flex-wrap gap-3">
+
+<span class="font-semibold">
+
+Tags :
+
+</span>
+
+<a href="#"
+class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hover:text-white transition">
+
+Geography &amp; Maps
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="lg:col-span-4">
+
+<div class="sticky top-28 space-y-8">
+
+
+
+<div class="bg-white rounded-3xl shadow-xl p-8" style="background:#ffffff; color:#1e293b;">
+
+    <div class="flex items-center justify-between mb-6">
+
+        <h3 class="text-2xl font-bold text-slate-800">
+
+            Popular Articles
+
+        </h3>
+
+        <span class="text-sm text-green-600 font-semibold">
+
+            Trending
+
+        </span>
+
+    </div>
+
+    
+        <a href="/articles/the-nakba-1948-mass-displacement-palestinian-history"
+           class="group flex gap-4 py-5 border-b last:border-none hover:bg-slate-50 rounded-xl transition px-2">
+
+            
+                <img
+                    src="images/timeline/the-nakba-1948.jpg"
+                    class="w-24 h-20 rounded-xl object-cover group-hover:scale-105 duration-300">
+
+            
+            <div class="flex-1">
+
+                <h4 class="font-semibold text-slate-800 group-hover:text-green-600 transition">
+
+                    The Nakba of 1948: Mass Displacement and Palestinian Historical Memory
+
+                </h4>
+
+                <div class="flex items-center gap-4 mt-2 text-xs text-gray-500">
+
+                    <span>
+
+                        15 Aug 2026
+
+                    </span>
+
+                    <span>
+
+                        👁 2,411
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    
+        <a href="/articles/architectural-heritage-old-city-jerusalem-al-aqsa"
+           class="group flex gap-4 py-5 border-b last:border-none hover:bg-slate-50 rounded-xl transition px-2">
+
+            
+                <img
+                    src="images/dome-of-rock.jpg"
+                    class="w-24 h-20 rounded-xl object-cover group-hover:scale-105 duration-300">
+
+            
+            <div class="flex-1">
+
+                <h4 class="font-semibold text-slate-800 group-hover:text-green-600 transition">
+
+                    Architectural Heritage of Old City Jerusalem &amp; Al-Aqsa Compound
+
+                </h4>
+
+                <div class="flex items-center gap-4 mt-2 text-xs text-gray-500">
+
+                    <span>
+
+                        05 Aug 2026
+
+                    </span>
+
+                    <span>
+
+                        👁 1,981
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    
+        <a href="/articles/balfour-declaration-1917-british-mandate"
+           class="group flex gap-4 py-5 border-b last:border-none hover:bg-slate-50 rounded-xl transition px-2">
+
+            
+                <img
+                    src="images/timeline/balfour-declaration-1917.jpg"
+                    class="w-24 h-20 rounded-xl object-cover group-hover:scale-105 duration-300">
+
+            
+            <div class="flex-1">
+
+                <h4 class="font-semibold text-slate-800 group-hover:text-green-600 transition">
+
+                    The Balfour Declaration of 1917 &amp; The Beginning of British Mandatory Palestine
+
+                </h4>
+
+                <div class="flex items-center gap-4 mt-2 text-xs text-gray-500">
+
+                    <span>
+
+                        21 Aug 2026
+
+                    </span>
+
+                    <span>
+
+                        👁 1,843
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    
+        <a href="/articles/six-day-war-1967-naksah-occupation-palestinian-lands"
+           class="group flex gap-4 py-5 border-b last:border-none hover:bg-slate-50 rounded-xl transition px-2">
+
+            
+                <img
+                    src="images/timeline/six-day-war-1967.jpg"
+                    class="w-24 h-20 rounded-xl object-cover group-hover:scale-105 duration-300">
+
+            
+            <div class="flex-1">
+
+                <h4 class="font-semibold text-slate-800 group-hover:text-green-600 transition">
+
+                    The 1967 Six-Day War (Al-Naksah) and Occupation of Palestinian Lands
+
+                </h4>
+
+                <div class="flex items-center gap-4 mt-2 text-xs text-gray-500">
+
+                    <span>
+
+                        11 Aug 2026
+
+                    </span>
+
+                    <span>
+
+                        👁 1,631
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    
+        <a href="/articles/first-intifada-1987-popular-resistance-grassroots"
+           class="group flex gap-4 py-5 border-b last:border-none hover:bg-slate-50 rounded-xl transition px-2">
+
+            
+                <img
+                    src="images/timeline/first-intifada-1987.jpg"
+                    class="w-24 h-20 rounded-xl object-cover group-hover:scale-105 duration-300">
+
+            
+            <div class="flex-1">
+
+                <h4 class="font-semibold text-slate-800 group-hover:text-green-600 transition">
+
+                    The First Intifada (1987): Popular Resistance and Grassroots Mobilization
+
+                </h4>
+
+                <div class="flex items-center gap-4 mt-2 text-xs text-gray-500">
+
+                    <span>
+
+                        08 Aug 2026
+
+                    </span>
+
+                    <span>
+
+                        👁 1,491
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    
+</div>
+
+
+
+<div class="bg-white rounded-3xl shadow-xl p-8" style="background:#ffffff; color:#1e293b;">
+
+    <h3 class="text-2xl font-bold text-slate-800 mb-6">
+
+        Categories
+
+    </h3>
+
+    <div class="flex flex-wrap gap-3">
+
+        
+            <a href="/articles?category=2"
+
+               class="px-5 py-3 rounded-full
+               bg-green-100
+               text-green-700
+               font-medium
+               hover:bg-green-600
+               hover:text-white
+               hover:scale-105
+               duration-300">
+
+                Culture &amp; Arts
+
+            </a>
+
+        
+            <a href="/articles?category=5"
+
+               class="px-5 py-3 rounded-full
+               bg-green-100
+               text-green-700
+               font-medium
+               hover:bg-green-600
+               hover:text-white
+               hover:scale-105
+               duration-300">
+
+                Educational Guides
+
+            </a>
+
+        
+            <a href="/articles?category=3"
+
+               class="px-5 py-3 rounded-full
+               bg-green-100
+               text-green-700
+               font-medium
+               hover:bg-green-600
+               hover:text-white
+               hover:scale-105
+               duration-300">
+
+                Geography &amp; Maps
+
+            </a>
+
+        
+            <a href="/articles?category=1"
+
+               class="px-5 py-3 rounded-full
+               bg-green-100
+               text-green-700
+               font-medium
+               hover:bg-green-600
+               hover:text-white
+               hover:scale-105
+               duration-300">
+
+                History &amp; Heritage
+
+            </a>
+
+        
+            <a href="/articles?category=4"
+
+               class="px-5 py-3 rounded-full
+               bg-green-100
+               text-green-700
+               font-medium
+               hover:bg-green-600
+               hover:text-white
+               hover:scale-105
+               duration-300">
+
+                Human Rights &amp; Law
+
+            </a>
+
+        
+    </div>
+
+</div>
+
+
+
+<div class="bg-white rounded-3xl shadow-xl p-8" style="background:#ffffff; color:#1e293b;">
+
+    <h3 class="text-2xl font-bold text-slate-800 mb-6">
+
+        Share Article
+
+    </h3>
+
+    <div class="space-y-4">
+
+        <a target="_blank"
+           href="https://wa.me/?text=http%3A%2F%2F127.0.0.1%3A8000%2Farticles%2Fhistoric-coastal-ports-jaffa-haifa-akko"
+           class="flex items-center justify-center gap-3 py-4 rounded-xl bg-green-500 text-white hover:bg-green-600 duration-300">
+
+            <span class="text-xl">🟢</span>
+
+            WhatsApp
+
+        </a>
+
+        <a target="_blank"
+           href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Farticles%2Fhistoric-coastal-ports-jaffa-haifa-akko"
+           class="flex items-center justify-center gap-3 py-4 rounded-xl bg-blue-600 text-white hover:bg-blue-700 duration-300">
+
+            <span class="text-xl">🔵</span>
+
+            Facebook
+
+        </a>
+
+        <a target="_blank"
+           href="https://twitter.com/intent/tweet?url=http%3A%2F%2F127.0.0.1%3A8000%2Farticles%2Fhistoric-coastal-ports-jaffa-haifa-akko"
+           class="flex items-center justify-center gap-3 py-4 rounded-xl bg-black text-white hover:bg-slate-800 duration-300">
+
+            <span class="text-xl">⚫</span>
+
+            X (Twitter)
+
+        </a>
+
+        <a target="_blank"
+           href="https://t.me/share/url?url=http%3A%2F%2F127.0.0.1%3A8000%2Farticles%2Fhistoric-coastal-ports-jaffa-haifa-akko"
+           class="flex items-center justify-center gap-3 py-4 rounded-xl bg-sky-500 text-white hover:bg-sky-600 duration-300">
+
+            <span class="text-xl">🔷</span>
+
+            Telegram
+
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<div class="bg-gradient-to-br from-green-700 to-emerald-600 rounded-3xl text-white p-8">
+
+    <h3 class="text-2xl font-bold">
+
+        Palestine Hub
+
+    </h3>
+
+    <p class="mt-4 text-green-100 leading-7">
+
+        Learn history, geography and humanitarian issues through trusted educational content.
+
+    </p>
+
+    <div class="grid grid-cols-2 gap-4 mt-8">
+
+        <div class="bg-white/10 rounded-xl p-4">
+
+            <div class="text-3xl font-bold">
+
+                1,121
+
+            </div>
+
+            <div class="text-sm text-green-100">
+
+                Views
+
+            </div>
+
+        </div>
+
+        <div class="bg-white/10 rounded-xl p-4">
+
+            <div class="text-3xl font-bold">
+
+                1
+
+            </div>
+
+            <div class="text-sm text-green-100">
+
+                Min Read
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="bg-slate-100 pb-12" style="background:#f1f5f9;">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            
+            
+            <a href="/articles/tatreez-living-art-cultural-memory-palestinian-embroidery"
+               class="group bg-white rounded-3xl shadow-lg p-8 hover:shadow-2xl transition" style="background:#ffffff; color:#1e293b; display:block;">
+
+                <p class="text-sm text-gray-500">
+
+                    ← Previous Article
+
+                </p>
+
+                <h3 class="text-2xl font-bold mt-3 group-hover:text-green-600">
+
+                    Tatreez: The Living Art and Cultural Memory of Palestinian Embroidery
+
+                </h3>
+
+            </a>
+
+            
+
+            
+            
+            <a href="/articles/architectural-heritage-old-city-jerusalem-al-aqsa"
+               class="group bg-white rounded-3xl shadow-lg p-8 text-right hover:shadow-2xl transition" style="background:#ffffff; color:#1e293b; display:block;">
+
+                <p class="text-sm text-gray-500">
+
+                    Next Article →
+
+                </p>
+
+                <h3 class="text-2xl font-bold mt-3 group-hover:text-green-600">
+
+                    Architectural Heritage of Old City Jerusalem &amp; Al-Aqsa Compound
+
+                </h3>
+
+            </a>
+
+            
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<section class="bg-slate-100 pb-16">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="bg-white rounded-3xl shadow-xl p-10" style="background:#ffffff; color:#1e293b;">
+
+<div class="flex items-center gap-6">
+
+<div
+class="w-20 h-20 rounded-full bg-green-600 text-white flex items-center justify-center text-3xl font-bold">
+
+S
+
+</div>
+
+<div>
+
+<h3 class="text-3xl font-bold">
+
+Super Admin
+
+</h3>
+
+<p class="text-gray-500 mt-2">
+
+Content Writer • Palestine Knowledge Hub
+
+</p>
+
+</div>
+
+</div>
+
+<p class="mt-8 text-gray-700 leading-8">
+
+This article is part of Palestine Knowledge Hub,
+an educational platform dedicated to preserving
+the history, culture, geography and identity of
+Palestine through trusted educational resources.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="bg-slate-100 pb-24" style="background:#f1f5f9;">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="flex items-center justify-between mb-10">
+
+<h2 class="text-4xl font-bold" style="color:#1e293b;">
+
+Related Articles
+
+</h2>
+
+<a
+href="articles.html"
+class="text-green-600 font-semibold">
+
+View All →
+
+</a>
+
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+<div class="col-span-3">
+
+<div class="bg-white rounded-3xl shadow-lg p-16 text-center" style="background:#ffffff; color:#1e293b;">
+
+<h3 class="text-2xl font-bold">
+
+No Related Articles
+
+</h3>
+
+<p class="mt-4 text-gray-500">
+
+More articles will appear here soon.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="bg-green-700 py-24">
+
+    <div class="max-w-4xl mx-auto text-center px-6">
+
+        <h2 class="text-5xl text-white font-bold">
+            Start Learning Palestine Today
+        </h2>
+
+        <p class="mt-6 text-green-100 text-lg">
+            Explore trusted educational resources and understand Palestine's history.
+        </p>
+
+        <a
+            href="articles.html"
+            class="inline-block mt-10 bg-white text-green-700 px-10 py-4 rounded-xl font-bold hover:bg-gray-100 transition">
+
+            Explore Articles
+
+        </a>
+
+    </div>
+
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+
+            <!-- Col 1: Brand & Mission -->
+            <div class="lg:col-span-2 space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 to-red-600 flex items-center justify-center text-white font-black text-xl">
+                        P
+                    </div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">
+                        Palestine <span class="text-emerald-500">Hub</span>
+                    </h2>
+                </div>
+                <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+                    An open-access educational repository and real-time news platform dedicated to documenting history, culture, geography, and legal protections.
+                </p>
+                <div class="pt-2 flex items-center gap-3">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Real-Time Updates Active
+                    </span>
+                </div>
+            </div>
+
+            <!-- Col 2: Content Modules -->
+            <div>
+                <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Content Modules</h3>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="articles.html" class="hover:text-emerald-400 transition">Articles & Essays</a></li>
+                    <li><a href="timeline.html" class="hover:text-emerald-400 transition">Historical Timeline</a></li>
+                    <li><a href="maps.html" class="hover:text-emerald-400 transition">Geography & Interactive Maps</a></li>
+                    <li><a href="gallery.html" class="hover:text-emerald-400 transition">Photo & Media Gallery</a></li>
+                    <li><a href="resources.html" class="hover:text-emerald-400 transition">Educational Resources</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Interactive Learning -->
+            <div>
+                <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Learning & News</h3>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="news.html" class="hover:text-emerald-400 transition">Real-Time News Hub</a></li>
+                    <li><a href="quiz.html" class="hover:text-emerald-400 transition">Knowledge Quizzes</a></li>
+                    <li><a href="/learning/dashboard" class="hover:text-emerald-400 transition">Learning Progress</a></li>
+                    <li><a href="bookmarks.html" class="hover:text-emerald-400 transition">Saved Bookmarks</a></li>
+                    <li><a href="/sitemap.xml" class="hover:text-emerald-400 transition">XML Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Newsletter -->
+            <div>
+                <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Educational Newsletter</h3>
+                <p class="text-xs text-slate-400 mb-3">Subscribe for weekly articles, new archival releases, and educational guides.</p>
+                <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to Palestine Knowledge Hub!');" class="space-y-2">
+                    <input type="email" required placeholder="Enter your email..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-sm text-white placeholder-slate-500 outline-none focus:border-emerald-500">
+                    <button type="submit" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <p>© 2026 Palestine Knowledge Hub. Open educational portfolio project.</p>
+            <div class="flex items-center gap-6">
+                <span>Learn</span>
+                <span>•</span>
+                <span>Understand</span>
+                <span>•</span>
+                <span>Remember</span>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- Global Search Modal (Ctrl + K) -->
+    <div id="global-search-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[999] hidden flex items-start justify-center pt-20 px-4">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl max-w-2xl w-full border border-slate-200 dark:border-slate-800 overflow-hidden transform transition-all">
+            <div class="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center gap-3">
+                <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                <input type="text" id="global-search-input" placeholder="Search articles, timeline, news, quizzes, maps..." class="w-full bg-transparent outline-none text-slate-800 dark:text-slate-100 placeholder-slate-400 text-lg">
+                <kbd class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded text-xs">ESC</kbd>
+            </div>
+            <div id="global-search-results" class="p-4 max-h-[60vh] overflow-y-auto space-y-3">
+                <p class="text-sm text-slate-400 text-center py-6">Type something to search across the Palestine Knowledge Hub...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+    <!-- Global Scripts -->
+    <script>
+        // Reading progress calculation
+        window.addEventListener("scroll", function() {
+            const winScroll = document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+            const el = document.getElementById("reading-progress");
+            if (el) el.style.width = scrolled + "%";
+        });
+
+        // Dark Mode Toggle Logic
+        function toggleDarkMode() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Global Search Modal Logic
+        const searchModal = document.getElementById('global-search-modal');
+        const searchInput = document.getElementById('global-search-input');
+        const searchResults = document.getElementById('global-search-results');
+
+        function openSearchModal() {
+            if (searchModal) {
+                searchModal.classList.remove('hidden');
+                setTimeout(() => searchInput && searchInput.focus(), 100);
+            }
+        }
+
+        function closeSearchModal() {
+            if (searchModal) searchModal.classList.add('hidden');
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                openSearchModal();
+            }
+            if (e.key === 'Escape') {
+                closeSearchModal();
+            }
+        });
+
+        if (searchModal) {
+            searchModal.addEventListener('click', function(e) {
+                if (e.target === searchModal) closeSearchModal();
+            });
+        }
+
+        let searchTimeout;
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                const query = this.value.trim();
+                if (query.length < 2) {
+                    searchResults.innerHTML = '<p class="text-sm text-slate-400 text-center py-6">Type at least 2 characters to search...</p>';
+                    return;
+                }
+
+                searchTimeout = setTimeout(() => {
+                    searchResults.innerHTML = '<p class="text-sm text-slate-400 text-center py-6">Searching knowledge base...</p>';
+                    fetch(`/api/search?query=${encodeURIComponent(query)}`)
+                        .then(res => res.json())
+                        .then(data => {
+                            let html = '';
+                            const categories = ['articles', 'timeline', 'resources', 'news', 'quizzes'];
+                            let totalFound = 0;
+
+                            categories.forEach(cat => {
+                                if (data[cat] && data[cat].length > 0) {
+                                    totalFound += data[cat].length;
+                                    html += `<div class="mb-3"><h4 class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2">${cat}</h4><div class="space-y-1">`;
+                                    data[cat].forEach(item => {
+                                        html += `
+                                            <a href="${item.url}" class="block p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center justify-between">
+                                                <span class="font-medium text-slate-800 dark:text-slate-100">${item.title}</span>
+                                                <span class="text-xs px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">${item.meta}</span>
+                                            </a>
+                                        `;
+                                    });
+                                    html += `</div></div>`;
+                                }
+                            });
+
+                            if (totalFound === 0) {
+                                html = '<p class="text-sm text-slate-400 text-center py-6">No matching content found for "' + query + '".</p>';
+                            }
+
+                            searchResults.innerHTML = html;
+                        })
+                        .catch(() => {
+                            searchResults.innerHTML = '<p class="text-sm text-red-400 text-center py-6">Error loading search results.</p>';
+                        });
+                }, 300);
+            });
+        }
+
+        // Bookmark & Like AJAX helper functions
+        function toggleBookmark(id, type, btn) {
+            fetch('/api/bookmark', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                },
+                body: JSON.stringify({ id: id, type: type })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'guest') {
+                    // Localstorage fallback for guests
+                    let localBookmarks = JSON.parse(localStorage.getItem('p_bookmarks') || '[]');
+                    const key = type + '_' + id;
+                    if (localBookmarks.includes(key)) {
+                        localBookmarks = localBookmarks.filter(k => k !== key);
+                        btn.classList.remove('text-emerald-600', 'fill-current');
+                        alert('Bookmark removed from local storage');
+                    } else {
+                        localBookmarks.push(key);
+                        btn.classList.add('text-emerald-600', 'fill-current');
+                        alert('Bookmarked in local storage');
+                    }
+                    localStorage.setItem('p_bookmarks', JSON.stringify(localBookmarks));
+                } else {
+                    if (data.bookmarked) {
+                        btn.classList.add('text-emerald-600', 'fill-emerald-600');
+                    } else {
+                        btn.classList.remove('text-emerald-600', 'fill-emerald-600');
+                    }
+                    alert(data.message);
+                }
+            });
+        }
+
+        function toggleLike(id, type, countEl) {
+            fetch('/api/like', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                },
+                body: JSON.stringify({ id: id, type: type })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (countEl) countEl.innerText = data.total_likes;
+            });
+        }
+    </script>
+    </body>
+</html>

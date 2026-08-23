@@ -383,6 +383,42 @@ class ComprehensivePalestineSeeder extends Seeder
                 'caption' => 'Traditional Old City market craftsmanship in Nablus.',
                 'year' => 2023,
                 'views' => 1120,
+            ],
+            [
+                'title' => 'Church of the Nativity in Bethlehem',
+                'category' => 'Historical Landmarks',
+                'media_type' => 'image',
+                'media_url' => 'images/cities/bethlehem.jpg',
+                'caption' => 'One of the oldest continuously operating Christian churches in the world, located in Bethlehem.',
+                'year' => 2023,
+                'views' => 1340,
+            ],
+            [
+                'title' => 'Coastal Horizon of Gaza Port',
+                'category' => 'Heritage',
+                'media_type' => 'image',
+                'media_url' => 'images/cities/gaza.jpg',
+                'caption' => 'Mediterranean coastline and historical fishing heritage along Gaza city.',
+                'year' => 2023,
+                'views' => 1560,
+            ],
+            [
+                'title' => 'Slopes of Mount Carmel and Haifa Port',
+                'category' => 'Historical Landmarks',
+                'media_type' => 'image',
+                'media_url' => 'images/cities/haifa.jpg',
+                'caption' => 'Historic coastal port and terraced gardens of Haifa.',
+                'year' => 2022,
+                'views' => 1210,
+            ],
+            [
+                'title' => 'Ibrahimi Mosque & Old City of Hebron',
+                'category' => 'Historical Landmarks',
+                'media_type' => 'image',
+                'media_url' => 'images/cities/hebron.jpg',
+                'caption' => 'Architectural heritage of Al-Khalil (Hebron) and the ancient stone alleys.',
+                'year' => 2023,
+                'views' => 1480,
             ]
         ];
 

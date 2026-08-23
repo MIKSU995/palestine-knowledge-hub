@@ -74,9 +74,13 @@
         {{-- Masonry-style photo grid --}}
         <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
             @foreach($items as $item)
-            <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('{{ $item->image_url }}', '{{ addslashes($item->title) }}', '{{ addslashes($item->caption ?? '') }}', '{{ $item->year ?? '' }}', '{{ $item->category ?? '' }}', '{{ $item->location ?? '' }}')">
+            @php
+                $rawImg = $item->image_url;
+                $cleanImg = Str::startsWith($rawImg, 'http') ? $rawImg : (Str::startsWith($rawImg, 'images/') ? asset($rawImg) : asset('storage/' . $rawImg));
+            @endphp
+            <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('{{ $cleanImg }}', '{{ addslashes($item->title) }}', '{{ addslashes($item->caption ?? '') }}', '{{ $item->year ?? '' }}', '{{ $item->category ?? '' }}', '{{ $item->location ?? '' }}')">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
-                    <img src="{{ $item->image_url }}"
+                    <img src="{{ $cleanImg }}"
                          alt="{{ $item->title }}"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">

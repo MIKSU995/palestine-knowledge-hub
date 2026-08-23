@@ -112,8 +112,11 @@ foreach ($routes as $route => $filename) {
     
     $html = str_replace('</head>', $productionHeadAssets . "\n</head>", $html);
 
-    // Fix navigation hrefs to relative static .html files
+    // Fix navigation hrefs and image paths in HTML & JS modal strings
     $replacements = [
+        'http://127.0.0.1:8000/images/' => $relPrefix . 'images/',
+        'http://127.0.0.1:8000/build/' => $relPrefix . 'build/',
+        'http://127.0.0.1:8000' => '',
         'href="/"' => 'href="' . $relPrefix . 'index.html"',
         'href="/news"' => 'href="' . $relPrefix . 'news.html"',
         'href="/timeline"' => 'href="' . $relPrefix . 'timeline.html"',
@@ -123,10 +126,10 @@ foreach ($routes as $route => $filename) {
         'href="/resources"' => 'href="' . $relPrefix . 'resources.html"',
         'href="/quiz"' => 'href="' . $relPrefix . 'quiz.html"',
         'href="/bookmarks"' => 'href="' . $relPrefix . 'bookmarks.html"',
-        'src="images/' => 'src="' . $relPrefix . 'images/',
         'src="/images/' => 'src="' . $relPrefix . 'images/',
-        'href="images/' => 'href="' . $relPrefix . 'images/',
         'href="/images/' => 'href="' . $relPrefix . 'images/',
+        "'/images/" => "'" . $relPrefix . "images/",
+        '"/images/' => '"' . $relPrefix . 'images/',
         'href="/articles/' => 'href="' . $relPrefix . 'articles/',
     ];
 

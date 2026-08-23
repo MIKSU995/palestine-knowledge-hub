@@ -49,6 +49,49 @@
             background: rgba(17, 24, 39, 0.85);
             backdrop-filter: blur(12px);
         }
+
+        /* Continuous Ambient Motion Animations */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(1.5deg); }
+        }
+        @keyframes floatMedium {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-8px) scale(1.03); }
+        }
+        @keyframes ambientGlow {
+            0%, 100% { opacity: 0.35; transform: scale(1) translate(0, 0); }
+            50% { opacity: 0.75; transform: scale(1.15) translate(20px, -20px); }
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes shimmerBorder {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animate-float-slow {
+            animation: floatSlow 7s ease-in-out infinite;
+        }
+        .animate-float-medium {
+            animation: floatMedium 5s ease-in-out infinite;
+        }
+        .animate-ambient-glow {
+            animation: ambientGlow 10s ease-in-out infinite;
+        }
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+        .glow-shimmer {
+            background-size: 200% 200%;
+            animation: shimmerBorder 6s linear infinite;
+        }
     </style>
     @stack('styles')
 </head>

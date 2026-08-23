@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\RateLimiter;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +22,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Rate Limiter untuk form login (maksimal 5 percobaan per menit per IP)
+        RateLimiter::for('login', function (Request $request) {
+            return Limit::perMinute(5)->by($request->ip());
+        });
+
+        // Rate Limiter umum (maksimal 60 request per menit)
+        RateLimiter::for('global', function (Request $request) {
+            return Limit::perMinute(60)->by($request->ip());
+        });
     }
 }
+

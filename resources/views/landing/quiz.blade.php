@@ -10,7 +10,7 @@
     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_70%_50%,#8b5cf6,transparent_60%)]"></div>
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <span class="px-3.5 py-1.5 rounded-full bg-purple-500/20 text-purple-300 font-bold text-xs uppercase tracking-wider">
-            🧠 Interactive Learning
+            Interactive Learning
         </span>
         <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mt-3">
             Palestine Knowledge Quizzes
@@ -37,7 +37,9 @@
 
         @if($quizzes->isEmpty())
         <div class="flex flex-col items-center justify-center py-24 text-center">
-            <div class="w-20 h-20 rounded-3xl bg-purple-100 dark:bg-purple-950/50 flex items-center justify-center text-4xl mb-6">📝</div>
+            <div class="w-20 h-20 rounded-3xl bg-purple-100 dark:bg-purple-950/50 flex items-center justify-center text-slate-400 mb-6">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 01-2 2h-4a2 2 0 01-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            </div>
             <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">Quizzes Coming Soon</h2>
             <p class="text-slate-500 dark:text-slate-400 max-w-md leading-relaxed">
                 Our team is preparing comprehensive quiz modules on Palestinian history, culture, and geography. Sign up to be notified when they're ready.
@@ -64,7 +66,9 @@
                         <div class="w-24 h-24 rounded-full bg-white/20 absolute bottom-0 left-4"></div>
                     </div>
                     <div class="text-center relative z-10">
-                        <div class="text-5xl mb-2">🧠</div>
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white mx-auto mb-2">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 01-2 2h-4a2 2 0 01-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                        </div>
                         <span class="text-white/80 text-sm font-semibold">{{ $quiz->questions_count ?? 0 }} Questions</span>
                     </div>
                     @if($userScore !== null)
@@ -109,7 +113,7 @@
 
                     <a href="{{ route('quiz.show', $quiz->slug) }}"
                        class="mt-5 w-full text-center py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-2xl font-bold text-sm transition duration-200 group-hover:shadow-lg">
-                        {{ $userScore !== null ? '🔄 Retake Quiz' : '▶ Start Quiz' }}
+                        {{ $userScore !== null ? 'Retake Quiz' : 'Start Quiz' }}
                     </a>
                 </div>
             </div>
@@ -120,7 +124,6 @@
         {{-- Learning CTA --}}
         @auth
         <div class="mt-16 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-3xl p-8 text-white text-center shadow-xl">
-            <div class="text-5xl mb-4">🎓</div>
             <h2 class="text-2xl font-bold mb-2">Track Your Learning Journey</h2>
             <p class="text-purple-200 mb-6 max-w-lg mx-auto">View your quiz history, earned badges, and personalized content recommendations on your Learning Dashboard.</p>
             <a href="{{ route('learning.dashboard') }}"
@@ -130,7 +133,6 @@
         </div>
         @else
         <div class="mt-16 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-3xl p-8 text-white text-center shadow-xl">
-            <div class="text-5xl mb-4">🔑</div>
             <h2 class="text-2xl font-bold mb-2">Track Your Progress</h2>
             <p class="text-purple-200 mb-6 max-w-lg mx-auto">Create a free account to save your quiz scores, earn badges, and get personalized content recommendations.</p>
             <a href="{{ route('register') }}"

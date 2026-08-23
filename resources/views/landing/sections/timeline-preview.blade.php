@@ -23,6 +23,11 @@
                     <span class="px-3 py-1 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold">
                         {{ $event->year }}
                     </span>
+                    @if($event->image_url)
+                    <div class="mt-3 rounded-xl overflow-hidden h-36 bg-slate-900 shadow">
+                        <img src="{{ \Illuminate\Support\Str::startsWith($event->image_url, 'http') ? $event->image_url : asset($event->image_url) }}" alt="{{ $event->title }}" class="w-full h-full object-cover">
+                    </div>
+                    @endif
                     <h3 class="text-lg font-bold text-white mt-4 line-clamp-2">
                         {{ $event->title }}
                     </h3>

@@ -30,7 +30,7 @@
             {{-- Badge --}}
             <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-5"
                   style="background:rgba(139,92,246,0.25); border:1px solid rgba(167,139,250,0.4); color:#c4b5fd; backdrop-filter:blur(8px);">
-                📊 Learning Dashboard
+                Learning Dashboard
             </span>
 
             {{-- Greeting --}}
@@ -43,26 +43,26 @@
 
             <p class="mt-4 text-slate-300 text-base max-w-lg leading-relaxed" style="text-shadow: 0 1px 4px rgba(0,0,0,0.4);">
                 Track your Palestine learning journey, quiz results, and earned badges.
-                <span class="block mt-1 text-slate-400 text-sm italic">🕌 "Al-Quds will never be forgotten."</span>
+                <span class="block mt-1 text-slate-400 text-sm italic">"Al-Quds will never be forgotten."</span>
             </p>
 
             {{-- Quick stats bar --}}
             <div class="flex flex-wrap gap-4 mt-7">
                 <div class="flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold"
                      style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.18); backdrop-filter:blur(10px); color:#fff;">
-                    📝 <span>{{ $attempts->count() }} Attempts</span>
+                    <span>{{ $attempts->count() }} Attempts</span>
                 </div>
                 <div class="flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold"
                      style="background:rgba(16,185,129,0.2); border:1px solid rgba(52,211,153,0.3); backdrop-filter:blur(10px); color:#6ee7b7;">
-                    ✅ <span>{{ $totalCompletedQuizzes }} Passed</span>
+                    <span>{{ $totalCompletedQuizzes }} Passed</span>
                 </div>
                 <div class="flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold"
                      style="background:rgba(245,158,11,0.2); border:1px solid rgba(251,191,36,0.3); backdrop-filter:blur(10px); color:#fde68a;">
-                    📊 <span>{{ $avgScore }}% Avg</span>
+                    <span>{{ $avgScore }}% Avg</span>
                 </div>
                 <div class="flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold"
                      style="background:rgba(99,102,241,0.2); border:1px solid rgba(129,140,248,0.3); backdrop-filter:blur(10px); color:#c7d2fe;">
-                    🏅 <span>{{ count($badges) }} Badges</span>
+                    <span>{{ count($badges) }} Badges</span>
                 </div>
             </div>
         </div>
@@ -72,15 +72,15 @@
             <a href="{{ route('quiz') }}"
                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl text-white font-bold text-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
                style="background: linear-gradient(135deg, #7c3aed, #4f46e5); box-shadow: 0 4px 24px rgba(124,58,237,0.5);">
-                ▶ Take a Quiz
+                Take a Quiz
             </a>
             <a href="{{ route('articles') }}"
                class="inline-flex items-center gap-2 px-7 py-3 rounded-2xl font-semibold text-sm transition-all duration-300 hover:-translate-y-1"
                style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.25); backdrop-filter:blur(10px); color:#fff;">
-                📚 Browse Articles
+                Browse Articles
             </a>
             {{-- Image credit --}}
-            <p class="text-xs text-slate-400 mt-1 opacity-60">📍 Dome of the Rock, Jerusalem</p>
+            <p class="text-xs text-slate-400 mt-1 opacity-60">Dome of the Rock, Jerusalem</p>
         </div>
 
     </div>
@@ -106,22 +106,30 @@
         {{-- Stats Row --}}
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm">
-                <div class="w-10 h-10 rounded-2xl bg-purple-100 dark:bg-purple-950/60 flex items-center justify-center text-xl mb-3">📝</div>
+                <div class="w-10 h-10 rounded-2xl bg-purple-100 dark:bg-purple-950/60 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                </div>
                 <p class="text-3xl font-extrabold text-slate-900 dark:text-white">{{ $attempts->count() }}</p>
                 <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Quiz Attempts</p>
             </div>
             <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm">
-                <div class="w-10 h-10 rounded-2xl bg-emerald-100 dark:bg-emerald-950/60 flex items-center justify-center text-xl mb-3">✅</div>
+                <div class="w-10 h-10 rounded-2xl bg-emerald-100 dark:bg-emerald-950/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                </div>
                 <p class="text-3xl font-extrabold text-slate-900 dark:text-white">{{ $totalCompletedQuizzes }}</p>
                 <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Quizzes Passed</p>
             </div>
             <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm">
-                <div class="w-10 h-10 rounded-2xl bg-amber-100 dark:bg-amber-950/60 flex items-center justify-center text-xl mb-3">📊</div>
+                <div class="w-10 h-10 rounded-2xl bg-amber-100 dark:bg-amber-950/60 flex items-center justify-center text-amber-600 dark:text-amber-400 mb-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                </div>
                 <p class="text-3xl font-extrabold text-slate-900 dark:text-white">{{ $avgScore }}%</p>
                 <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Average Score</p>
             </div>
             <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm">
-                <div class="w-10 h-10 rounded-2xl bg-blue-100 dark:bg-blue-950/60 flex items-center justify-center text-xl mb-3">🏅</div>
+                <div class="w-10 h-10 rounded-2xl bg-blue-100 dark:bg-blue-950/60 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                </div>
                 <p class="text-3xl font-extrabold text-slate-900 dark:text-white">{{ count($badges) }}</p>
                 <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Badges Earned</p>
             </div>
@@ -136,7 +144,7 @@
                 @if(count($badges) > 0)
                 <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
                     <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                        🏅 Earned Badges
+                        Earned Badges
                     </h2>
                     <div class="grid sm:grid-cols-2 gap-3">
                         @foreach($badges as $badge)
@@ -161,7 +169,9 @@
 
                     @if($attempts->isEmpty())
                     <div class="text-center py-10 text-slate-400">
-                        <div class="text-4xl mb-3">🧠</div>
+                        <div class="w-12 h-12 rounded-2xl bg-purple-100 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 01-2 2h-4a2 2 0 01-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                        </div>
                         <p class="font-medium">No quiz attempts yet.</p>
                         <a href="{{ route('quiz') }}" class="mt-4 inline-block text-sm text-purple-600 dark:text-purple-400 font-semibold hover:underline">Take your first quiz →</a>
                     </div>
@@ -197,7 +207,7 @@
             <div class="space-y-6">
                 <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
                     <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                        📚 Recommended Reading
+                        Recommended Reading
                     </h2>
                     <div class="space-y-4">
                         @foreach($recommendedArticles as $article)
@@ -205,7 +215,9 @@
                             @if($article->thumbnail)
                             <img src="{{ asset('storage/' . $article->thumbnail) }}" alt="{{ $article->title }}" class="w-14 h-14 rounded-xl object-cover flex-shrink-0">
                             @else
-                            <div class="w-14 h-14 rounded-xl bg-emerald-100 dark:bg-emerald-950/50 flex items-center justify-center text-xl flex-shrink-0">📄</div>
+                            <div class="w-14 h-14 rounded-xl bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            </div>
                             @endif
                             <div class="flex-1 min-w-0">
                                 <p class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2 leading-snug">
@@ -225,19 +237,19 @@
 
                 {{-- Quick Links --}}
                 <div class="bg-gradient-to-br from-purple-600 to-indigo-700 rounded-3xl p-5 text-white">
-                    <h3 class="font-bold mb-3">📖 Explore More</h3>
+                    <h3 class="font-bold mb-3">Explore More</h3>
                     <div class="space-y-2">
                         <a href="{{ route('timeline') }}" class="flex items-center gap-2 text-sm text-purple-100 hover:text-white transition">
-                            <span>⏳</span> Historical Timeline
+                            Historical Timeline
                         </a>
                         <a href="{{ route('maps') }}" class="flex items-center gap-2 text-sm text-purple-100 hover:text-white transition">
-                            <span>🗺️</span> Interactive Maps
+                            Interactive Maps
                         </a>
                         <a href="{{ route('gallery') }}" class="flex items-center gap-2 text-sm text-purple-100 hover:text-white transition">
-                            <span>📷</span> Photo Gallery
+                            Photo Gallery
                         </a>
                         <a href="{{ route('resources') }}" class="flex items-center gap-2 text-sm text-purple-100 hover:text-white transition">
-                            <span>📚</span> Educational Resources
+                            Educational Resources
                         </a>
                     </div>
                 </div>

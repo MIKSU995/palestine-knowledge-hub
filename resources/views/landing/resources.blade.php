@@ -10,7 +10,7 @@
     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_80%_50%,#3b82f6,transparent_60%)]"></div>
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <span class="px-3.5 py-1.5 rounded-full bg-blue-500/20 text-blue-300 font-bold text-xs uppercase tracking-wider">
-            📚 Open Educational Resources
+            Open Educational Resources
         </span>
         <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mt-3">
             Educational Resources
@@ -33,13 +33,13 @@
             <a href="{{ route('resources', ['type' => $type]) }}"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition {{ request('type') === $type ? 'bg-blue-600 text-white border-blue-600' : 'border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600' }}">
                 {{ match($type) {
-                    'pdf' => '📄 PDF',
-                    'video' => '🎥 Video',
-                    'book' => '📖 Book',
-                    'journal' => '📰 Journal',
-                    'report' => '📊 Report',
-                    'documentary' => '🎬 Documentary',
-                    'infographic' => '📈 Infographic',
+                    'pdf' => 'PDF',
+                    'video' => 'Video',
+                    'book' => 'Book',
+                    'journal' => 'Journal',
+                    'report' => 'Report',
+                    'documentary' => 'Documentary',
+                    'infographic' => 'Infographic',
                     default => ucfirst($type)
                 } }}
             </a>
@@ -66,7 +66,9 @@
 
         @if($resources->isEmpty())
         <div class="flex flex-col items-center justify-center py-24 text-center">
-            <div class="w-20 h-20 rounded-3xl bg-blue-100 dark:bg-blue-950/50 flex items-center justify-center text-4xl mb-6">📚</div>
+            <div class="w-20 h-20 rounded-3xl bg-blue-100 dark:bg-blue-950/50 flex items-center justify-center text-slate-400 mb-6">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
             <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">Resources Coming Soon</h2>
             <p class="text-slate-500 dark:text-slate-400 max-w-md leading-relaxed">
                 Our educational library is being curated with high-quality resources about Palestinian history and culture. Check back soon.
@@ -77,13 +79,13 @@
             @foreach($resources as $resource)
             @php
                 $typeConfig = [
-                    'pdf' => ['icon' => '📄', 'color' => 'bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-300', 'label' => 'PDF Document'],
-                    'video' => ['icon' => '🎥', 'color' => 'bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300', 'label' => 'Video'],
-                    'book' => ['icon' => '📖', 'color' => 'bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300', 'label' => 'Book'],
-                    'journal' => ['icon' => '📰', 'color' => 'bg-purple-100 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300', 'label' => 'Academic Journal'],
-                    'report' => ['icon' => '📊', 'color' => 'bg-cyan-100 dark:bg-cyan-950/60 text-cyan-700 dark:text-cyan-300', 'label' => 'Report'],
-                    'documentary' => ['icon' => '🎬', 'color' => 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300', 'label' => 'Documentary'],
-                    'infographic' => ['icon' => '📈', 'color' => 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300', 'label' => 'Infographic'],
+                    'pdf' => ['color' => 'bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-300', 'label' => 'PDF Document'],
+                    'video' => ['color' => 'bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300', 'label' => 'Video'],
+                    'book' => ['color' => 'bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300', 'label' => 'Book'],
+                    'journal' => ['color' => 'bg-purple-100 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300', 'label' => 'Academic Journal'],
+                    'report' => ['color' => 'bg-cyan-100 dark:bg-cyan-950/60 text-cyan-700 dark:text-cyan-300', 'label' => 'Report'],
+                    'documentary' => ['color' => 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300', 'label' => 'Documentary'],
+                    'infographic' => ['color' => 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300', 'label' => 'Infographic'],
                 ];
                 $config = $typeConfig[$resource->type ?? 'pdf'] ?? $typeConfig['pdf'];
             @endphp
@@ -93,7 +95,9 @@
                     @if($resource->thumbnail)
                     <img src="{{ asset('storage/' . $resource->thumbnail) }}" alt="{{ $resource->title }}" class="w-full h-full object-cover absolute inset-0">
                     @endif
-                    <div class="text-6xl z-10 group-hover:scale-110 transition duration-300">{{ $config['icon'] }}</div>
+                    <div class="z-10 group-hover:scale-110 transition duration-300 text-blue-600 dark:text-blue-400">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
                 </div>
                 <div class="p-5 flex flex-col flex-1">
                     <div class="flex items-center gap-2 mb-3">

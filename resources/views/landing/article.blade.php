@@ -12,7 +12,7 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div class="max-w-3xl">
             <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs uppercase tracking-wider">
-                📰 Knowledge Archive
+                Knowledge Archive
             </span>
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mt-3">
                 Articles & Publications
@@ -80,8 +80,9 @@
             <div class="lg:col-span-7 relative min-h-[320px] lg:min-h-[420px] bg-slate-900">
                 <img loading="lazy" src="{{ $featuredImg }}" alt="{{ $featured->title }}" class="w-full h-full object-cover">
                 <div class="absolute top-4 left-4">
-                    <span class="px-3 py-1 rounded-full bg-emerald-600 text-white text-xs font-extrabold uppercase tracking-wider shadow-md">
-                        ⭐ Featured Article
+                    <span class="px-3 py-1 rounded-full bg-emerald-600 text-white text-xs font-extrabold uppercase tracking-wider shadow-md inline-flex items-center gap-1">
+                        <svg class="w-3.5 h-3.5 text-amber-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        Featured Article
                     </span>
                 </div>
             </div>
@@ -108,8 +109,14 @@
 
                 <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
                     <div class="flex items-center gap-4 text-xs text-slate-400">
-                        <span>👁 {{ number_format($featured->views) }} views</span>
-                        <span>📖 {{ $featuredReadTime }} min read</span>
+                        <span class="inline-flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                            {{ number_format($featured->views) }} views
+                        </span>
+                        <span class="inline-flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            {{ $featuredReadTime }} min read
+                        </span>
                     </div>
                     <a href="{{ route('articles.show', $featured->slug) }}" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-900/30 transition flex items-center gap-2">
                         Read Article →
@@ -149,7 +156,7 @@
                         </div>
                         <button onclick="toggleBookmark({{ $article->id }}, 'article', this)"
                                 class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-950/80 backdrop-blur-md text-slate-300 hover:text-emerald-400 flex items-center justify-center transition shadow-md">
-                            🔖
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
                         </button>
                     </div>
 
@@ -158,7 +165,10 @@
                         <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
                             <span>{{ optional($article->published_at)->format('d M Y') ?? 'Recent' }}</span>
                             <span>•</span>
-                            <span>📖 {{ $readTime }} min read</span>
+                            <span class="inline-flex items-center gap-1">
+                                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                {{ $readTime }} min read
+                            </span>
                         </div>
 
                         <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2 leading-snug">
@@ -176,7 +186,8 @@
                 {{-- Footer --}}
                 <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
                     <span class="flex items-center gap-1">
-                        👁 {{ number_format($article->views) }} views
+                        <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                        {{ number_format($article->views) }} views
                     </span>
                     <a href="{{ route('articles.show', $article->slug) }}" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
                         Read →
@@ -192,7 +203,9 @@
         </div>
         @else
         <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-16 text-center">
-            <div class="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-3xl mx-auto mb-4">🔍</div>
+            <div class="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 mx-auto mb-4">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
             <h2 class="text-2xl font-bold text-slate-900 dark:text-white">No Articles Found</h2>
             <p class="text-slate-400 text-sm mt-2 max-w-md mx-auto">No articles matched your current search or category filter. Try clearing filters to view all content.</p>
             <a href="{{ route('articles') }}" class="inline-block mt-6 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl text-xs font-bold transition">

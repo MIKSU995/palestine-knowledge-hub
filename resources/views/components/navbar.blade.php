@@ -111,16 +111,16 @@
 
                     <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-52 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 py-2 z-50" style="display: none;">
                         <a href="{{ route('learning.dashboard') }}" class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
-                            🎓 Learning Dashboard
+                            Learning Dashboard
                         </a>
                         <a href="{{ route('bookmarks') }}" class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
-                            🔖 Saved Bookmarks
+                            Saved Bookmarks
                         </a>
 
                         @role('Admin')
                         <div class="border-t border-slate-100 dark:border-slate-800 my-1"></div>
                         <a href="{{ route('admin.dashboard') }}" class="block px-4 py-2 text-sm text-amber-600 dark:text-amber-400 font-semibold hover:bg-amber-50 dark:hover:bg-amber-950/30">
-                            ⚡ Admin Control Panel
+                            Admin Control Panel
                         </a>
                         @endrole
 

@@ -42,7 +42,7 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div class="max-w-3xl">
             <span class="px-3.5 py-1.5 rounded-full bg-blue-500/20 text-blue-300 font-bold text-xs uppercase tracking-wider">
-                🗺️ Interactive Geographic Atlas
+                Interactive Geographic Atlas
             </span>
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mt-3">
                 Geography & Historical Cities of Palestine
@@ -65,13 +65,13 @@
                     All Locations
                 </button>
                 <button onclick="filterMap('Historic Capital')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition">
-                    🏛️ Historic Capitals
+                    Historic Capitals
                 </button>
                 <button onclick="filterMap('Port City')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition">
-                    ⚓ Ports & Coastal
+                    Ports & Coastal
                 </button>
                 <button onclick="filterMap('Sacred Site')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition">
-                    ✨ Sacred Sites
+                    Sacred Sites
                 </button>
             </div>
 
@@ -117,8 +117,9 @@
                     </div>
 
                     <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-bold text-emerald-600 dark:text-emerald-400">
-                        <span class="flex items-center gap-1">
-                            📍 {{ number_format($loc['lat'], 2) }}°N, {{ number_format($loc['lng'], 2) }}°E
+                        <span class="inline-flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            {{ number_format($loc['lat'], 2) }}°N, {{ number_format($loc['lng'], 2) }}°E
                         </span>
                         <span>Fly to Map →</span>
                     </div>

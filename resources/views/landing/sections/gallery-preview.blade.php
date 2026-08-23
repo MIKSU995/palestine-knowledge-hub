@@ -19,7 +19,7 @@
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             @foreach($galleryPreview as $item)
             <a href="{{ route('gallery') }}" class="group relative h-48 rounded-2xl overflow-hidden shadow border border-slate-200 dark:border-slate-800">
-                <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <img src="{{ \Illuminate\Support\Str::startsWith($item->image_url, 'http') ? $item->image_url : (str_starts_with($item->image_url, 'images/') ? asset($item->image_url) : asset('storage/' . $item->image_url)) }}" alt="{{ $item->title }}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-3 text-white">
                     <span class="text-[10px] font-bold uppercase tracking-wider text-purple-400">{{ $item->category }}</span>
                     <h4 class="text-xs font-bold line-clamp-2 leading-tight">{{ $item->title }}</h4>

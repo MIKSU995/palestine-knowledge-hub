@@ -25,7 +25,7 @@
                     <!-- Thumbnail -->
                     <div class="relative h-52 overflow-hidden bg-slate-200 dark:bg-slate-700">
                         @if($article->thumbnail)
-                        <img src="{{ Str::startsWith($article->thumbnail, 'http') ? $article->thumbnail : asset('storage/' . $article->thumbnail) }}" alt="{{ $article->title }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="{{ Str::startsWith($article->thumbnail, 'http') ? $article->thumbnail : (Str::startsWith($article->thumbnail, 'images/') ? asset($article->thumbnail) : asset('storage/' . $article->thumbnail)) }}" alt="{{ $article->title }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         @else
                         <img src="{{ asset('images/dome-of-rock.jpg') }}" alt="Default image" class="w-full h-full object-cover" style="object-position: center 25%;">
                         @endif

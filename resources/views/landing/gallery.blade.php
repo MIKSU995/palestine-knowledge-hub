@@ -72,19 +72,25 @@
         </div>
         @else
         {{-- Masonry-style photo grid --}}
-        <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
+        <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4" id="gallery-grid">
             @foreach($items as $item)
             @php
                 $rawImg = $item->image_url;
                 $cleanImg = Str::startsWith($rawImg, 'http') ? $rawImg : (Str::startsWith($rawImg, 'images/') ? asset($rawImg) : asset('storage/' . $rawImg));
             @endphp
-            <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('{{ $cleanImg }}', '{{ addslashes($item->title) }}', '{{ addslashes($item->caption ?? '') }}', '{{ $item->year ?? '' }}', '{{ $item->category ?? '' }}', '{{ $item->location ?? '' }}')">
+            <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="{{ $cleanImg }}"
+                 data-title="{{ e($item->title) }}"
+                 data-caption="{{ e($item->caption ?? '') }}"
+                 data-year="{{ $item->year ?? '' }}"
+                 data-category="{{ e($item->category ?? '') }}"
+                 data-location="{{ e($item->location ?? '') }}">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="{{ $cleanImg }}"
                          alt="{{ $item->title }}"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">{{ $item->category }}</span>
                         <h3 class="text-white font-bold text-sm leading-snug">{{ $item->title }}</h3>
                         @if($item->year)
@@ -166,7 +172,23 @@
         document.body.style.overflow = '';
     }
 
-    document.addEventListener('keydown', function(e) {
+    // Use event delegation with data-* attrs to safely handle titles/captions with special characters
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.gallery-item').forEach(function (el) {
+            el.addEventListener('click', function () {
+                openGalleryModal(
+                    el.dataset.src,
+                    el.dataset.title,
+                    el.dataset.caption,
+                    el.dataset.year,
+                    el.dataset.category,
+                    el.dataset.location
+                );
+            });
+        });
+    });
+
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') closeGalleryModal();
     });
 </script>

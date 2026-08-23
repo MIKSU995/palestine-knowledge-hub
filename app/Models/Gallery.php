@@ -17,6 +17,7 @@ class Gallery extends Model
         'thumbnail_url',
         'caption',
         'year',
+        'location',
         'views',
     ];
 

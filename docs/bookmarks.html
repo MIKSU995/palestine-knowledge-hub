@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="u8mD52yDL69Jb5Pxi5gKftt4fGvRpwE8ICUUhIN9">
+    <meta name="csrf-token" content="UKiBzContUTcoF1HnYxU4Dphs8xPLvTonNKpkjIg">
 
     <title>My Bookmarks | Palestine Knowledge Hub</title>
 
@@ -195,7 +195,7 @@
                 </a>
 
                 <!-- User Dropdown / Auth Link -->
-                                <a href="/login" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
+                                <a href="index.html" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
                     Log in
                 </a>
                 
@@ -249,7 +249,7 @@
                 Create a free account to save articles, resources, and timeline events for later reading. Your bookmarks sync across all devices.
             </p>
             <div class="flex gap-3">
-                <a href="/login" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-bold text-sm transition">
+                <a href="index.html" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-bold text-sm transition">
                     Sign In
                 </a>
                 <a href="/register" class="px-6 py-3 border border-slate-300 dark:border-slate-600 hover:border-emerald-500 text-slate-700 dark:text-slate-300 hover:text-emerald-600 rounded-2xl font-bold text-sm transition">
@@ -511,5 +511,33 @@
             });
         }
     </script>
-    </body>
+    <script>
+    // Static GitHub Pages interactive filter handler
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const cat = urlParams.get('category') || urlParams.get('era') || urlParams.get('type');
+        const search = urlParams.get('search');
+
+        if (cat) {
+            const items = document.querySelectorAll('.grid > div, .columns-1 > div, article');
+            items.forEach(item => {
+                const text = item.textContent || '';
+                if (!text.toLowerCase().includes(cat.toLowerCase())) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        if (search) {
+            const items = document.querySelectorAll('.grid > div, .columns-1 > div, article');
+            items.forEach(item => {
+                const text = item.textContent || '';
+                if (!text.toLowerCase().includes(search.toLowerCase())) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    });
+</script>
+</body>
 </html>

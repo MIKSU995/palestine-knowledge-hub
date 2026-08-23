@@ -112,20 +112,66 @@ foreach ($routes as $route => $filename) {
     
     $html = str_replace('</head>', $productionHeadAssets . "\n</head>", $html);
 
-    // Fix navigation hrefs and image paths in HTML & JS modal strings
+    // Client-side helper for static GitHub Pages filter & search
+    $staticFilterScript = <<<'JS'
+<script>
+    // Static GitHub Pages interactive filter handler
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const cat = urlParams.get('category') || urlParams.get('era') || urlParams.get('type');
+        const search = urlParams.get('search');
+
+        if (cat) {
+            const items = document.querySelectorAll('.grid > div, .columns-1 > div, article');
+            items.forEach(item => {
+                const text = item.textContent || '';
+                if (!text.toLowerCase().includes(cat.toLowerCase())) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        if (search) {
+            const items = document.querySelectorAll('.grid > div, .columns-1 > div, article');
+            items.forEach(item => {
+                const text = item.textContent || '';
+                if (!text.toLowerCase().includes(search.toLowerCase())) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    });
+</script>
+JS;
+
+    $html = str_replace('</body>', $staticFilterScript . "\n</body>", $html);
+
+    // Fix navigation hrefs, form actions, and image paths in HTML & JS strings
     $replacements = [
         'http://127.0.0.1:8000/images/' => $relPrefix . 'images/',
         'http://127.0.0.1:8000/build/' => $relPrefix . 'build/',
         'http://127.0.0.1:8000' => '',
         'href="/"' => 'href="' . $relPrefix . 'index.html"',
+        'href="/news?refresh=1"' => 'href="javascript:location.reload()"',
+        'href="/news?category=' => 'href="' . $relPrefix . 'news.html?category=',
         'href="/news"' => 'href="' . $relPrefix . 'news.html"',
+        'href="/timeline?era=' => 'href="' . $relPrefix . 'timeline.html?era=',
         'href="/timeline"' => 'href="' . $relPrefix . 'timeline.html"',
         'href="/maps"' => 'href="' . $relPrefix . 'maps.html"',
+        'href="/articles?category=' => 'href="' . $relPrefix . 'articles.html?category=',
         'href="/articles"' => 'href="' . $relPrefix . 'articles.html"',
+        'href="/gallery?category=' => 'href="' . $relPrefix . 'gallery.html?category=',
         'href="/gallery"' => 'href="' . $relPrefix . 'gallery.html"',
+        'href="/resources?type=' => 'href="' . $relPrefix . 'resources.html?type=',
         'href="/resources"' => 'href="' . $relPrefix . 'resources.html"',
         'href="/quiz"' => 'href="' . $relPrefix . 'quiz.html"',
         'href="/bookmarks"' => 'href="' . $relPrefix . 'bookmarks.html"',
+        'href="/login"' => 'href="' . $relPrefix . 'index.html"',
+        'action="/news"' => 'action="' . $relPrefix . 'news.html"',
+        'action="/articles"' => 'action="' . $relPrefix . 'articles.html"',
+        'action="/gallery"' => 'action="' . $relPrefix . 'gallery.html"',
+        'action="/timeline"' => 'action="' . $relPrefix . 'timeline.html"',
+        'action="/resources"' => 'action="' . $relPrefix . 'resources.html"',
         'src="/images/' => 'src="' . $relPrefix . 'images/',
         'href="/images/' => 'href="' . $relPrefix . 'images/',
         "'/images/" => "'" . $relPrefix . "images/",
@@ -136,6 +182,7 @@ foreach ($routes as $route => $filename) {
     foreach ($replacements as $search => $replace) {
         $html = str_replace($search, $replace, $html);
     }
+
 
     // Save to both root directory and docs/ directory
     foreach ($outputDirs as $targetDir) {

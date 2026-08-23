@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="l5fAqtvSAhGj6S6ooAsy9Bmd2O8f8zYESye4lnjB">
+    <meta name="csrf-token" content="eDfTBYfP5Q78fVVwe31aDX4B1ijA7sCYrNqXgxTu">
 
     <title>Historical Timeline of Palestine - 1917 to Present</title>
 
@@ -195,7 +195,7 @@
                 </a>
 
                 <!-- User Dropdown / Auth Link -->
-                                <a href="/login" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
+                                <a href="index.html" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
                     Log in
                 </a>
                 
@@ -257,24 +257,24 @@
                 <a href="timeline.html" class="px-4 py-2 rounded-xl text-sm font-semibold transition bg-amber-600 text-white shadow-md">
                     All Eras
                 </a>
-                                <a href="/timeline?era=Ottoman%20%26%20British%20Mandate%20%281917-1947%29" class="px-4 py-2 rounded-xl text-sm font-semibold transition bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
+                                <a href="timeline.html?era=Ottoman%20%26%20British%20Mandate%20%281917-1947%29" class="px-4 py-2 rounded-xl text-sm font-semibold transition bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
                     Ottoman &amp; British Mandate (1917-1947)
                 </a>
-                                <a href="/timeline?era=Nakba%20%26%20Partition%20%281948-1966%29" class="px-4 py-2 rounded-xl text-sm font-semibold transition bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
+                                <a href="timeline.html?era=Nakba%20%26%20Partition%20%281948-1966%29" class="px-4 py-2 rounded-xl text-sm font-semibold transition bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
                     Nakba &amp; Partition (1948-1966)
                 </a>
-                                <a href="/timeline?era=1967%20War%20%26%20Occupation%20%281967-1986%29" class="px-4 py-2 rounded-xl text-sm font-semibold transition bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
+                                <a href="timeline.html?era=1967%20War%20%26%20Occupation%20%281967-1986%29" class="px-4 py-2 rounded-xl text-sm font-semibold transition bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
                     1967 War &amp; Occupation (1967-1986)
                 </a>
-                                <a href="/timeline?era=Intifadas%20%26%20Peace%20Process%20%281987-2005%29" class="px-4 py-2 rounded-xl text-sm font-semibold transition bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
+                                <a href="timeline.html?era=Intifadas%20%26%20Peace%20Process%20%281987-2005%29" class="px-4 py-2 rounded-xl text-sm font-semibold transition bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
                     Intifadas &amp; Peace Process (1987-2005)
                 </a>
-                                <a href="/timeline?era=Contemporary%20Era%20%282006-Present%29" class="px-4 py-2 rounded-xl text-sm font-semibold transition bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
+                                <a href="timeline.html?era=Contemporary%20Era%20%282006-Present%29" class="px-4 py-2 rounded-xl text-sm font-semibold transition bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
                     Contemporary Era (2006-Present)
                 </a>
                             </div>
 
-            <form action="/timeline" method="GET" class="flex items-center gap-2">
+            <form action="timeline.html" method="GET" class="flex items-center gap-2">
                                 <input type="text" name="search" value="" placeholder="Search historical events..." class="px-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm text-slate-900 dark:text-white placeholder-slate-400 outline-none focus:border-amber-500 w-64">
                 <button type="submit" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm transition">
                     Search
@@ -862,5 +862,33 @@
             });
         }
     </script>
-    </body>
+    <script>
+    // Static GitHub Pages interactive filter handler
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const cat = urlParams.get('category') || urlParams.get('era') || urlParams.get('type');
+        const search = urlParams.get('search');
+
+        if (cat) {
+            const items = document.querySelectorAll('.grid > div, .columns-1 > div, article');
+            items.forEach(item => {
+                const text = item.textContent || '';
+                if (!text.toLowerCase().includes(cat.toLowerCase())) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        if (search) {
+            const items = document.querySelectorAll('.grid > div, .columns-1 > div, article');
+            items.forEach(item => {
+                const text = item.textContent || '';
+                if (!text.toLowerCase().includes(search.toLowerCase())) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    });
+</script>
+</body>
 </html>

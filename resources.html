@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="dUIXJpSnWdbKG8uf1c1OOlNoHYRIuJ4pSElW4cbp">
+    <meta name="csrf-token" content="5SQAQYCSiD58AAhml6x6w3FdxrDeyVVSesRNKlbF">
 
     <title>Educational Resources - Books, PDFs &amp; Documents | Palestine Knowledge Hub</title>
 
@@ -195,7 +195,7 @@
                 </a>
 
                 <!-- User Dropdown / Auth Link -->
-                                <a href="/login" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
+                                <a href="index.html" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
                     Log in
                 </a>
                 
@@ -254,36 +254,36 @@
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white">
                 All Types
             </a>
-                        <a href="/resources?type=pdf"
+                        <a href="resources.html?type=pdf"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600">
                 PDF
             </a>
-                        <a href="/resources?type=video"
+                        <a href="resources.html?type=video"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600">
                 Video
             </a>
-                        <a href="/resources?type=book"
+                        <a href="resources.html?type=book"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600">
                 Book
             </a>
-                        <a href="/resources?type=journal"
+                        <a href="resources.html?type=journal"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600">
                 Journal
             </a>
-                        <a href="/resources?type=report"
+                        <a href="resources.html?type=report"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600">
                 Report
             </a>
-                        <a href="/resources?type=documentary"
+                        <a href="resources.html?type=documentary"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600">
                 Documentary
             </a>
-                        <a href="/resources?type=infographic"
+                        <a href="resources.html?type=infographic"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-blue-500 hover:text-blue-600">
                 Infographic
             </a>
                     </div>
-        <form method="GET" action="/resources" class="flex gap-2">
+        <form method="GET" action="resources.html" class="flex gap-2">
                         <div class="relative">
                 <svg class="absolute left-3 top-2.5 w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                 <input type="text" name="search" value=""
@@ -686,5 +686,33 @@
             });
         }
     </script>
-    </body>
+    <script>
+    // Static GitHub Pages interactive filter handler
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const cat = urlParams.get('category') || urlParams.get('era') || urlParams.get('type');
+        const search = urlParams.get('search');
+
+        if (cat) {
+            const items = document.querySelectorAll('.grid > div, .columns-1 > div, article');
+            items.forEach(item => {
+                const text = item.textContent || '';
+                if (!text.toLowerCase().includes(cat.toLowerCase())) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        if (search) {
+            const items = document.querySelectorAll('.grid > div, .columns-1 > div, article');
+            items.forEach(item => {
+                const text = item.textContent || '';
+                if (!text.toLowerCase().includes(search.toLowerCase())) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    });
+</script>
+</body>
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="92Zc8KVTH8KvC33fiZfQVOZSVOjV7A9o6Yx2Rdxv">
+    <meta name="csrf-token" content="N1dqP3ch4GtSSsQMCQlqz1if3Fh6sCcGj8egleVe">
 
     <title>Gallery - Historical Images of Palestine | Palestine Knowledge Hub</title>
 
@@ -195,7 +195,7 @@
                 </a>
 
                 <!-- User Dropdown / Auth Link -->
-                                <a href="/login" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
+                                <a href="index.html" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
                     Log in
                 </a>
                 
@@ -255,41 +255,41 @@
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white">
                 All
             </a>
-                        <a href="/gallery?category=Architecture"
+                        <a href="gallery.html?category=Architecture"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-emerald-500 hover:text-emerald-600">
                 Architecture
             </a>
-                        <a href="/gallery?category=Culture"
+                        <a href="gallery.html?category=Culture"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-emerald-500 hover:text-emerald-600">
                 Culture
             </a>
-                        <a href="/gallery?category=Daily%20Life"
+                        <a href="gallery.html?category=Daily%20Life"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-emerald-500 hover:text-emerald-600">
                 Daily Life
             </a>
-                        <a href="/gallery?category=Historical%20Photos"
+                        <a href="gallery.html?category=Historical%20Photos"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-emerald-500 hover:text-emerald-600">
                 Historical Photos
             </a>
-                        <a href="/gallery?category=Documents"
+                        <a href="gallery.html?category=Documents"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-emerald-500 hover:text-emerald-600">
                 Documents
             </a>
-                        <a href="/gallery?category=Historical%20Events"
+                        <a href="gallery.html?category=Historical%20Events"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-emerald-500 hover:text-emerald-600">
                 Historical Events
             </a>
-                        <a href="/gallery?category=Historical%20Landmarks"
+                        <a href="gallery.html?category=Historical%20Landmarks"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-emerald-500 hover:text-emerald-600">
                 Historical Landmarks
             </a>
-                        <a href="/gallery?category=Heritage"
+                        <a href="gallery.html?category=Heritage"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-emerald-500 hover:text-emerald-600">
                 Heritage
             </a>
                     </div>
         
-        <form method="GET" action="/gallery" class="flex gap-2">
+        <form method="GET" action="gallery.html" class="flex gap-2">
                         <div class="relative">
                 <svg class="absolute left-3 top-2.5 w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                 <input type="text" name="search" value=""
@@ -308,157 +308,229 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
                 
-        <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
-                                    <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('images/cities/bethlehem.jpg', 'Church of the Nativity in Bethlehem', 'One of the oldest continuously operating Christian churches in the world, located in Bethlehem.', '2023', 'Historical Landmarks', '')">
+        <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4" id="gallery-grid">
+                                    <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="images/cities/bethlehem.jpg"
+                 data-title="Church of the Nativity in Bethlehem"
+                 data-caption="One of the oldest continuously operating Christian churches in the world, located in Bethlehem."
+                 data-year="2023"
+                 data-category="Historical Landmarks"
+                 data-location="Bethlehem, West Bank">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="images/cities/bethlehem.jpg"
                          alt="Church of the Nativity in Bethlehem"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">Historical Landmarks</span>
                         <h3 class="text-white font-bold text-sm leading-snug">Church of the Nativity in Bethlehem</h3>
                                                 <span class="text-slate-300 text-xs mt-1">2023</span>
                                             </div>
                 </div>
             </div>
-                                    <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('images/cities/gaza.jpg', 'Coastal Horizon of Gaza Port', 'Mediterranean coastline and historical fishing heritage along Gaza city.', '2023', 'Heritage', '')">
+                                    <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="images/cities/gaza.jpg"
+                 data-title="Coastal Horizon of Gaza Port"
+                 data-caption="Mediterranean coastline and historical fishing heritage along Gaza city."
+                 data-year="2023"
+                 data-category="Heritage"
+                 data-location="Gaza City, Gaza Strip">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="images/cities/gaza.jpg"
                          alt="Coastal Horizon of Gaza Port"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">Heritage</span>
                         <h3 class="text-white font-bold text-sm leading-snug">Coastal Horizon of Gaza Port</h3>
                                                 <span class="text-slate-300 text-xs mt-1">2023</span>
                                             </div>
                 </div>
             </div>
-                                    <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('images/cities/haifa.jpg', 'Slopes of Mount Carmel and Haifa Port', 'Historic coastal port and terraced gardens of Haifa.', '2022', 'Historical Landmarks', '')">
+                                    <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="images/cities/haifa.jpg"
+                 data-title="Slopes of Mount Carmel and Haifa Port"
+                 data-caption="Historic coastal port and terraced gardens of Haifa."
+                 data-year="2022"
+                 data-category="Historical Landmarks"
+                 data-location="Haifa, Mount Carmel">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="images/cities/haifa.jpg"
                          alt="Slopes of Mount Carmel and Haifa Port"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">Historical Landmarks</span>
                         <h3 class="text-white font-bold text-sm leading-snug">Slopes of Mount Carmel and Haifa Port</h3>
                                                 <span class="text-slate-300 text-xs mt-1">2022</span>
                                             </div>
                 </div>
             </div>
-                                    <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('images/cities/hebron.jpg', 'Ibrahimi Mosque &amp; Old City of Hebron', 'Architectural heritage of Al-Khalil (Hebron) and the ancient stone alleys.', '2023', 'Historical Landmarks', '')">
+                                    <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="images/cities/hebron.jpg"
+                 data-title="Ibrahimi Mosque &amp;amp; Old City of Hebron"
+                 data-caption="Architectural heritage of Al-Khalil (Hebron) and the ancient stone alleys."
+                 data-year="2023"
+                 data-category="Historical Landmarks"
+                 data-location="Hebron (Al-Khalil), West Bank">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="images/cities/hebron.jpg"
                          alt="Ibrahimi Mosque &amp; Old City of Hebron"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">Historical Landmarks</span>
                         <h3 class="text-white font-bold text-sm leading-snug">Ibrahimi Mosque &amp; Old City of Hebron</h3>
                                                 <span class="text-slate-300 text-xs mt-1">2023</span>
                                             </div>
                 </div>
             </div>
-                                    <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('images/cities/nablus.jpg', 'Artisan Heritage &amp; Culture in Nablus', 'Traditional Old City market craftsmanship in Nablus.', '2023', 'Culture', '')">
+                                    <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="images/cities/nablus.jpg"
+                 data-title="Artisan Heritage &amp;amp; Culture in Nablus"
+                 data-caption="Traditional Old City market craftsmanship in Nablus."
+                 data-year="2023"
+                 data-category="Culture"
+                 data-location="Old City, Nablus">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="images/cities/nablus.jpg"
                          alt="Artisan Heritage &amp; Culture in Nablus"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">Culture</span>
                         <h3 class="text-white font-bold text-sm leading-snug">Artisan Heritage &amp; Culture in Nablus</h3>
                                                 <span class="text-slate-300 text-xs mt-1">2023</span>
                                             </div>
                 </div>
             </div>
-                                    <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('images/timeline/balfour-declaration-1917.jpg', 'The Balfour Declaration Document (1917)', 'Official letter issued on November 2, 1917, by Arthur Balfour establishing British policy in Mandatory Palestine.', '1917', 'Historical Events', '')">
+                                    <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="images/timeline/balfour-declaration-1917.jpg"
+                 data-title="The Balfour Declaration Document (1917)"
+                 data-caption="Official letter issued on November 2, 1917, by Arthur Balfour establishing British policy in Mandatory Palestine."
+                 data-year="1917"
+                 data-category="Historical Events"
+                 data-location="London, United Kingdom">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="images/timeline/balfour-declaration-1917.jpg"
                          alt="The Balfour Declaration Document (1917)"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">Historical Events</span>
                         <h3 class="text-white font-bold text-sm leading-snug">The Balfour Declaration Document (1917)</h3>
                                                 <span class="text-slate-300 text-xs mt-1">1917</span>
                                             </div>
                 </div>
             </div>
-                                    <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('images/timeline/un-partition-plan-1947.jpg', 'United Nations Partition Plan Map (1947)', 'Historical map illustrating UN Resolution 181 partition proposal for Jewish, Arab, and Jerusalem international zones.', '1947', 'Historical Events', '')">
+                                    <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="images/timeline/un-partition-plan-1947.jpg"
+                 data-title="United Nations Partition Plan Map (1947)"
+                 data-caption="Historical map illustrating UN Resolution 181 partition proposal for Jewish, Arab, and Jerusalem international zones."
+                 data-year="1947"
+                 data-category="Historical Events"
+                 data-location="New York, United Nations">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="images/timeline/un-partition-plan-1947.jpg"
                          alt="United Nations Partition Plan Map (1947)"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">Historical Events</span>
                         <h3 class="text-white font-bold text-sm leading-snug">United Nations Partition Plan Map (1947)</h3>
                                                 <span class="text-slate-300 text-xs mt-1">1947</span>
                                             </div>
                 </div>
             </div>
-                                    <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('images/timeline/the-nakba-1948.jpg', 'The Nakba - Mass Displacement (1948)', 'Infographic and photo documentation of the 1948 Catastrophe, displacing over 700,000 Palestinians.', '1948', 'Historical Events', '')">
+                                    <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="images/timeline/the-nakba-1948.jpg"
+                 data-title="The Nakba - Mass Displacement (1948)"
+                 data-caption="Infographic and photo documentation of the 1948 Catastrophe, displacing over 700,000 Palestinians."
+                 data-year="1948"
+                 data-category="Historical Events"
+                 data-location="Haifa &amp;amp; surrounding areas, Palestine">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="images/timeline/the-nakba-1948.jpg"
                          alt="The Nakba - Mass Displacement (1948)"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">Historical Events</span>
                         <h3 class="text-white font-bold text-sm leading-snug">The Nakba - Mass Displacement (1948)</h3>
                                                 <span class="text-slate-300 text-xs mt-1">1948</span>
                                             </div>
                 </div>
             </div>
-                                    <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('images/timeline/six-day-war-1967.jpg', 'Military Occupation &amp; Six-Day War (1967)', 'Archival photograph depicting military armor during the June 1967 war in the West Bank and Gaza Strip.', '1967', 'Historical Events', '')">
+                                    <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="images/timeline/six-day-war-1967.jpg"
+                 data-title="Military Occupation &amp;amp; Six-Day War (1967)"
+                 data-caption="Archival photograph depicting military armor during the June 1967 war in the West Bank and Gaza Strip."
+                 data-year="1967"
+                 data-category="Historical Events"
+                 data-location="West Bank &amp;amp; Gaza Strip">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="images/timeline/six-day-war-1967.jpg"
                          alt="Military Occupation &amp; Six-Day War (1967)"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">Historical Events</span>
                         <h3 class="text-white font-bold text-sm leading-snug">Military Occupation &amp; Six-Day War (1967)</h3>
                                                 <span class="text-slate-300 text-xs mt-1">1967</span>
                                             </div>
                 </div>
             </div>
-                                    <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('images/timeline/first-intifada-1987.jpg', 'First Intifada Grassroots Protests (1987)', 'Civilian demonstrations and youth resistance during the First Intifada uprising across Gaza and the West Bank.', '1987', 'Historical Events', '')">
+                                    <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="images/timeline/first-intifada-1987.jpg"
+                 data-title="First Intifada Grassroots Protests (1987)"
+                 data-caption="Civilian demonstrations and youth resistance during the First Intifada uprising across Gaza and the West Bank."
+                 data-year="1987"
+                 data-category="Historical Events"
+                 data-location="Gaza &amp;amp; West Bank, Palestine">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="images/timeline/first-intifada-1987.jpg"
                          alt="First Intifada Grassroots Protests (1987)"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">Historical Events</span>
                         <h3 class="text-white font-bold text-sm leading-snug">First Intifada Grassroots Protests (1987)</h3>
                                                 <span class="text-slate-300 text-xs mt-1">1987</span>
                                             </div>
                 </div>
             </div>
-                                    <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('images/dome-of-rock.jpg', 'Dome of the Rock &amp; Al-Aqsa Sanctuary', 'Panoramic view of the golden Dome of the Rock in Jerusalem, built during the 7th century Umayyad period.', '2023', 'Historical Landmarks', '')">
+                                    <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="images/dome-of-rock.jpg"
+                 data-title="Dome of the Rock &amp;amp; Al-Aqsa Sanctuary"
+                 data-caption="Panoramic view of the golden Dome of the Rock in Jerusalem, built during the 7th century Umayyad period."
+                 data-year="2023"
+                 data-category="Historical Landmarks"
+                 data-location="Al-Aqsa Compound, Jerusalem">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="images/dome-of-rock.jpg"
                          alt="Dome of the Rock &amp; Al-Aqsa Sanctuary"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">Historical Landmarks</span>
                         <h3 class="text-white font-bold text-sm leading-snug">Dome of the Rock &amp; Al-Aqsa Sanctuary</h3>
                                                 <span class="text-slate-300 text-xs mt-1">2023</span>
                                             </div>
                 </div>
             </div>
-                                    <div class="break-inside-avoid group cursor-pointer relative" onclick="openGalleryModal('images/cities/jerusalem.jpg', 'Old City Jerusalem Landscape', 'Historic stone walls and architectural heritage of Al-Quds (Jerusalem).', '2023', 'Historical Landmarks', '')">
+                                    <div class="break-inside-avoid group cursor-pointer relative gallery-item"
+                 data-src="images/cities/jerusalem.jpg"
+                 data-title="Old City Jerusalem Landscape"
+                 data-caption="Historic stone walls and architectural heritage of Al-Quds (Jerusalem)."
+                 data-year="2023"
+                 data-category="Historical Landmarks"
+                 data-location="Old City, Jerusalem">
                 <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                     <img src="images/cities/jerusalem.jpg"
                          alt="Old City Jerusalem Landscape"
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
                         <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">Historical Landmarks</span>
                         <h3 class="text-white font-bold text-sm leading-snug">Old City Jerusalem Landscape</h3>
                                                 <span class="text-slate-300 text-xs mt-1">2023</span>
@@ -843,8 +915,52 @@
         document.body.style.overflow = '';
     }
 
-    document.addEventListener('keydown', function(e) {
+    // Use event delegation with data-* attrs to safely handle titles/captions with special characters
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.gallery-item').forEach(function (el) {
+            el.addEventListener('click', function () {
+                openGalleryModal(
+                    el.dataset.src,
+                    el.dataset.title,
+                    el.dataset.caption,
+                    el.dataset.year,
+                    el.dataset.category,
+                    el.dataset.location
+                );
+            });
+        });
+    });
+
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') closeGalleryModal();
+    });
+</script>
+<script>
+    // Static GitHub Pages interactive filter handler
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const cat = urlParams.get('category') || urlParams.get('era') || urlParams.get('type');
+        const search = urlParams.get('search');
+
+        if (cat) {
+            const items = document.querySelectorAll('.grid > div, .columns-1 > div, article');
+            items.forEach(item => {
+                const text = item.textContent || '';
+                if (!text.toLowerCase().includes(cat.toLowerCase())) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        if (search) {
+            const items = document.querySelectorAll('.grid > div, .columns-1 > div, article');
+            items.forEach(item => {
+                const text = item.textContent || '';
+                if (!text.toLowerCase().includes(search.toLowerCase())) {
+                    item.style.display = 'none';
+                }
+            });
+        }
     });
 </script>
 </body>

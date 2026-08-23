@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="wWVrN2UsIOOkALjqclrwPZUHdwDt3ENf0CsPpscS">
+    <meta name="csrf-token" content="MjIPUBew2lGTCErPV0kfBr7Ca1EWpp2LJcZPkiCV">
 
     <title>Tatreez: The Living Art and Cultural Memory of Palestinian Embroidery</title>
 
@@ -195,7 +195,7 @@
                 </a>
 
                 <!-- User Dropdown / Auth Link -->
-                                <a href="/login" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
+                                <a href="../index.html" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
                     Log in
                 </a>
                 
@@ -303,7 +303,7 @@
 
             <span>
 
-                👁 1,351
+                👁 1,353
 
             </span>
 
@@ -378,7 +378,7 @@ By <strong>Super Admin</strong>
 
 <span>
 
-👁 1,351 Views
+👁 1,353 Views
 
 </span>
 
@@ -477,7 +477,7 @@ Culture &amp; Arts
 
                     <span>
 
-                        👁 2,411
+                        👁 2,413
 
                     </span>
 
@@ -515,7 +515,7 @@ Culture &amp; Arts
 
                     <span>
 
-                        👁 1,981
+                        👁 1,983
 
                     </span>
 
@@ -553,7 +553,7 @@ Culture &amp; Arts
 
                     <span>
 
-                        👁 1,841
+                        👁 1,843
 
                     </span>
 
@@ -591,7 +591,7 @@ Culture &amp; Arts
 
                     <span>
 
-                        👁 1,631
+                        👁 1,633
 
                     </span>
 
@@ -629,7 +629,7 @@ Culture &amp; Arts
 
                     <span>
 
-                        👁 1,491
+                        👁 1,493
 
                     </span>
 
@@ -655,7 +655,7 @@ Culture &amp; Arts
     <div class="flex flex-wrap gap-3">
 
         
-            <a href="/articles?category=2"
+            <a href="../articles.html?category=2"
 
                class="px-5 py-3 rounded-full
                bg-green-100
@@ -671,7 +671,7 @@ Culture &amp; Arts
             </a>
 
         
-            <a href="/articles?category=5"
+            <a href="../articles.html?category=5"
 
                class="px-5 py-3 rounded-full
                bg-green-100
@@ -687,7 +687,7 @@ Culture &amp; Arts
             </a>
 
         
-            <a href="/articles?category=3"
+            <a href="../articles.html?category=3"
 
                class="px-5 py-3 rounded-full
                bg-green-100
@@ -703,7 +703,7 @@ Culture &amp; Arts
             </a>
 
         
-            <a href="/articles?category=1"
+            <a href="../articles.html?category=1"
 
                class="px-5 py-3 rounded-full
                bg-green-100
@@ -719,7 +719,7 @@ Culture &amp; Arts
             </a>
 
         
-            <a href="/articles?category=4"
+            <a href="../articles.html?category=4"
 
                class="px-5 py-3 rounded-full
                bg-green-100
@@ -817,7 +817,7 @@ Culture &amp; Arts
 
             <div class="text-3xl font-bold">
 
-                1,351
+                1,353
 
             </div>
 
@@ -1309,5 +1309,33 @@ Read More →
             });
         }
     </script>
-    </body>
+    <script>
+    // Static GitHub Pages interactive filter handler
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const cat = urlParams.get('category') || urlParams.get('era') || urlParams.get('type');
+        const search = urlParams.get('search');
+
+        if (cat) {
+            const items = document.querySelectorAll('.grid > div, .columns-1 > div, article');
+            items.forEach(item => {
+                const text = item.textContent || '';
+                if (!text.toLowerCase().includes(cat.toLowerCase())) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        if (search) {
+            const items = document.querySelectorAll('.grid > div, .columns-1 > div, article');
+            items.forEach(item => {
+                const text = item.textContent || '';
+                if (!text.toLowerCase().includes(search.toLowerCase())) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    });
+</script>
+</body>
 </html>

@@ -121,36 +121,3 @@
 
     </div>
 </section>
-
-                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed">
-                        Live news updates automatically synced from global news APIs and RSS feeds.
-                    </p>
-                </div>
-                <a href="{{ route('news.index') }}" class="inline-flex items-center gap-2 text-sm font-extrabold text-red-600 dark:text-red-400 mt-8 group-hover:translate-x-1 transition-transform">
-                    <span>Read Live News</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                </a>
-            </div>
-
-            <!-- Card 6: Educational Resources -->
-            <div class="group relative rounded-3xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 p-8 shadow-sm hover:shadow-2xl hover:border-teal-500/40 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div>
-                    <div class="w-14 h-14 rounded-2xl bg-teal-500/10 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-inner">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                    </div>
-                    <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">6. Educational Resources</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed">
-                        Open-access downloadable PDFs, documentaries, visual infographics, and academic papers.
-                    </p>
-                </div>
-                <a href="{{ route('resources') }}" class="inline-flex items-center gap-2 text-sm font-extrabold text-teal-600 dark:text-teal-400 mt-8 group-hover:translate-x-1 transition-transform">
-                    <span>Access Resources</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                </a>
-            </div>
-
-        </div>
-
-    </div>
-</section>

@@ -29,48 +29,49 @@
             </a>
 
             <!-- Navigation Links (Desktop) -->
-            <div class="hidden lg:flex items-center gap-6">
+            <div class="hidden lg:flex items-center gap-3 xl:gap-5">
 
-                <a href="/" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->is('/') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
+                <a href="/" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->is('/') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
                     Beranda
                 </a>
 
-                <a href="{{ route('news.index') }}" class="relative text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition flex items-center gap-1.5 {{ request()->routeIs('news.*') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
-                    <span>Berita Terkini</span>
+                <a href="{{ route('news.index') }}" class="whitespace-nowrap relative text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition flex items-center gap-1.5 {{ request()->routeIs('news.*') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
+                    <span>Berita</span>
                     <span class="flex h-2 w-2 relative">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                     </span>
                 </a>
 
-                <a href="{{ route('timeline') }}" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->routeIs('timeline') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
+                <a href="{{ route('timeline') }}" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->routeIs('timeline') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
                     Linimasa
                 </a>
 
-                <a href="{{ route('maps') }}" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->routeIs('maps') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
-                    Peta Interaktif
+                <a href="{{ route('maps') }}" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->routeIs('maps') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
+                    Peta
                 </a>
 
-                <a href="{{ route('articles') }}" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->routeIs('articles*') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
-                    Artikel Edukasi
+                <a href="{{ route('articles') }}" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->routeIs('articles*') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
+                    Artikel
                 </a>
 
-                <a href="{{ route('gallery') }}" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->routeIs('gallery') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
-                    Galeri Foto
+                <a href="{{ route('gallery') }}" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->routeIs('gallery') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
+                    Galeri
                 </a>
 
-                <a href="{{ route('resources') }}" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->routeIs('resources') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
-                    Materi Edukasi
+                <a href="{{ route('resources') }}" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->routeIs('resources') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
+                    Materi
                 </a>
 
-                <a href="{{ route('quiz') }}" class="text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->routeIs('quiz*') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
-                    Kuis Interaktif
+                <a href="{{ route('quiz') }}" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition {{ request()->routeIs('quiz*') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
+                    Kuis
                 </a>
 
             </div>
 
             <!-- Right Tools & User Actions -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+
 
                 <!-- Global Search Trigger -->
                 <button onclick="openSearchModal()" class="p-2.5 rounded-xl text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white bg-slate-100 dark:bg-slate-800 transition flex items-center gap-2 text-xs font-medium">

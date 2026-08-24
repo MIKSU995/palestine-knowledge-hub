@@ -1,25 +1,25 @@
 @extends('layouts.admin')
 
-@section('title', 'Categories')
-@section('page_title', 'Categories')
-@section('page_subtitle', 'Organize articles by topic and domain')
+@section('title', 'Kategori Artikel')
+@section('page_title', 'Kategori Artikel')
+@section('page_subtitle', 'Kelola dan kelompokkan artikel berdasarkan domain dan topik')
 
 @section('content')
 
 <div class="flex items-center justify-between mb-6">
     <div>
         <h1 class="text-xl font-bold text-slate-900">
-            Category Management
+            Manajemen Kategori
         </h1>
         <p class="text-xs text-slate-400 mt-0.5">
-            Add, edit, or reorganize article categories
+            Tambah, edit, atau tata ulang kategori artikel
         </p>
     </div>
 
     <a href="{{ route('admin.categories.create') }}"
        class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-2xl text-xs font-bold transition flex items-center gap-2 shadow-lg shadow-emerald-900/20">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-        Add Category
+        Tambah Kategori
     </a>
 </div>
 
@@ -28,9 +28,9 @@
         <thead class="bg-slate-50 text-slate-500 font-semibold border-b border-slate-100">
             <tr>
                 <th class="p-4 pl-6">#</th>
-                <th class="p-4">Name</th>
+                <th class="p-4">Nama Kategori</th>
                 <th class="p-4">Slug</th>
-                <th class="p-4 pr-6 text-right">Action</th>
+                <th class="p-4 pr-6 text-right">Aksi</th>
             </tr>
         </thead>
         <tbody class="divide-y divide-slate-100">
@@ -54,11 +54,11 @@
 
                         <form action="{{ route('admin.categories.destroy', $category) }}"
                               method="POST"
-                              onsubmit="return confirm('Delete this category?')">
+                              onsubmit="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">
                             @csrf
                             @method('DELETE')
                             <button class="px-3 py-1 bg-red-50 hover:bg-red-100 text-red-600 rounded-xl text-xs font-bold transition">
-                                Delete
+                                Hapus
                             </button>
                         </form>
                     </div>
@@ -67,7 +67,7 @@
             @empty
             <tr>
                 <td colspan="4" class="p-8 text-center text-slate-400 text-sm">
-                    No categories found.
+                    Belum ada kategori yang ditemukan.
                 </td>
             </tr>
             @endforelse

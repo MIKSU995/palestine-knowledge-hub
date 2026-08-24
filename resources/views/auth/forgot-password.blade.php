@@ -7,8 +7,8 @@
                 <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-3xl mb-4">
                     🔒
                 </div>
-                <h1 class="text-2xl font-extrabold text-white tracking-tight">Reset Password</h1>
-                <p class="text-slate-400 text-sm mt-1">Enter your registered email address to receive a password reset link.</p>
+                <h1 class="text-2xl font-extrabold text-white tracking-tight">Reset Kata Sandi</h1>
+                <p class="text-slate-400 text-sm mt-1">Masukkan alamat email terdaftar Anda untuk menerima tautan reset kata sandi.</p>
             </div>
 
             @if(session('status'))
@@ -22,7 +22,7 @@
 
                 <div>
                     <label for="email" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                        Email Address
+                        Alamat Email
                     </label>
                     <input id="email"
                            type="email"
@@ -41,13 +41,13 @@
 
                 <button type="submit"
                         class="w-full py-3.5 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm tracking-wide shadow-lg shadow-emerald-900/40 transition duration-200">
-                    Send Password Reset Link →
+                    Kirim Tautan Reset Kata Sandi →
                 </button>
             </form>
 
             <div class="mt-6 text-center pt-6 border-t border-slate-800/60">
                 <a href="{{ route('login') }}" class="text-xs font-bold text-slate-400 hover:text-white transition">
-                    ← Back to Sign In
+                    ← Kembali ke Halaman Masuk
                 </a>
             </div>
 

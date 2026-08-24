@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Palestine Knowledge Hub') }} — Account Authentication</title>
+    <title>{{ config('app.name', 'Palestine Knowledge Hub') }} — Autentikasi Akun</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
                 </div>
             </a>
             <a href="{{ route('home') }}" class="text-xs font-bold text-slate-400 hover:text-white flex items-center gap-2 transition bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-800">
-                ← Return to Platform
+                ← Kembali ke Platform
             </a>
         </div>
     </header>
@@ -47,7 +47,7 @@
 
     {{-- Footer --}}
     <footer class="py-6 text-center text-xs text-slate-500 relative z-10 border-t border-slate-900">
-        <p>© {{ date('Y') }} Palestine Knowledge Hub. Educate, Preserve, Empower.</p>
+        <p>© {{ date('Y') }} Palestine Knowledge Hub. Pelajari, Lestarikan, Berdayakan.</p>
     </footer>
 
 </body>

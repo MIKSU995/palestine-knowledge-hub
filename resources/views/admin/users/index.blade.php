@@ -1,8 +1,8 @@
 @extends('layouts.admin')
 
-@section('title', 'User Management')
-@section('page_title', 'User Management')
-@section('page_subtitle', 'Manage registered accounts, assign roles, and administer permissions')
+@section('title', 'Kelola Pengguna')
+@section('page_title', 'Kelola Pengguna')
+@section('page_subtitle', 'Kelola akun terdaftar, tetapkan peran (role), dan atur hak akses')
 
 @section('content')
 
@@ -10,22 +10,22 @@
     <div class="p-6 border-b border-slate-100 flex items-center justify-between">
         <div>
             <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-                👥 Registered Users
+                👥 Pengguna Terdaftar
             </h2>
-            <p class="text-xs text-slate-400 mt-0.5">Control access levels and manage platform members</p>
+            <p class="text-xs text-slate-400 mt-0.5">Atur tingkat akses dan kelola anggota platform</p>
         </div>
-        <span class="text-xs font-bold text-slate-400">{{ $users->total() }} users registered</span>
+        <span class="text-xs font-bold text-slate-400">{{ $users->total() }} pengguna terdaftar</span>
     </div>
 
     <div class="overflow-x-auto">
         <table class="w-full text-left text-sm">
             <thead class="bg-slate-50 text-slate-500 font-semibold border-b border-slate-100">
                 <tr>
-                    <th class="p-4 pl-6">User</th>
+                    <th class="p-4 pl-6">Pengguna</th>
                     <th class="p-4">Email</th>
-                    <th class="p-4">Role</th>
-                    <th class="p-4">Joined Date</th>
-                    <th class="p-4 pr-6 text-right">Actions</th>
+                    <th class="p-4">Peran (Role)</th>
+                    <th class="p-4">Tanggal Bergabung</th>
+                    <th class="p-4 pr-6 text-right">Aksi</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-slate-100">
@@ -38,7 +38,7 @@
                         <div>
                             <p class="font-semibold text-slate-900">{{ $user->name }}</p>
                             @if($user->id === auth()->id())
-                            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">You</span>
+                            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Anda</span>
                             @endif
                         </div>
                     </td>
@@ -63,22 +63,22 @@
                     </td>
                     <td class="p-4 pr-6 text-right">
                         @if($user->id !== auth()->id())
-                        <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Remove user {{ $user->name }}?')">
+                        <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Hapus pengguna {{ $user->name }}?')">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="px-3 py-1 bg-red-50 hover:bg-red-100 text-red-600 rounded-xl text-xs font-bold transition">
-                                Delete
+                                Hapus
                             </button>
                         </form>
                         @else
-                        <span class="text-xs text-slate-400 italic">Protected</span>
+                        <span class="text-xs text-slate-400 italic">Dilindungi</span>
                         @endif
                     </td>
                 </tr>
                 @empty
                 <tr>
                     <td colspan="5" class="p-8 text-center text-slate-400 text-sm">
-                        No registered users found.
+                        Belum ada pengguna terdaftar yang ditemukan.
                     </td>
                 </tr>
                 @endforelse
@@ -93,3 +93,4 @@
 </div>
 
 @endsection
+

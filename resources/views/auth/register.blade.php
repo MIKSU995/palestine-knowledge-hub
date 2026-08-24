@@ -9,8 +9,8 @@
                 <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-3xl mb-4">
                     ✨
                 </div>
-                <h1 class="text-2xl font-extrabold text-white tracking-tight">Create Account</h1>
-                <p class="text-slate-400 text-sm mt-1">Join Palestine Knowledge Hub to save bookmarks and track learning progress.</p>
+                <h1 class="text-2xl font-extrabold text-white tracking-tight">Buat Akun Baru</h1>
+                <p class="text-slate-400 text-sm mt-1">Bergabung dengan Palestine Knowledge Hub untuk menyimpan artikel dan mencatat progres belajar.</p>
             </div>
 
             <form method="POST" action="{{ route('register') }}" class="space-y-5">
@@ -19,7 +19,7 @@
                 {{-- Full Name --}}
                 <div>
                     <label for="name" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                        Full Name
+                        Nama Lengkap
                     </label>
                     <input id="name"
                            type="text"
@@ -40,7 +40,7 @@
                 {{-- Email Address --}}
                 <div>
                     <label for="email" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                        Email Address
+                        Alamat Email
                     </label>
                     <input id="email"
                            type="email"
@@ -60,14 +60,14 @@
                 {{-- Password --}}
                 <div>
                     <label for="password" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                        Password
+                        Kata Sandi
                     </label>
                     <input id="password"
                            type="password"
                            name="password"
                            required
                            autocomplete="new-password"
-                           placeholder="Minimum 8 characters"
+                           placeholder="Minimal 8 karakter"
                            class="w-full px-4 py-3 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition">
                     @error('password')
                         <p class="text-red-400 text-xs font-semibold mt-1.5 flex items-center gap-1">
@@ -79,14 +79,14 @@
                 {{-- Confirm Password --}}
                 <div>
                     <label for="password_confirmation" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                        Confirm Password
+                        Konfirmasi Kata Sandi
                     </label>
                     <input id="password_confirmation"
                            type="password"
                            name="password_confirmation"
                            required
                            autocomplete="new-password"
-                           placeholder="Re-enter password"
+                           placeholder="Ulangi kata sandi"
                            class="w-full px-4 py-3 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition">
                     @error('password_confirmation')
                         <p class="text-red-400 text-xs font-semibold mt-1.5 flex items-center gap-1">
@@ -98,16 +98,16 @@
                 {{-- Submit Button --}}
                 <button type="submit"
                         class="w-full py-3.5 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm tracking-wide shadow-lg shadow-emerald-900/40 transition duration-200 flex items-center justify-center gap-2">
-                    Create Free Account →
+                    Buat Akun Gratis →
                 </button>
             </form>
 
             {{-- Login Link --}}
             <div class="mt-6 text-center pt-6 border-t border-slate-800/60">
                 <p class="text-xs text-slate-400">
-                    Already have an account?
+                    Sudah punya akun?
                     <a href="{{ route('login') }}" class="font-bold text-emerald-400 hover:text-emerald-300 transition underline ml-1">
-                        Sign In
+                        Masuk
                     </a>
                 </p>
             </div>

@@ -37,7 +37,7 @@
 
         {{-- Navigation --}}
         <nav class="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
-            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest px-3 mb-2">Main</p>
+            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest px-3 mb-2">Utama</p>
 
             <a href="{{ route('admin.dashboard') }}"
                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition {{ request()->routeIs('admin.dashboard') ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-900/30' : 'text-slate-300 hover:bg-slate-800 hover:text-white' }}">
@@ -45,26 +45,26 @@
                 Dashboard
             </a>
 
-            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest px-3 mt-5 mb-2">Content</p>
+            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest px-3 mt-5 mb-2">Manajemen Konten</p>
 
             <a href="{{ route('admin.articles.index') }}"
                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition {{ request()->routeIs('admin.articles*') ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-900/30' : 'text-slate-300 hover:bg-slate-800 hover:text-white' }}">
                 <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                Articles
+                Kelola Artikel
             </a>
 
             <a href="{{ route('admin.categories.index') }}"
                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition {{ request()->routeIs('admin.categories*') ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-900/30' : 'text-slate-300 hover:bg-slate-800 hover:text-white' }}">
                 <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a2 2 0 012-2z"/></svg>
-                Categories
+                Kategori Artikel
             </a>
 
-            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest px-3 mt-5 mb-2">Community</p>
+            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest px-3 mt-5 mb-2">Komunitas & Pengguna</p>
 
             <a href="{{ route('admin.moderation.index') }}"
                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition {{ request()->routeIs('admin.moderation*') ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-900/30' : 'text-slate-300 hover:bg-slate-800 hover:text-white' }}">
                 <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                Moderation
+                Moderasi Laporan
                 @php $pendingCount = \App\Models\Report::where('status','pending')->count(); @endphp
                 @if($pendingCount > 0)
                 <span class="ml-auto bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">{{ $pendingCount }}</span>
@@ -74,7 +74,7 @@
             <a href="{{ route('admin.users.index') }}"
                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition {{ request()->routeIs('admin.users*') ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-900/30' : 'text-slate-300 hover:bg-slate-800 hover:text-white' }}">
                 <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-                Users
+                Kelola Pengguna
             </a>
         </nav>
 
@@ -83,7 +83,7 @@
             <a href="{{ route('home') }}" target="_blank"
                class="flex items-center gap-2 px-3 py-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 text-xs font-semibold transition">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                View Public Site
+                Lihat Situs Publik
             </a>
             <div class="flex items-center gap-3 px-3 py-2">
                 <div class="w-7 h-7 rounded-full bg-emerald-600 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
@@ -93,7 +93,7 @@
                     <p class="text-white text-xs font-semibold truncate">{{ Auth::user()->name ?? 'Admin' }}</p>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <button type="submit" class="text-slate-500 hover:text-red-400 text-[10px] font-medium transition">Sign Out</button>
+                        <button type="submit" class="text-slate-500 hover:text-red-400 text-[10px] font-medium transition">Keluar</button>
                     </form>
                 </div>
             </div>
@@ -106,9 +106,10 @@
         {{-- Top Bar --}}
         <header class="bg-white border-b border-slate-200 px-8 py-4 flex items-center justify-between sticky top-0 z-30 shadow-sm">
             <div>
-                <h2 class="text-lg font-bold text-slate-900">@yield('page_title', 'Dashboard')</h2>
-                <p class="text-xs text-slate-400 mt-0.5">@yield('page_subtitle', 'Palestine Knowledge Hub CMS')</p>
+                <h2 class="text-lg font-bold text-slate-900">@yield('page_title', 'Dashboard Admin')</h2>
+                <p class="text-xs text-slate-400 mt-0.5">@yield('page_subtitle', 'Panel Administrasi Palestine Knowledge Hub')</p>
             </div>
+
             <div class="flex items-center gap-3">
                 @if(session('success'))
                 <div class="flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold px-3 py-1.5 rounded-xl">

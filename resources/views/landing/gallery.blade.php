@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Gallery - Historical Images of Palestine | Palestine Knowledge Hub')
-@section('meta_description', 'Explore a curated gallery of historical, cultural, and contemporary photographs documenting Palestinian life, heritage, and resilience.')
+@section('title', 'Galeri Foto & Warisan Sejarah Palestina | Palestine Knowledge Hub')
+@section('meta_description', 'Koleksi kurasi foto bersejarah, dokumen otentik, dan kesaksian visual yang mendokumentasikan kebudayaan dan sejarah Palestina dari masa ke masa.')
 
 @section('content')
 
@@ -10,13 +10,13 @@
     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,#10b981,transparent_60%)]"></div>
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs uppercase tracking-wider">
-            Historical Archive & Gallery
+            Arsip Sejarah & Galeri Foto
         </span>
         <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mt-3">
-            Visual Heritage of Palestine
+            Warisan Visual & Foto Sejarah Palestina
         </h1>
         <p class="mt-4 text-slate-300 text-lg max-w-2xl leading-relaxed">
-            A curated collection of photographs, documents, and visual testimonies showcasing Palestinian culture, history, and resilience through the ages.
+            Koleksi kurasi foto bersejarah, dokumen otentik, dan kesaksian visual yang mendokumentasikan kebudayaan dan sejarah Palestina dari masa ke masa.
         </p>
     </div>
 </section>
@@ -28,7 +28,7 @@
         <div class="flex flex-wrap gap-2">
             <a href="{{ route('gallery') }}"
                class="px-4 py-1.5 rounded-full text-sm font-semibold border transition {{ !request('category') ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white' : 'border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-emerald-500 hover:text-emerald-600' }}">
-                All
+                Semua Kategori
             </a>
             @foreach($categories as $cat)
             <a href="{{ route('gallery', ['category' => $cat]) }}"
@@ -37,6 +37,7 @@
             </a>
             @endforeach
         </div>
+
         {{-- Search --}}
         <form method="GET" action="{{ route('gallery') }}" class="flex gap-2">
             @if(request('category'))<input type="hidden" name="category" value="{{ request('category') }}">@endif

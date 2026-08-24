@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Real-Time Palestine News Hub - Live Updates')
+@section('title', 'Pusat Berita Terkini Palestina - Real-Time Updates | Palestine Knowledge Hub')
 
 @section('content')
 
@@ -8,19 +8,20 @@
 <section class="bg-slate-900 text-white py-16 border-b border-slate-800 relative">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="max-w-3xl">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/20 border border-red-500/40 text-red-400 text-xs font-bold uppercase tracking-wider mb-4">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
-                Live API News Integration
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-600/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                Integrasi Berita Real-Time
             </div>
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
-                Palestine Real-Time News Hub
+                Pusat Berita Terkini Palestina
             </h1>
             <p class="mt-4 text-slate-300 text-lg leading-relaxed">
-                Stay updated with live news feeds, international reports, humanitarian documentations, and verified news updates automatically synced from global API sources.
+                Dapatkan berita terkini, laporan internasional, dan dokumentasi kemanusiaan yang terintegrasi secara langsung dari sumber API berita terverifikasi.
             </p>
         </div>
     </div>
 </section>
+
 
 <!-- Filter & Search Section -->
 <section class="py-12 bg-slate-50 dark:bg-slate-950 min-h-screen">

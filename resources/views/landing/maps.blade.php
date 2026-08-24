@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Interactive Geography & Maps of Palestine | Palestine Knowledge Hub')
-@section('meta_description', 'Explore historic cities, ports, sacred sanctuaries, and cultural centers across Palestine using our interactive map.')
+@section('title', 'Peta & Geografi Interaktif Palestina | Palestine Knowledge Hub')
+@section('meta_description', 'Jelajahi kota-kota bersejarah, pelabuhan, tempat suci, dan pusat kebudayaan Palestina melalui peta interaktif.')
 
 @push('styles')
 <style>
@@ -41,14 +41,14 @@
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div class="max-w-3xl">
-            <span class="px-3.5 py-1.5 rounded-full bg-blue-500/20 text-blue-300 font-bold text-xs uppercase tracking-wider">
-                Interactive Geographic Atlas
+            <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs uppercase tracking-wider">
+                Atlas Geografi Interaktif
             </span>
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mt-3">
-                Geography & Historical Cities of Palestine
+                Geografi & Kota Bersejarah Palestina
             </h1>
             <p class="mt-4 text-slate-300 text-base sm:text-lg leading-relaxed">
-                Click any city or historical marker on the interactive map to explore its history, landmarks, maritime trade legacy, and cultural heritage.
+                Klik kota atau penanda bersejarah pada peta interaktif untuk mempelajari sejarah, landmark penting, dan warisan kebudayaannya.
             </p>
         </div>
     </div>
@@ -60,14 +60,17 @@
         {{-- Map Filter Bar --}}
         <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm mb-6 flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0">
-                <span class="font-bold text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mr-2">Filter Region:</span>
+                <span class="font-bold text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mr-2">Filter Wilayah:</span>
                 <button onclick="filterMap('All')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-emerald-600 text-white transition">
-                    All Locations
+                    Semua Lokasi
                 </button>
                 <button onclick="filterMap('Historic Capital')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition">
-                    Historic Capitals
+                    Kota Bersejarah
                 </button>
                 <button onclick="filterMap('Port City')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition">
+                    Kota Pelabuhan
+                </button>
+
                     Ports & Coastal
                 </button>
                 <button onclick="filterMap('Sacred Site')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition">

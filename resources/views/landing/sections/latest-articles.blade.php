@@ -5,14 +5,14 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
                 <span class="px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold text-xs uppercase tracking-wider">
-                    Educational Articles
+                    Artikel Edukasi
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
-                    Featured & Popular Readings
+                    Kajian & Artikel Pilihan
                 </h2>
             </div>
             <a href="{{ route('articles') }}" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:underline">
-                View All Articles →
+                Lihat Semua Artikel →
             </a>
         </div>
 
@@ -31,7 +31,7 @@
                         @endif
                         <div class="absolute top-4 left-4">
                             <span class="px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold">
-                                {{ $article->category->name ?? 'General' }}
+                                {{ $article->category->name ?? 'Umum' }}
                             </span>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                             <span>•</span>
                             <span class="inline-flex items-center gap-1">
                                 <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                                {{ $article->reading_time }} min read
+                                {{ $article->reading_time }} menit baca
                             </span>
                         </div>
 
@@ -66,10 +66,10 @@
                 <div class="p-6 pt-0 flex items-center justify-between">
                     <span class="text-xs text-slate-400 font-medium inline-flex items-center gap-1">
                         <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                        {{ number_format($article->views) }} views
+                        {{ number_format($article->views) }} kali dibaca
                     </span>
                     <a href="{{ route('articles.show', $article->slug) }}" class="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline">
-                        <span>Read Article</span>
+                        <span>Baca Artikel</span>
                         <span>→</span>
                     </a>
                 </div>
@@ -82,3 +82,4 @@
     </div>
 
 </section>
+

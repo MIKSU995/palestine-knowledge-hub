@@ -4,14 +4,14 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
             <div>
                 <span class="px-3.5 py-1.5 rounded-full bg-amber-500/20 text-amber-300 font-bold text-xs uppercase tracking-wider">
-                    Historical Chronology
+                    Kronologi Sejarah
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-3">
-                    Key Eras in Modern Palestine History
+                    Peristiwa Penting Sejarah Modern Palestina
                 </h2>
             </div>
             <a href="{{ route('timeline') }}" class="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:underline">
-                Explore Interactive Timeline →
+                Buka Linimasa Interaktif →
             </a>
         </div>
 
@@ -21,7 +21,7 @@
             <div class="p-6 rounded-3xl bg-slate-800/80 border border-slate-700 hover:border-amber-500/60 transition duration-300 flex flex-col justify-between">
                 <div>
                     <span class="px-3 py-1 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold">
-                        {{ $event->year }}
+                        Tahun {{ $event->year }}
                     </span>
                     @if($event->image_url)
                     <div class="mt-3 rounded-xl overflow-hidden h-36 bg-slate-900 shadow">
@@ -32,7 +32,7 @@
                         {{ $event->title }}
                     </h3>
                     <p class="text-xs text-slate-400 mt-2 font-medium">
-                        {{ $event->era }}
+                        Era: {{ $event->era }}
                     </p>
                     <p class="text-sm text-slate-300 mt-3 line-clamp-3 leading-relaxed">
                         {{ $event->description }}
@@ -40,7 +40,7 @@
                 </div>
 
                 <a href="{{ route('timeline') }}#event-{{ $event->id }}" class="mt-6 text-xs font-bold text-amber-400 hover:underline inline-flex items-center gap-1">
-                    <span>Read Historical Context</span>
+                    <span>Baca Konteks Sejarah</span>
                     <span>→</span>
                 </a>
             </div>

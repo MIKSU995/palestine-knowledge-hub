@@ -1,4 +1,4 @@
-<section class="py-20 bg-gradient-to-br from-emerald-800 via-emerald-900 to-slate-950 text-white relative overflow-hidden">
+<section class="py-20 bg-gradient-to-br from-emerald-800 via-emerald-900 to-slate-950 text-white relative overflow-hidden w-full max-w-full">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-400/10 via-transparent to-transparent pointer-events-none"></div>
 
     <div class="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-6">

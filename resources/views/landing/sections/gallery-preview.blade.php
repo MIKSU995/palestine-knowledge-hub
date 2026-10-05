@@ -1,4 +1,4 @@
-<section class="py-20 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 transition-colors">
+<section class="py-20 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 transition-colors relative overflow-hidden w-full max-w-full">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">

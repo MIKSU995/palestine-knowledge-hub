@@ -1,4 +1,4 @@
-<section id="humanitarian-hub" class="py-20 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-200 border-b border-slate-200 dark:border-slate-800">
+<section id="humanitarian-hub" class="py-20 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-200 border-b border-slate-200 dark:border-slate-800 relative overflow-hidden w-full max-w-full">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 

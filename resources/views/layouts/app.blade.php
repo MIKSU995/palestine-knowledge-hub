@@ -38,8 +38,14 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <style>
-        body {
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden !important;
             font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        main {
+            max-width: 100vw;
+            overflow-x: hidden !important;
         }
         .glass-panel {
             background: rgba(255, 255, 255, 0.85);
@@ -96,7 +102,7 @@
     @stack('styles')
 </head>
 
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-200">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-200 overflow-x-hidden max-w-full">
 
     <!-- Reading Progress Bar -->
     <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-emerald-500 via-emerald-600 to-red-600 z-[9999] transition-all duration-150" style="width: 0%"></div>
@@ -118,7 +124,7 @@
     @endif
 
     <!-- Main Content -->
-    <main class="flex-grow">
+    <main class="flex-grow overflow-x-hidden max-w-full">
         @yield('content')
     </main>
 

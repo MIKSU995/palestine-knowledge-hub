@@ -53,8 +53,8 @@ $routes = [
 try {
     require __DIR__ . '/vendor/autoload.php';
     $app = require_once __DIR__ . '/bootstrap/app.php';
-    $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
-    $kernel->bootstrap();
+    $httpKernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+    $httpKernel->bootstrap();
 
     $articles = \App\Models\Article::all();
     foreach ($articles as $article) {
@@ -80,17 +80,20 @@ if (file_exists(__DIR__ . '/public/build/manifest.json')) {
 
 // 4. Process each route
 foreach ($routes as $route => $filename) {
-    $url = $baseUrl . $route;
-    echo "Fetching $url -> $filename...\n";
+    echo "Rendering $route -> $filename...\n";
 
-    $context = stream_context_create([
-        'http' => ['timeout' => 10, 'ignore_errors' => true]
-    ]);
+    try {
+        $req = Illuminate\Http\Request::create($route, 'GET');
+        $app->instance('request', $req);
+        $res = $httpKernel->handle($req);
+        $html = $res->getContent();
+    } catch (\Exception $e) {
+        echo "Error rendering $route: " . $e->getMessage() . "\n";
+        continue;
+    }
 
-    $html = @file_get_contents($url, false, $context);
-
-    if ($html === false) {
-        echo "Error fetching $url\n";
+    if (empty($html)) {
+        echo "Empty output for $route\n";
         continue;
     }
 

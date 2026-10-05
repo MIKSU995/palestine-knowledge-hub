@@ -8,19 +8,22 @@
 <section class="bg-slate-900 text-white py-16 border-b border-slate-800 relative">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="max-w-3xl">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-600/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-                Integrasi Berita Real-Time
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-600/20 border border-rose-500/40 text-rose-400 text-xs font-bold uppercase tracking-wider mb-4">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
+                Integrasi API Instagram @thegaza.update & Berita Real-Time
             </div>
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
-                Pusat Berita Terkini Palestina
+                Pusat Berita Terkini & Live Gaza Update
             </h1>
             <p class="mt-4 text-slate-300 text-lg leading-relaxed">
-                Dapatkan berita terkini, laporan internasional, dan dokumentasi kemanusiaan yang terintegrasi secara langsung dari sumber API berita terverifikasi.
+                Aliran update langsung dari Instagram @thegaza.update, laporan kemanusiaan, dan agregasi berita terverifikasi dari media nasional & internasional.
             </p>
         </div>
     </div>
 </section>
+
+<!-- The Gaza Update Instagram Live Feed Section -->
+@include('landing.sections.gaza-update-section')
 
 
 <!-- Filter & Search Section -->

@@ -35,6 +35,11 @@
                     Beranda
                 </a>
 
+                <a href="/#gaza-update" class="whitespace-nowrap relative text-sm font-semibold text-rose-600 dark:text-rose-400 hover:text-rose-700 transition flex items-center gap-1">
+                    <span>Gaza Live 📸</span>
+                    <span class="px-1.5 py-0.2 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300 text-[10px] font-extrabold uppercase">Feed</span>
+                </a>
+
                 <a href="{{ route('news.index') }}" class="whitespace-nowrap relative text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition flex items-center gap-1.5 {{ request()->routeIs('news.*') ? 'text-emerald-600 dark:text-emerald-400 font-bold' : '' }}">
                     <span>Berita</span>
                     <span class="flex h-2 w-2 relative">
@@ -71,6 +76,12 @@
 
             <!-- Right Tools & User Actions -->
             <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+
+                <!-- Humanitarian Aid CTA Button -->
+                <a href="/#humanitarian-hub" class="px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-rose-600 to-purple-600 hover:opacity-95 text-white font-extrabold text-xs transition shadow-md flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/></svg>
+                    <span class="hidden sm:inline">Bantu Gaza</span>
+                </a>
 
 
                 <!-- Global Search Trigger -->

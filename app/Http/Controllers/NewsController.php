@@ -36,12 +36,27 @@ class NewsController extends Controller
         $newsList = $query->latest('published_at')->paginate(12);
         $categories = News::distinct()->pluck('category')->filter()->values();
 
-        return view('landing.news', compact('newsList', 'categories'));
+        $gazaService = app(\App\Services\GazaUpdateService::class);
+        $gazaUpdates = $gazaService->getLatestUpdates(6);
+
+        return view('landing.news', compact('newsList', 'categories', 'gazaUpdates'));
     }
 
     public function liveTicker()
     {
         $latest = News::latest('published_at')->take(8)->get(['id', 'title', 'source', 'published_at', 'url']);
         return response()->json($latest);
+    }
+
+    public function gazaUpdates()
+    {
+        $service = app(\App\Services\GazaUpdateService::class);
+        return response()->json([
+            'status' => 'success',
+            'handle' => '@thegaza.update',
+            'followers' => '2.4M',
+            'updated_at' => now()->toIso8601String(),
+            'data' => $service->getLatestUpdates(12)
+        ]);
     }
 }

@@ -42,6 +42,9 @@ class LandingController extends Controller
         $newsService = app(NewsService::class);
         $liveNews = $newsService->getLatestNews(6);
 
+        $gazaService = app(\App\Services\GazaUpdateService::class);
+        $gazaUpdates = $gazaService->getLatestUpdates(6);
+
         $stats = [
             'total_articles' => Article::where('status', 'published')->count(),
             'total_timeline' => TimelineEvent::count(),
@@ -56,6 +59,7 @@ class LandingController extends Controller
             'timelinePreview',
             'galleryPreview',
             'liveNews',
+            'gazaUpdates',
             'stats'
         ));
     }

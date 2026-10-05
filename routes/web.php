@@ -25,6 +25,7 @@ Route::get('/articles/{slug}', [LandingController::class, 'showArticle'])->name(
 
 Route::get('/news', [NewsController::class, 'index'])->name('news.index');
 Route::get('/api/news/ticker', [NewsController::class, 'liveTicker'])->name('news.ticker');
+Route::get('/api/gaza-updates', [NewsController::class, 'gazaUpdates'])->name('api.gaza-updates');
 
 Route::get('/timeline', [LandingController::class, 'timeline'])->name('timeline');
 Route::get('/maps', [LandingController::class, 'maps'])->name('maps');

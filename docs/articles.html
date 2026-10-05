@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="3uchSrpOZUjwmCma1MCpPyPaFVafjqT6E6vkHCjN">
+    <meta name="csrf-token" content="dnTH4JvW9NS4BlaJv67moGPwVdGKwqGErJaIEmBw">
 
     <title>Articles &amp; Publications — Palestine Knowledge Hub</title>
 
@@ -35,7 +35,7 @@
         }
     </script>
 
-    
+    <link rel="preload" as="style" href="http://localhost/build/assets/app-DNUesSB3.css" /><link rel="modulepreload" as="script" href="http://localhost/build/assets/app-BfpX1doZ.js" /><link rel="stylesheet" href="http://localhost/build/assets/app-DNUesSB3.css" />
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -92,7 +92,7 @@
             animation: shimmerBorder 6s linear infinite;
         }
     </style>
-    <link rel="stylesheet" href="build/assets/app-CqY1sYK7.css">
+    <link rel="stylesheet" href="build/assets/app-DNUesSB3.css">
 <script type="module" src="build/assets/app-BfpX1doZ.js"></script>
 </head>
 
@@ -139,7 +139,12 @@
                     Beranda
                 </a>
 
-                <a href="news.html" class="whitespace-nowrap relative text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition flex items-center gap-1.5 ">
+                <a href="/#gaza-update" class="whitespace-nowrap relative text-sm font-semibold text-rose-600 dark:text-rose-400 hover:text-rose-700 transition flex items-center gap-1">
+                    <span>Gaza Live 📸</span>
+                    <span class="px-1.5 py-0.2 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300 text-[10px] font-extrabold uppercase">Feed</span>
+                </a>
+
+                <a href="http://localhost/news" class="whitespace-nowrap relative text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition flex items-center gap-1.5 ">
                     <span>Berita</span>
                     <span class="flex h-2 w-2 relative">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -147,27 +152,27 @@
                     </span>
                 </a>
 
-                <a href="timeline.html" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
+                <a href="http://localhost/timeline" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
                     Linimasa
                 </a>
 
-                <a href="maps.html" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
+                <a href="http://localhost/maps" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
                     Peta
                 </a>
 
-                <a href="articles.html" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition text-emerald-600 dark:text-emerald-400 font-bold">
+                <a href="http://localhost/articles" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition text-emerald-600 dark:text-emerald-400 font-bold">
                     Artikel
                 </a>
 
-                <a href="gallery.html" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
+                <a href="http://localhost/gallery" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
                     Galeri
                 </a>
 
-                <a href="resources.html" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
+                <a href="http://localhost/resources" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
                     Materi
                 </a>
 
-                <a href="quiz.html" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
+                <a href="http://localhost/quiz" class="whitespace-nowrap text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition ">
                     Kuis
                 </a>
 
@@ -175,6 +180,12 @@
 
             <!-- Right Tools & User Actions -->
             <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+
+                <!-- Humanitarian Aid CTA Button -->
+                <a href="/#humanitarian-hub" class="px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-rose-600 to-purple-600 hover:opacity-95 text-white font-extrabold text-xs transition shadow-md flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/></svg>
+                    <span class="hidden sm:inline">Bantu Gaza</span>
+                </a>
 
 
                 <!-- Global Search Trigger -->
@@ -191,12 +202,12 @@
                 </button>
 
                 <!-- Saved Bookmarks Button -->
-                <a href="bookmarks.html" class="p-2.5 rounded-xl text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 bg-slate-100 dark:bg-slate-800 transition" title="Tersimpan">
+                <a href="http://localhost/bookmarks" class="p-2.5 rounded-xl text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 bg-slate-100 dark:bg-slate-800 transition" title="Tersimpan">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
                 </a>
 
                 <!-- User Dropdown / Auth Link -->
-                                <a href="index.html" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
+                                <a href="http://localhost/login" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm hover:shadow">
                     Masuk
                 </a>
                 
@@ -215,14 +226,14 @@
     <!-- Mobile Drawer -->
     <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-4 space-y-3">
         <a href="index.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Beranda</a>
-        <a href="news.html" class="block font-semibold text-emerald-600 dark:text-emerald-400">Berita Terkini</a>
-        <a href="timeline.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Linimasa Sejarah</a>
-        <a href="maps.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Peta Interaktif</a>
-        <a href="articles.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Artikel Edukasi</a>
-        <a href="gallery.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Galeri Foto</a>
-        <a href="resources.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Materi Edukasi</a>
-        <a href="quiz.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Kuis Interaktif</a>
-        <a href="bookmarks.html" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Artikel Tersimpan</a>
+        <a href="http://localhost/news" class="block font-semibold text-emerald-600 dark:text-emerald-400">Berita Terkini</a>
+        <a href="http://localhost/timeline" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Linimasa Sejarah</a>
+        <a href="http://localhost/maps" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Peta Interaktif</a>
+        <a href="http://localhost/articles" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Artikel Edukasi</a>
+        <a href="http://localhost/gallery" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Galeri Foto</a>
+        <a href="http://localhost/resources" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Materi Edukasi</a>
+        <a href="http://localhost/quiz" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Kuis Interaktif</a>
+        <a href="http://localhost/bookmarks" class="block font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-600">Artikel Tersimpan</a>
     </div>
 
 </nav>
@@ -250,7 +261,7 @@
 
         
         <div class="mt-8 max-w-2xl">
-            <form action="articles.html" method="GET" class="relative">
+            <form action="http://localhost/articles" method="GET" class="relative">
                 <div class="flex items-center bg-slate-800/90 border border-slate-700 rounded-2xl p-2 shadow-2xl focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-500/20 transition">
                     <svg class="w-6 h-6 text-slate-400 ml-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -276,27 +287,27 @@
         
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
             <div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
-                <a href="articles.html"
+                <a href="http://localhost/articles"
                    class="px-4 py-2 rounded-2xl text-xs font-bold transition flex-shrink-0 bg-emerald-600 text-white shadow-lg shadow-emerald-900/20">
                     All Categories
                 </a>
-                                <a href="articles.html?category=2"
+                                <a href="http://localhost/articles?category=2"
                    class="px-4 py-2 rounded-2xl text-xs font-bold transition flex-shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-emerald-500">
                     Culture &amp; Arts
                 </a>
-                                <a href="articles.html?category=5"
+                                <a href="http://localhost/articles?category=5"
                    class="px-4 py-2 rounded-2xl text-xs font-bold transition flex-shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-emerald-500">
                     Educational Guides
                 </a>
-                                <a href="articles.html?category=3"
+                                <a href="http://localhost/articles?category=3"
                    class="px-4 py-2 rounded-2xl text-xs font-bold transition flex-shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-emerald-500">
                     Geography &amp; Maps
                 </a>
-                                <a href="articles.html?category=1"
+                                <a href="http://localhost/articles?category=1"
                    class="px-4 py-2 rounded-2xl text-xs font-bold transition flex-shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-emerald-500">
                     History &amp; Heritage
                 </a>
-                                <a href="articles.html?category=4"
+                                <a href="http://localhost/articles?category=4"
                    class="px-4 py-2 rounded-2xl text-xs font-bold transition flex-shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-emerald-500">
                     Human Rights &amp; Law
                 </a>
@@ -310,7 +321,7 @@
         
                         <div class="mb-12 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 grid lg:grid-cols-12">
             <div class="lg:col-span-7 relative min-h-[320px] lg:min-h-[420px] bg-slate-900">
-                <img loading="lazy" src="images/timeline/balfour-declaration-1917.jpg" alt="The Balfour Declaration of 1917 &amp; The Beginning of British Mandatory Palestine" class="w-full h-full object-cover">
+                <img loading="lazy" src="http://localhost/images/timeline/balfour-declaration-1917.jpg" alt="The Balfour Declaration of 1917 &amp; The Beginning of British Mandatory Palestine" class="w-full h-full object-cover">
                 <div class="absolute top-4 left-4">
                     <span class="px-3 py-1 rounded-full bg-emerald-600 text-white text-xs font-extrabold uppercase tracking-wider shadow-md inline-flex items-center gap-1">
                         <svg class="w-3.5 h-3.5 text-amber-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -330,7 +341,7 @@
                         </span>
                     </div>
                     <h2 class="text-2xl lg:text-3xl font-extrabold text-slate-900 dark:text-white leading-snug">
-                        <a href="articles/balfour-declaration-1917-british-mandate" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition">
+                        <a href="http://localhost/articles/balfour-declaration-1917-british-mandate" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition">
                             The Balfour Declaration of 1917 &amp; The Beginning of British Mandatory Palestine
                         </a>
                     </h2>
@@ -343,14 +354,14 @@
                     <div class="flex items-center gap-4 text-xs text-slate-400">
                         <span class="inline-flex items-center gap-1">
                             <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                            1,847 views
+                            1,849 views
                         </span>
                         <span class="inline-flex items-center gap-1">
                             <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                             1 min read
                         </span>
                     </div>
-                    <a href="articles/balfour-declaration-1917-british-mandate" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-900/30 transition flex items-center gap-2">
+                    <a href="http://localhost/articles/balfour-declaration-1917-british-mandate" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-900/30 transition flex items-center gap-2">
                         Read Article →
                     </a>
                 </div>
@@ -364,7 +375,7 @@
                 <div>
                     
                     <div class="relative h-52 overflow-hidden bg-slate-900">
-                        <img loading="lazy" src="images/timeline/un-partition-plan-1947.jpg" alt="UN Resolution 181 (1947) &amp; The Partition Plan of Palestine" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img loading="lazy" src="http://localhost/images/timeline/un-partition-plan-1947.jpg" alt="UN Resolution 181 (1947) &amp; The Partition Plan of Palestine" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3">
                             <span class="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-emerald-400 text-[11px] font-bold">
                                 Human Rights &amp; Law
@@ -388,7 +399,7 @@
                         </div>
 
                         <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2 leading-snug">
-                            <a href="articles/un-resolution-181-partition-plan-palestine-1947">
+                            <a href="http://localhost/articles/un-resolution-181-partition-plan-palestine-1947">
                                 UN Resolution 181 (1947) &amp; The Partition Plan of Palestine
                             </a>
                         </h3>
@@ -403,9 +414,9 @@
                 <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
                     <span class="flex items-center gap-1">
                         <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                        1,256 views
+                        1,258 views
                     </span>
-                    <a href="articles/un-resolution-181-partition-plan-palestine-1947" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
+                    <a href="http://localhost/articles/un-resolution-181-partition-plan-palestine-1947" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
                         Read →
                     </a>
                 </div>
@@ -415,7 +426,7 @@
                 <div>
                     
                     <div class="relative h-52 overflow-hidden bg-slate-900">
-                        <img loading="lazy" src="images/timeline/the-nakba-1948.jpg" alt="The Nakba of 1948: Mass Displacement and Palestinian Historical Memory" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img loading="lazy" src="http://localhost/images/timeline/the-nakba-1948.jpg" alt="The Nakba of 1948: Mass Displacement and Palestinian Historical Memory" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3">
                             <span class="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-emerald-400 text-[11px] font-bold">
                                 History &amp; Heritage
@@ -439,7 +450,7 @@
                         </div>
 
                         <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2 leading-snug">
-                            <a href="articles/the-nakba-1948-mass-displacement-palestinian-history">
+                            <a href="http://localhost/articles/the-nakba-1948-mass-displacement-palestinian-history">
                                 The Nakba of 1948: Mass Displacement and Palestinian Historical Memory
                             </a>
                         </h3>
@@ -454,9 +465,9 @@
                 <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
                     <span class="flex items-center gap-1">
                         <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                        2,417 views
+                        2,419 views
                     </span>
-                    <a href="articles/the-nakba-1948-mass-displacement-palestinian-history" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
+                    <a href="http://localhost/articles/the-nakba-1948-mass-displacement-palestinian-history" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
                         Read →
                     </a>
                 </div>
@@ -466,7 +477,7 @@
                 <div>
                     
                     <div class="relative h-52 overflow-hidden bg-slate-900">
-                        <img loading="lazy" src="images/timeline/six-day-war-1967.jpg" alt="The 1967 Six-Day War (Al-Naksah) and Occupation of Palestinian Lands" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img loading="lazy" src="http://localhost/images/timeline/six-day-war-1967.jpg" alt="The 1967 Six-Day War (Al-Naksah) and Occupation of Palestinian Lands" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3">
                             <span class="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-emerald-400 text-[11px] font-bold">
                                 Human Rights &amp; Law
@@ -490,7 +501,7 @@
                         </div>
 
                         <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2 leading-snug">
-                            <a href="articles/six-day-war-1967-naksah-occupation-palestinian-lands">
+                            <a href="http://localhost/articles/six-day-war-1967-naksah-occupation-palestinian-lands">
                                 The 1967 Six-Day War (Al-Naksah) and Occupation of Palestinian Lands
                             </a>
                         </h3>
@@ -505,9 +516,9 @@
                 <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
                     <span class="flex items-center gap-1">
                         <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                        1,636 views
+                        1,638 views
                     </span>
-                    <a href="articles/six-day-war-1967-naksah-occupation-palestinian-lands" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
+                    <a href="http://localhost/articles/six-day-war-1967-naksah-occupation-palestinian-lands" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
                         Read →
                     </a>
                 </div>
@@ -517,7 +528,7 @@
                 <div>
                     
                     <div class="relative h-52 overflow-hidden bg-slate-900">
-                        <img loading="lazy" src="images/timeline/first-intifada-1987.jpg" alt="The First Intifada (1987): Popular Resistance and Grassroots Mobilization" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img loading="lazy" src="http://localhost/images/timeline/first-intifada-1987.jpg" alt="The First Intifada (1987): Popular Resistance and Grassroots Mobilization" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3">
                             <span class="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-emerald-400 text-[11px] font-bold">
                                 History &amp; Heritage
@@ -541,7 +552,7 @@
                         </div>
 
                         <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2 leading-snug">
-                            <a href="articles/first-intifada-1987-popular-resistance-grassroots">
+                            <a href="http://localhost/articles/first-intifada-1987-popular-resistance-grassroots">
                                 The First Intifada (1987): Popular Resistance and Grassroots Mobilization
                             </a>
                         </h3>
@@ -556,9 +567,9 @@
                 <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
                     <span class="flex items-center gap-1">
                         <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                        1,496 views
+                        1,498 views
                     </span>
-                    <a href="articles/first-intifada-1987-popular-resistance-grassroots" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
+                    <a href="http://localhost/articles/first-intifada-1987-popular-resistance-grassroots" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
                         Read →
                     </a>
                 </div>
@@ -568,7 +579,7 @@
                 <div>
                     
                     <div class="relative h-52 overflow-hidden bg-slate-900">
-                        <img loading="lazy" src="images/dome-of-rock.jpg" alt="Architectural Heritage of Old City Jerusalem &amp; Al-Aqsa Compound" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img loading="lazy" src="http://localhost/images/dome-of-rock.jpg" alt="Architectural Heritage of Old City Jerusalem &amp; Al-Aqsa Compound" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3">
                             <span class="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-emerald-400 text-[11px] font-bold">
                                 Culture &amp; Arts
@@ -592,7 +603,7 @@
                         </div>
 
                         <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2 leading-snug">
-                            <a href="articles/architectural-heritage-old-city-jerusalem-al-aqsa">
+                            <a href="http://localhost/articles/architectural-heritage-old-city-jerusalem-al-aqsa">
                                 Architectural Heritage of Old City Jerusalem &amp; Al-Aqsa Compound
                             </a>
                         </h3>
@@ -607,9 +618,9 @@
                 <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
                     <span class="flex items-center gap-1">
                         <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                        1,986 views
+                        1,988 views
                     </span>
-                    <a href="articles/architectural-heritage-old-city-jerusalem-al-aqsa" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
+                    <a href="http://localhost/articles/architectural-heritage-old-city-jerusalem-al-aqsa" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
                         Read →
                     </a>
                 </div>
@@ -619,7 +630,7 @@
                 <div>
                     
                     <div class="relative h-52 overflow-hidden bg-slate-900">
-                        <img loading="lazy" src="images/cities/jaffa.jpg" alt="Historic Coastal Ports: Jaffa, Haifa, and Akko on the Mediterranean" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img loading="lazy" src="http://localhost/images/cities/jaffa.jpg" alt="Historic Coastal Ports: Jaffa, Haifa, and Akko on the Mediterranean" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3">
                             <span class="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-emerald-400 text-[11px] font-bold">
                                 Geography &amp; Maps
@@ -643,7 +654,7 @@
                         </div>
 
                         <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2 leading-snug">
-                            <a href="articles/historic-coastal-ports-jaffa-haifa-akko">
+                            <a href="http://localhost/articles/historic-coastal-ports-jaffa-haifa-akko">
                                 Historic Coastal Ports: Jaffa, Haifa, and Akko on the Mediterranean
                             </a>
                         </h3>
@@ -658,9 +669,9 @@
                 <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
                     <span class="flex items-center gap-1">
                         <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                        1,126 views
+                        1,128 views
                     </span>
-                    <a href="articles/historic-coastal-ports-jaffa-haifa-akko" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
+                    <a href="http://localhost/articles/historic-coastal-ports-jaffa-haifa-akko" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
                         Read →
                     </a>
                 </div>
@@ -670,7 +681,7 @@
                 <div>
                     
                     <div class="relative h-52 overflow-hidden bg-slate-900">
-                        <img loading="lazy" src="images/cities/ramallah.jpg" alt="Tatreez: The Living Art and Cultural Memory of Palestinian Embroidery" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img loading="lazy" src="http://localhost/images/cities/ramallah.jpg" alt="Tatreez: The Living Art and Cultural Memory of Palestinian Embroidery" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3">
                             <span class="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-emerald-400 text-[11px] font-bold">
                                 Culture &amp; Arts
@@ -694,7 +705,7 @@
                         </div>
 
                         <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2 leading-snug">
-                            <a href="articles/tatreez-living-art-cultural-memory-palestinian-embroidery">
+                            <a href="http://localhost/articles/tatreez-living-art-cultural-memory-palestinian-embroidery">
                                 Tatreez: The Living Art and Cultural Memory of Palestinian Embroidery
                             </a>
                         </h3>
@@ -709,9 +720,9 @@
                 <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
                     <span class="flex items-center gap-1">
                         <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                        1,356 views
+                        1,358 views
                     </span>
-                    <a href="articles/tatreez-living-art-cultural-memory-palestinian-embroidery" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
+                    <a href="http://localhost/articles/tatreez-living-art-cultural-memory-palestinian-embroidery" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
                         Read →
                     </a>
                 </div>
@@ -744,13 +755,16 @@
                     </h2>
                 </div>
                 <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
-                    Platform edukasi terbuka dan pusat berita terkini yang didedikasikan untuk mengarsipkan sejarah, kebudayaan, geografi, dan wawasan otentik tentang Palestina.
+                    Platform edukasi terbuka, live feed Instagram @thegaza.update, dan saluran bantuan kemanusiaan terverifikasi untuk rakyat Palestina.
                 </p>
-                <div class="pt-2 flex items-center gap-3">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                        Pembaruan Berita Real-Time Aktif
-                    </span>
+                <div class="pt-2 flex flex-wrap items-center gap-2">
+                    <a href="https://www.instagram.com/thegaza.update/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-semibold hover:bg-rose-500/20 transition">
+                        <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                        @thegaza.update Instagram Live
+                    </a>
+                    <a href="/#humanitarian-hub" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold hover:bg-emerald-500/20 transition">
+                        Akses Bantuan Terverifikasi
+                    </a>
                 </div>
             </div>
 
@@ -758,11 +772,11 @@
             <div>
                 <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Modul Utama</h3>
                 <ul class="space-y-2.5 text-sm">
-                    <li><a href="articles.html" class="hover:text-emerald-400 transition">Artikel & Essay</a></li>
-                    <li><a href="timeline.html" class="hover:text-emerald-400 transition">Linimasa Sejarah</a></li>
-                    <li><a href="maps.html" class="hover:text-emerald-400 transition">Peta & Geografi</a></li>
-                    <li><a href="gallery.html" class="hover:text-emerald-400 transition">Galeri Foto Sejarah</a></li>
-                    <li><a href="resources.html" class="hover:text-emerald-400 transition">Materi Pembelajaran</a></li>
+                    <li><a href="/#gaza-update" class="hover:text-rose-400 transition text-rose-300 font-bold">📸 Gaza Live Instagram Feed</a></li>
+                    <li><a href="/#humanitarian-hub" class="hover:text-emerald-400 transition text-emerald-400 font-bold">❤️ Akses Bantuan Kemanusiaan</a></li>
+                    <li><a href="http://localhost/articles" class="hover:text-emerald-400 transition">Artikel & Essay</a></li>
+                    <li><a href="http://localhost/timeline" class="hover:text-emerald-400 transition">Linimasa Sejarah</a></li>
+                    <li><a href="http://localhost/maps" class="hover:text-emerald-400 transition">Peta & Geografi</a></li>
                 </ul>
             </div>
 
@@ -770,21 +784,21 @@
             <div>
                 <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Fitur & Informasi</h3>
                 <ul class="space-y-2.5 text-sm">
-                    <li><a href="news.html" class="hover:text-emerald-400 transition">Pusat Berita Terkini</a></li>
-                    <li><a href="quiz.html" class="hover:text-emerald-400 transition">Kuis Interaktif</a></li>
-                    <li><a href="/learning/dashboard" class="hover:text-emerald-400 transition">Dashboard Edukasi</a></li>
-                    <li><a href="bookmarks.html" class="hover:text-emerald-400 transition">Artikel Tersimpan</a></li>
-                    <li><a href="/sitemap.xml" class="hover:text-emerald-400 transition">Peta Situs (Sitemap)</a></li>
+                    <li><a href="http://localhost/news" class="hover:text-emerald-400 transition">Pusat Berita Terkini</a></li>
+                    <li><a href="http://localhost/gallery" class="hover:text-emerald-400 transition">Galeri Foto Sejarah</a></li>
+                    <li><a href="http://localhost/resources" class="hover:text-emerald-400 transition">Materi Pembelajaran</a></li>
+                    <li><a href="http://localhost/quiz" class="hover:text-emerald-400 transition">Kuis Interaktif</a></li>
+                    <li><a href="http://localhost/sitemap.xml" class="hover:text-emerald-400 transition">Peta Situs (Sitemap)</a></li>
                 </ul>
             </div>
 
             <!-- Col 4: Buletin Edukasi -->
             <div>
                 <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Buletin Edukasi</h3>
-                <p class="text-xs text-slate-400 mb-3">Dapatkan artikel sejarah mingguan, rilis arsip baru, dan panduan edukasi langsung ke email Anda.</p>
+                <p class="text-xs text-slate-400 mb-3">Dapatkan rangkuman laporan kemanusiaan mingguan dan rilis materi edukasi langsung ke email Anda.</p>
                 <form onsubmit="event.preventDefault(); alert('Terima kasih telah berlangganan di Palestine Knowledge Hub!');" class="space-y-2">
                     <input type="email" required placeholder="Masukkan email Anda..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-sm text-white placeholder-slate-500 outline-none focus:border-emerald-500">
-                    <button type="submit" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition">
+                    <button type="submit" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:opacity-95 text-white font-semibold text-sm transition shadow-md">
                         Berlangganan
                     </button>
                 </form>
@@ -793,13 +807,13 @@
         </div>
 
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-            <p>© 2026 Palestine Knowledge Hub. Platform Edukasi & Informasi Otentik.</p>
+            <p>© 2026 Palestine Knowledge Hub. Platform Edukasi, Live Gaza Feed & Akses Kemanusiaan.</p>
             <div class="flex items-center gap-6">
-                <span>Pelajari</span>
+                <span>Edukasi</span>
                 <span>•</span>
-                <span>Pahami</span>
+                <span>Kemanusiaan</span>
                 <span>•</span>
-                <span>Ingat</span>
+                <span>Solidaritas</span>
             </div>
         </div>
     </div>

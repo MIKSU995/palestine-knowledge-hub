@@ -14,7 +14,7 @@
                 <div class="flex items-center gap-5 w-full lg:w-auto">
                     <!-- Instagram Gradient Ring Avatar -->
                     <div class="relative p-1 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 shrink-0">
-                        <img src="https://images.unsplash.com/photo-1547981609-4b6bf67db7ff?w=150&auto=format&fit=crop" alt="The Gaza Update" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-slate-900">
+                        <img src="https://images.unsplash.com/photo-1547981609-4b6bf67db7ff?w=150&auto=format&fit=crop" alt="The Palestine Circle" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-slate-900">
                         <span class="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-emerald-500 border-2 border-slate-900 flex items-center justify-center text-[10px]" title="Live Feed Connected">
                             <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
                         </span>
@@ -22,25 +22,25 @@
 
                     <div>
                         <div class="flex items-center gap-2 flex-wrap">
-                            <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">The Gaza Update</h2>
+                            <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">The Palestine Circle</h2>
                             <!-- Verified Badge -->
                             <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-400 text-xs font-bold">
                                 <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                                Verified Feed
+                                Verified Instagram Feed
                             </span>
                             <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold">
                                 Live Social API
                             </span>
                         </div>
                         <p class="text-slate-400 text-xs sm:text-sm mt-1 flex items-center gap-2">
-                            <span>@thegaza.update</span>
+                            <span>@thepalestinecircle</span>
                             <span>•</span>
-                            <span class="text-slate-300 font-semibold">2.4M Pengikut</span>
+                            <span class="text-slate-300 font-semibold">3.8M Pengikut</span>
                             <span>•</span>
                             <span class="text-emerald-400 font-medium">Pembaruan Lapangan 24/7</span>
                         </p>
                         <p class="text-slate-300 text-xs sm:text-sm mt-2 line-clamp-2 max-w-2xl">
-                            Saluran independen pendokumentasian berita, kondisi medis, dan aksi kemanusiaan di Gaza & Palestina secara langsung.
+                            Dokumentasi visual, laporan lapangan, dan informasi terverifikasi langsung dari komunitas kemanusiaan Palestina.
                         </p>
                     </div>
                 </div>
@@ -52,9 +52,9 @@
                         <span>Sinkronkan Live</span>
                     </button>
 
-                    <a href="https://www.instagram.com/thegaza.update/" target="_blank" rel="noopener" class="flex-1 lg:flex-none px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-500 via-rose-600 to-purple-600 hover:opacity-95 text-white font-extrabold text-xs sm:text-sm transition shadow-lg shadow-rose-950/40 flex items-center justify-center gap-2">
+                    <a href="https://www.instagram.com/thepalestinecircle/" target="_blank" rel="noopener" class="flex-1 lg:flex-none px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-500 via-rose-600 to-purple-600 hover:opacity-95 text-white font-extrabold text-xs sm:text-sm transition shadow-lg shadow-rose-950/40 flex items-center justify-center gap-2">
                         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        <span>Follow @thegaza.update</span>
+                        <span>Follow @thepalestinecircle</span>
                     </a>
                 </div>
 
@@ -83,7 +83,7 @@
 
             <div class="text-xs text-slate-400 flex items-center gap-1.5 font-medium">
                 <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                <span>Terhubung API Instagram & Field Reports</span>
+                <span>Terhubung API Instagram @thepalestinecircle</span>
             </div>
         </div>
 
@@ -158,7 +158,7 @@
                             </span>
                         </div>
 
-                        <a href="{{ $post['post_url'] }}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-rose-600 to-purple-600 text-white font-bold text-xs hover:opacity-90 transition shadow">
+                        <a href="https://www.instagram.com/thepalestinecircle/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-rose-600 to-purple-600 text-white font-bold text-xs hover:opacity-90 transition shadow">
                             <span>Buka di Instagram</span>
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                         </a>
@@ -176,9 +176,9 @@
 
         <!-- Live Refresh & View All Action -->
         <div class="mt-12 text-center">
-            <a href="https://www.instagram.com/thegaza.update/" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm border border-slate-700 transition shadow-xl group">
+            <a href="https://www.instagram.com/thepalestinecircle/" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm border border-slate-700 transition shadow-xl group">
                 <svg class="w-5 h-5 text-rose-500 fill-current group-hover:scale-110 transition" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                <span>Lihat Seluruh Update Langsung di @thegaza.update Instagram</span>
+                <span>Lihat Seluruh Update Langsung di @thepalestinecircle Instagram</span>
             </a>
         </div>
 
@@ -213,7 +213,7 @@
             .then(res => res.json())
             .then(data => {
                 if(data.status === 'success' && data.data) {
-                    console.log('Live Gaza Updates synced:', data.data.length, 'posts');
+                    console.log('Live Palestine Circle Updates synced:', data.data.length, 'posts');
                 }
             })
             .catch(err => console.log('Notice: Offline static feed used'))

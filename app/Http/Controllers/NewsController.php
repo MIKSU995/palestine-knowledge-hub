@@ -53,8 +53,8 @@ class NewsController extends Controller
         $service = app(\App\Services\GazaUpdateService::class);
         return response()->json([
             'status' => 'success',
-            'handle' => '@thegaza.update',
-            'followers' => '2.4M',
+            'handle' => '@thepalestinecircle',
+            'followers' => '3.8M',
             'updated_at' => now()->toIso8601String(),
             'data' => $service->getLatestUpdates(12)
         ]);

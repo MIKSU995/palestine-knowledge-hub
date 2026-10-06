@@ -105,7 +105,7 @@
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-200 overflow-x-hidden max-w-full">
 
     <!-- Reading Progress Bar -->
-    <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-emerald-500 via-emerald-600 to-red-600 z-[9999] transition-all duration-150" style="width: 0%"></div>
+    <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-red-600 via-rose-600 to-red-700 z-[9999] transition-all duration-150" style="width: 0%"></div>
 
     <!-- Main Navigation Header -->
     @include('components.navbar')
@@ -113,7 +113,7 @@
     <!-- Flash Notifications -->
     @if(session('success'))
     <div class="max-w-7xl mx-auto px-6 mt-4">
-        <div class="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-300 flex items-center justify-between">
+        <div class="p-4 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-700 dark:text-red-300 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 <span>{{ session('success') }}</span>
@@ -224,7 +224,7 @@
                             categories.forEach(cat => {
                                 if (data[cat] && data[cat].length > 0) {
                                     totalFound += data[cat].length;
-                                    html += `<div class="mb-3"><h4 class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2">${cat}</h4><div class="space-y-1">`;
+                                    html += `<div class="mb-3"><h4 class="text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider mb-2">${cat}</h4><div class="space-y-1">`;
                                     data[cat].forEach(item => {
                                         html += `
                                             <a href="${item.url}" class="block p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center justify-between">

@@ -55,13 +55,13 @@
 
                 <!-- Hero Action Buttons -->
                 <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="#humanitarian-hub" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-rose-600 to-purple-600 hover:opacity-95 text-white font-extrabold text-sm sm:text-base transition duration-300 shadow-xl shadow-rose-950/40 flex items-center gap-2">
+                    <a href="#humanitarian-hub" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:opacity-95 text-white font-extrabold text-sm sm:text-base transition duration-300 shadow-xl shadow-red-950/50 flex items-center gap-2">
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/></svg>
-                        <span>Bantu Gaza Sekarang</span>
+                        <span>Saluran Donasi Resmi</span>
                     </a>
 
                     <a href="#gaza-update" class="px-6 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-sm sm:text-base transition duration-300 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                        <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                         <span>Update Instagram Gaza</span>
                     </a>
                 </div>

@@ -15,13 +15,13 @@
     </div>
 
     <a href="{{ route('admin.articles.create') }}"
-        class="bg-emerald-600 text-white px-5 py-2.5 rounded-xl font-bold hover:bg-emerald-700 transition">
+        class="bg-red-600 text-white px-5 py-2.5 rounded-xl font-bold hover:bg-red-700 transition">
         + Artikel Baru
     </a>
 </div>
 
 @if(session('success'))
-<div class="bg-emerald-100 text-emerald-700 p-4 rounded-xl mb-5 font-semibold">
+<div class="bg-red-100 text-red-700 p-4 rounded-xl mb-5 font-semibold">
     {{ session('success') }}
 </div>
 @endif
@@ -46,7 +46,7 @@
         {{ $article->category->name ?? '-' }}
     </td>
     <td class="p-4">
-        <span class="px-2.5 py-1 rounded-lg text-xs font-bold {{ $article->status === 'published' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700' }}">
+        <span class="px-2.5 py-1 rounded-lg text-xs font-bold {{ $article->status === 'published' ? 'bg-red-100 text-red-700' : 'bg-amber-100 text-amber-700' }}">
             {{ $article->status === 'published' ? 'Terbit' : 'Draf' }}
         </span>
     </td>

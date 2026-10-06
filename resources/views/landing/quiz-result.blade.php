@@ -7,7 +7,7 @@
 <div class="min-h-screen bg-slate-950 text-white">
 
     {{-- Result Hero --}}
-    <div class="bg-gradient-to-br {{ $passed ? 'from-emerald-900 via-teal-900' : 'from-red-900 via-rose-900' }} to-slate-900 py-16 text-center border-b border-slate-800">
+    <div class="bg-gradient-to-br {{ $passed ? 'from-red-900 via-rose-900' : 'from-red-950 via-slate-900' }} to-slate-900 py-16 text-center border-b border-slate-800">
         <div class="max-w-xl mx-auto px-6">
 
             {{-- Score Circle --}}
@@ -15,12 +15,12 @@
                 <svg class="w-36 h-36 transform -rotate-90" viewBox="0 0 144 144">
                     <circle cx="72" cy="72" r="64" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="10"/>
                     <circle cx="72" cy="72" r="64" fill="none"
-                            stroke="{{ $passed ? '#10b981' : '#ef4444' }}" stroke-width="10"
+                            stroke="{{ $passed ? '#ef4444' : '#94a3b8' }}" stroke-width="10"
                             stroke-dasharray="{{ round($percentage * 4.02) }} 402"
                             stroke-linecap="round"/>
                 </svg>
                 <div class="absolute inset-0 flex flex-col items-center justify-center">
-                    <span class="text-4xl font-extrabold {{ $passed ? 'text-emerald-300' : 'text-red-300' }}">{{ $percentage }}%</span>
+                    <span class="text-4xl font-extrabold {{ $passed ? 'text-red-300' : 'text-slate-300' }}">{{ $percentage }}%</span>
                     <span class="text-xs text-slate-400">Score</span>
                 </div>
             </div>
@@ -61,9 +61,9 @@
 
         <div class="space-y-5">
             @foreach($results as $i => $result)
-            <div class="bg-slate-900 rounded-3xl border {{ $result['is_correct'] ? 'border-emerald-600/40' : 'border-red-600/40' }} p-6 shadow-lg">
+            <div class="bg-slate-900 rounded-3xl border {{ $result['is_correct'] ? 'border-red-600/40' : 'border-red-600/40' }} p-6 shadow-lg">
                 <div class="flex items-start gap-3 mb-4">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-xl {{ $result['is_correct'] ? 'bg-emerald-600/30' : 'bg-red-600/30' }} flex items-center justify-center text-sm font-bold {{ $result['is_correct'] ? 'text-emerald-300' : 'text-red-300' }}">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-xl {{ $result['is_correct'] ? 'bg-red-600/30' : 'bg-red-600/30' }} flex items-center justify-center text-sm font-bold {{ $result['is_correct'] ? 'text-red-300' : 'text-red-300' }}">
                         {{ $i + 1 }}
                     </div>
                     <p class="text-white font-semibold text-base leading-snug">{{ $result['question'] }}</p>
@@ -72,11 +72,11 @@
                 <div class="ml-11 space-y-2">
                     @foreach($result['options'] as $oi => $opt)
                     <div class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm
-                        {{ $oi === $result['correct_answer'] ? 'bg-emerald-600/20 border border-emerald-500/40 text-emerald-200' : '' }}
-                        {{ $oi === $result['user_answer'] && !$result['is_correct'] ? 'bg-red-600/20 border border-red-500/40 text-red-200' : '' }}
+                        {{ $oi === $result['correct_answer'] ? 'bg-red-600/20 border border-red-500/40 text-red-200' : '' }}
+                        {{ $oi === $result['user_answer'] && !$result['is_correct'] ? 'bg-red-900/40 border border-red-500/60 text-red-200' : '' }}
                         {{ ($oi !== $result['correct_answer'] && $oi !== $result['user_answer']) || ($result['is_correct'] && $oi !== $result['correct_answer']) ? 'text-slate-400' : '' }}">
                         @if($oi === $result['correct_answer'])
-                            <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                         @elseif($oi === $result['user_answer'] && !$result['is_correct'])
                             <svg class="w-4 h-4 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
                         @else
@@ -98,7 +98,7 @@
 
         {{-- Final CTA --}}
         <div class="mt-10 text-center">
-            <a href="{{ route('articles') }}" class="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-bold text-sm transition shadow-lg">
+            <a href="{{ route('articles') }}" class="inline-flex items-center gap-2 px-7 py-3.5 bg-red-600 hover:bg-red-700 text-white rounded-2xl font-bold text-sm transition shadow-lg">
                 📚 Continue Learning with Articles →
             </a>
         </div>

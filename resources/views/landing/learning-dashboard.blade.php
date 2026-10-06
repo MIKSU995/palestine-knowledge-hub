@@ -113,7 +113,7 @@
                 <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Quiz Attempts</p>
             </div>
             <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm">
-                <div class="w-10 h-10 rounded-2xl bg-emerald-100 dark:bg-emerald-950/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-3">
+                <div class="w-10 h-10 rounded-2xl bg-red-100 dark:bg-red-950/60 flex items-center justify-center text-red-600 dark:text-red-400 mb-3">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 </div>
                 <p class="text-3xl font-extrabold text-slate-900 dark:text-white">{{ $totalCompletedQuizzes }}</p>
@@ -163,23 +163,23 @@
                 {{-- Quiz History --}}
                 <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
                     <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+                        <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
                         Quiz History
                     </h2>
 
                     @if($attempts->isEmpty())
                     <div class="text-center py-10 text-slate-400">
-                        <div class="w-12 h-12 rounded-2xl bg-purple-100 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 flex items-center justify-center mx-auto mb-3">
+                        <div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-950/50 text-red-600 dark:text-red-400 flex items-center justify-center mx-auto mb-3">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 01-2 2h-4a2 2 0 01-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
                         </div>
                         <p class="font-medium">No quiz attempts yet.</p>
-                        <a href="{{ route('quiz') }}" class="mt-4 inline-block text-sm text-purple-600 dark:text-purple-400 font-semibold hover:underline">Take your first quiz →</a>
+                        <a href="{{ route('quiz') }}" class="mt-4 inline-block text-sm text-red-600 dark:text-red-400 font-semibold hover:underline">Take your first quiz →</a>
                     </div>
                     @else
                     <div class="space-y-3">
                         @foreach($attempts as $attempt)
-                        <div class="flex items-center gap-4 p-4 rounded-2xl border {{ $attempt->passed ? 'border-emerald-200 dark:border-emerald-800/50 bg-emerald-50 dark:bg-emerald-950/30' : 'border-slate-200 dark:border-slate-800' }} transition">
-                            <div class="w-12 h-12 rounded-2xl {{ $attempt->passed ? 'bg-emerald-100 dark:bg-emerald-950' : 'bg-slate-100 dark:bg-slate-800' }} flex items-center justify-center font-extrabold text-sm {{ $attempt->passed ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-500 dark:text-slate-400' }} flex-shrink-0">
+                        <div class="flex items-center gap-4 p-4 rounded-2xl border {{ $attempt->passed ? 'border-red-200 dark:border-red-800/50 bg-red-50 dark:bg-red-950/30' : 'border-slate-200 dark:border-slate-800' }} transition">
+                            <div class="w-12 h-12 rounded-2xl {{ $attempt->passed ? 'bg-red-100 dark:bg-red-950' : 'bg-slate-100 dark:bg-slate-800' }} flex items-center justify-center font-extrabold text-sm {{ $attempt->passed ? 'text-red-600 dark:text-red-400' : 'text-slate-500 dark:text-slate-400' }} flex-shrink-0">
                                 {{ $attempt->score }}%
                             </div>
                             <div class="flex-1 min-w-0">
@@ -191,7 +191,7 @@
                             </div>
                             <div class="flex-shrink-0">
                                 @if($attempt->passed)
-                                <span class="px-2.5 py-1 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold">PASSED</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300 text-xs font-bold">PASSED</span>
                                 @else
                                 <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-bold">RETRY</span>
                                 @endif
@@ -215,12 +215,12 @@
                             @if($article->thumbnail)
                             <img src="{{ asset('storage/' . $article->thumbnail) }}" alt="{{ $article->title }}" class="w-14 h-14 rounded-xl object-cover flex-shrink-0">
                             @else
-                            <div class="w-14 h-14 rounded-xl bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0">
+                            <div class="w-14 h-14 rounded-xl bg-red-100 dark:bg-red-950/50 text-red-600 dark:text-red-400 flex items-center justify-center flex-shrink-0">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                             </div>
                             @endif
                             <div class="flex-1 min-w-0">
-                                <p class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2 leading-snug">
+                                <p class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition line-clamp-2 leading-snug">
                                     {{ $article->title }}
                                 </p>
                                 @if($article->category)
@@ -230,7 +230,7 @@
                         </a>
                         @endforeach
                     </div>
-                    <a href="{{ route('articles') }}" class="mt-5 w-full block text-center py-2.5 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 rounded-2xl transition">
+                    <a href="{{ route('articles') }}" class="mt-5 w-full block text-center py-2.5 border border-slate-200 dark:border-slate-700 hover:border-red-500 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 rounded-2xl transition">
                         Browse All Articles →
                     </a>
                 </div>

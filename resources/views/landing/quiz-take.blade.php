@@ -22,7 +22,7 @@
                     {{ $quiz->questions->count() }} Questions
                 </span>
                 <span class="flex items-center gap-1.5 text-slate-300">
-                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     Pass at {{ $quiz->pass_score ?? 70 }}%
                 </span>
                 <span class="flex items-center gap-1.5 text-slate-300">
@@ -107,7 +107,7 @@
                     </button>
                     @else
                     <button type="submit" id="submit-quiz-btn"
-                            class="px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-bold text-sm transition shadow-lg hover:shadow-emerald-700/30">
+                            class="px-8 py-3 bg-red-600 hover:bg-red-700 text-white rounded-2xl font-bold text-sm transition shadow-lg hover:shadow-red-700/30">
                         Submit Quiz ✓
                     </button>
                     @endif

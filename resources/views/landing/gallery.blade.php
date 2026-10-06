@@ -7,9 +7,9 @@
 
 {{-- Hero --}}
 <section class="bg-slate-900 text-white py-16 border-b border-slate-800 relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,#10b981,transparent_60%)]"></div>
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,#dc2626,transparent_60%)]"></div>
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
-        <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs uppercase tracking-wider">
+        <span class="px-3.5 py-1.5 rounded-full bg-red-500/20 text-red-300 font-bold text-xs uppercase tracking-wider">
             Arsip Sejarah & Galeri Foto
         </span>
         <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mt-3">
@@ -27,12 +27,12 @@
         {{-- Category Filter --}}
         <div class="flex flex-wrap gap-2">
             <a href="{{ route('gallery') }}"
-               class="px-4 py-1.5 rounded-full text-sm font-semibold border transition {{ !request('category') ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white' : 'border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-emerald-500 hover:text-emerald-600' }}">
+               class="px-4 py-1.5 rounded-full text-sm font-semibold border transition {{ !request('category') ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white' : 'border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-red-500 hover:text-red-600' }}">
                 Semua Kategori
             </a>
             @foreach($categories as $cat)
             <a href="{{ route('gallery', ['category' => $cat]) }}"
-               class="px-4 py-1.5 rounded-full text-sm font-semibold border transition {{ request('category') === $cat ? 'bg-emerald-600 text-white border-emerald-600' : 'border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-emerald-500 hover:text-emerald-600' }}">
+               class="px-4 py-1.5 rounded-full text-sm font-semibold border transition {{ request('category') === $cat ? 'bg-red-600 text-white border-red-600' : 'border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-red-500 hover:text-red-600' }}">
                 {{ $cat }}
             </a>
             @endforeach
@@ -45,9 +45,9 @@
                 <svg class="absolute left-3 top-2.5 w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                 <input type="text" name="search" value="{{ request('search') }}"
                        placeholder="Search gallery..."
-                       class="pl-9 pr-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm text-slate-800 dark:text-slate-100 outline-none focus:ring-2 focus:ring-emerald-500 w-56">
+                       class="pl-9 pr-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm text-slate-800 dark:text-slate-100 outline-none focus:ring-2 focus:ring-red-500 w-56">
             </div>
-            <button type="submit" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-semibold transition">
+            <button type="submit" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-xl text-sm font-semibold transition">
                 Search
             </button>
         </form>
@@ -67,7 +67,7 @@
             <p class="text-slate-500 dark:text-slate-400 max-w-md leading-relaxed">
                 Our curated collection of historical images and documents is being prepared. Check back soon for a rich visual journey through Palestinian heritage.
             </p>
-            <a href="{{ route('home') }}" class="mt-6 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-semibold transition text-sm">
+            <a href="{{ route('home') }}" class="mt-6 px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-2xl font-semibold transition text-sm">
                 Back to Home
             </a>
         </div>
@@ -92,7 +92,7 @@
                          loading="lazy"
                          class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl flex flex-col justify-end p-4 pointer-events-none">
-                        <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide mb-1">{{ $item->category }}</span>
+                        <span class="text-xs font-semibold text-red-300 uppercase tracking-wide mb-1">{{ $item->category }}</span>
                         <h3 class="text-white font-bold text-sm leading-snug">{{ $item->title }}</h3>
                         @if($item->year)
                         <span class="text-slate-300 text-xs mt-1">{{ $item->year }}</span>
@@ -124,7 +124,7 @@
         {{-- Info Panel --}}
         <div class="lg:w-72 p-6 flex flex-col justify-between bg-slate-900 border-t lg:border-t-0 lg:border-l border-slate-800">
             <div>
-                <span id="modal-category" class="text-xs font-bold text-emerald-400 uppercase tracking-wider"></span>
+                <span id="modal-category" class="text-xs font-bold text-red-400 uppercase tracking-wider"></span>
                 <h2 id="modal-title" class="text-xl font-bold text-white mt-2 leading-snug"></h2>
                 <p id="modal-caption" class="text-slate-400 text-sm mt-3 leading-relaxed"></p>
                 <div class="mt-4 space-y-2">

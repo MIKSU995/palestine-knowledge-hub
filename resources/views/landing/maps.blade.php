@@ -41,7 +41,7 @@
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div class="max-w-3xl">
-            <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs uppercase tracking-wider">
+            <span class="px-3.5 py-1.5 rounded-full bg-red-500/20 text-red-300 font-bold text-xs uppercase tracking-wider">
                 Atlas Geografi Interaktif
             </span>
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mt-3">
@@ -61,19 +61,19 @@
         <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm mb-6 flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0">
                 <span class="font-bold text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mr-2">Filter Wilayah:</span>
-                <button onclick="filterMap('All')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-emerald-600 text-white transition">
+                <button onclick="filterMap('All')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-red-600 text-white transition">
                     Semua Lokasi
                 </button>
-                <button onclick="filterMap('Historic Capital')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition">
+                <button onclick="filterMap('Historic Capital')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-600 hover:text-white transition">
                     Kota Bersejarah
                 </button>
-                <button onclick="filterMap('Port City')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition">
+                <button onclick="filterMap('Port City')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-600 hover:text-white transition">
                     Kota Pelabuhan
                 </button>
 
                     Ports & Coastal
                 </button>
-                <button onclick="filterMap('Sacred Site')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition">
+                <button onclick="filterMap('Sacred Site')" class="map-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-600 hover:text-white transition">
                     Sacred Sites
                 </button>
             </div>
@@ -100,18 +100,18 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 @foreach($locations as $index => $loc)
-                <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-emerald-500/50 transition duration-300 cursor-pointer flex flex-col justify-between group"
+                <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-red-500/50 transition duration-300 cursor-pointer flex flex-col justify-between group"
                      onclick="focusLocation({{ $loc['lat'] }}, {{ $loc['lng'] }}, '{{ addslashes($loc['name']) }}')">
                     <div>
                         <div class="relative h-40 rounded-2xl overflow-hidden bg-slate-900 mb-4">
                             <img src="{{ $loc['image'] }}" alt="{{ $loc['name'] }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute top-2 left-2">
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-950/80 backdrop-blur-md text-emerald-400 text-[10px] font-bold">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-950/80 backdrop-blur-md text-red-400 text-[10px] font-bold">
                                     {{ $loc['category'] }}
                                 </span>
                             </div>
                         </div>
-                        <h3 class="font-bold text-slate-900 dark:text-white text-base group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition">
+                        <h3 class="font-bold text-slate-900 dark:text-white text-base group-hover:text-red-600 dark:group-hover:text-red-400 transition">
                             {{ $loc['name'] }}
                         </h3>
                         <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed line-clamp-3">
@@ -119,9 +119,9 @@
                         </p>
                     </div>
 
-                    <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                    <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-bold text-red-600 dark:text-red-400">
                         <span class="inline-flex items-center gap-1">
-                            <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <svg class="w-3.5 h-3.5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                             {{ number_format($loc['lat'], 2) }}°N, {{ number_format($loc['lng'], 2) }}°E
                         </span>
                         <span>Fly to Map →</span>
@@ -162,7 +162,7 @@
 
         // Marker Color Map
         const colors = {
-            'Historic Capital': '#10b981',
+            'Historic Capital': '#dc2626',
             'Coastal Region': '#3b82f6',
             'Heritage Site': '#f59e0b',
             'Trade & Artisan Center': '#8b5cf6',
@@ -173,7 +173,7 @@
         };
 
         function createPinIcon(category) {
-            const color = colors[category] || '#10b981';
+            const color = colors[category] || '#dc2626';
             return L.divIcon({
                 className: '',
                 html: `<div style="width:32px;height:32px;background:${color};border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid white;box-shadow:0 6px 16px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;"></div>`,
@@ -191,7 +191,7 @@
                     <div style="font-family:'Plus Jakarta Sans',sans-serif;">
                         <img src="${loc.image}" style="width:100%;height:130px;object-fit:cover;" alt="${loc.name}">
                         <div style="padding:12px 14px;">
-                            <span style="font-size:10px;font-weight:800;color:#10b981;text-transform:uppercase;letter-spacing:0.05em;">${loc.category}</span>
+                            <span style="font-size:10px;font-weight:800;color:#dc2626;text-transform:uppercase;letter-spacing:0.05em;">${loc.category}</span>
                             <h3 style="font-size:15px;font-weight:800;margin:4px 0 6px;">${loc.name}</h3>
                             <p style="font-size:11px;line-height:1.5;color:#64748b;">${loc.description}</p>
                         </div>

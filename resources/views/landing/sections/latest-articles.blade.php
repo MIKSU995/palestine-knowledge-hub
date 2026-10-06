@@ -4,14 +4,14 @@
 
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-                <span class="px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold text-xs uppercase tracking-wider">
+                <span class="px-3.5 py-1.5 rounded-full bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300 font-bold text-xs uppercase tracking-wider">
                     Artikel Edukasi
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
                     Kajian & Artikel Pilihan
                 </h2>
             </div>
-            <a href="{{ route('articles') }}" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:underline">
+            <a href="{{ route('articles') }}" class="inline-flex items-center gap-2 text-sm font-bold text-red-600 dark:text-red-400 hover:underline">
                 Lihat Semua Artikel →
             </a>
         </div>
@@ -50,7 +50,7 @@
                             </span>
                         </div>
 
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition line-clamp-2">
                             <a href="{{ route('articles.show', $article->slug) }}">
                                 {{ $article->title }}
                             </a>
@@ -68,7 +68,7 @@
                         <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
                         {{ number_format($article->views) }} kali dibaca
                     </span>
-                    <a href="{{ route('articles.show', $article->slug) }}" class="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline">
+                    <a href="{{ route('articles.show', $article->slug) }}" class="inline-flex items-center gap-1 text-xs font-bold text-red-600 dark:text-red-400 hover:underline">
                         <span>Baca Artikel</span>
                         <span>→</span>
                     </a>

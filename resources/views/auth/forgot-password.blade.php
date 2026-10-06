@@ -4,7 +4,7 @@
         <div class="bg-slate-900/90 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 shadow-2xl shadow-black/50">
 
             <div class="text-center mb-8">
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-3xl mb-4">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-red-500/10 border border-red-500/20 text-3xl mb-4">
                     🔒
                 </div>
                 <h1 class="text-2xl font-extrabold text-white tracking-tight">Reset Kata Sandi</h1>
@@ -12,7 +12,7 @@
             </div>
 
             @if(session('status'))
-                <div class="mb-6 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-semibold">
+                <div class="mb-6 p-4 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-300 text-xs font-semibold">
                     {{ session('status') }}
                 </div>
             @endif
@@ -31,7 +31,7 @@
                            required
                            autofocus
                            placeholder="user@example.com"
-                           class="w-full px-4 py-3 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition">
+                           class="w-full px-4 py-3 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition">
                     @error('email')
                         <p class="text-red-400 text-xs font-semibold mt-1.5 flex items-center gap-1">
                             <span>⚠</span> {{ $message }}
@@ -40,7 +40,7 @@
                 </div>
 
                 <button type="submit"
-                        class="w-full py-3.5 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm tracking-wide shadow-lg shadow-emerald-900/40 transition duration-200">
+                        class="w-full py-3.5 px-6 rounded-2xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm tracking-wide shadow-lg shadow-red-900/40 transition duration-200">
                     Kirim Tautan Reset Kata Sandi →
                 </button>
             </form>

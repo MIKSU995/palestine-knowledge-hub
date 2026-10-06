@@ -268,19 +268,19 @@
                     const key = type + '_' + id;
                     if (localBookmarks.includes(key)) {
                         localBookmarks = localBookmarks.filter(k => k !== key);
-                        btn.classList.remove('text-emerald-600', 'fill-current');
+                        btn.classList.remove('text-red-600', 'fill-current');
                         alert('Bookmark removed from local storage');
                     } else {
                         localBookmarks.push(key);
-                        btn.classList.add('text-emerald-600', 'fill-current');
+                        btn.classList.add('text-red-600', 'fill-current');
                         alert('Bookmarked in local storage');
                     }
                     localStorage.setItem('p_bookmarks', JSON.stringify(localBookmarks));
                 } else {
                     if (data.bookmarked) {
-                        btn.classList.add('text-emerald-600', 'fill-emerald-600');
+                        btn.classList.add('text-red-600', 'fill-red-600');
                     } else {
-                        btn.classList.remove('text-emerald-600', 'fill-emerald-600');
+                        btn.classList.remove('text-red-600', 'fill-red-600');
                     }
                     alert(data.message);
                 }

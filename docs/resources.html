@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="DpElVsMKiEqlQxV3XgXkyvtQh4b7567e8OiaSREA">
+    <meta name="csrf-token" content="byNaA4PSCnkAbd1zTWSJUmOSzeiRHKIUIcADybT1">
 
     <title>Educational Resources - Books, PDFs &amp; Documents | Palestine Knowledge Hub</title>
 
@@ -98,7 +98,7 @@
             animation: shimmerBorder 6s linear infinite;
         }
     </style>
-    <link rel="stylesheet" href="build/assets/app-DBIyAGNE.css">
+    <link rel="stylesheet" href="build/assets/app-D68krcbG.css">
 <script type="module" src="build/assets/app-BfpX1doZ.js"></script>
 </head>
 
@@ -386,7 +386,7 @@
                 </div>
                 <div class="p-5 flex flex-col flex-1">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300">Infographic</span>
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300">Infographic</span>
                                                 <span class="text-xs text-slate-400 dark:text-slate-500">History &amp; Heritage</span>
                                             </div>
                     <h3 class="font-bold text-slate-900 dark:text-white text-base leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">
@@ -518,7 +518,12 @@
         </div>
 
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-            <p>© 2026 Palestine Knowledge Hub. Platform Edukasi, Live Gaza Feed & Akses Kemanusiaan.</p>
+            <div class="flex flex-wrap items-center gap-3">
+                <p>© 2026 Palestine Knowledge Hub. Platform Edukasi, Live Gaza Feed & Akses Kemanusiaan.</p>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600/20 border border-red-500/40 text-red-300 font-bold text-xs">
+                    🇮🇩 Karya Anak Indonesia
+                </span>
+            </div>
             <div class="flex items-center gap-6">
                 <span>Edukasi</span>
                 <span>•</span>
@@ -666,19 +671,19 @@
                     const key = type + '_' + id;
                     if (localBookmarks.includes(key)) {
                         localBookmarks = localBookmarks.filter(k => k !== key);
-                        btn.classList.remove('text-emerald-600', 'fill-current');
+                        btn.classList.remove('text-red-600', 'fill-current');
                         alert('Bookmark removed from local storage');
                     } else {
                         localBookmarks.push(key);
-                        btn.classList.add('text-emerald-600', 'fill-current');
+                        btn.classList.add('text-red-600', 'fill-current');
                         alert('Bookmarked in local storage');
                     }
                     localStorage.setItem('p_bookmarks', JSON.stringify(localBookmarks));
                 } else {
                     if (data.bookmarked) {
-                        btn.classList.add('text-emerald-600', 'fill-emerald-600');
+                        btn.classList.add('text-red-600', 'fill-red-600');
                     } else {
-                        btn.classList.remove('text-emerald-600', 'fill-emerald-600');
+                        btn.classList.remove('text-red-600', 'fill-red-600');
                     }
                     alert(data.message);
                 }

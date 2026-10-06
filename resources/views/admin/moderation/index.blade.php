@@ -50,7 +50,7 @@
                     </td>
                     <td class="p-4">
                         <span class="px-2.5 py-1 rounded-lg text-xs font-bold
-                            {{ $report->status === 'resolved' ? 'bg-emerald-100 text-emerald-700' : ($report->status === 'dismissed' ? 'bg-slate-100 text-slate-600' : 'bg-amber-100 text-amber-700') }}">
+                            {{ $report->status === 'resolved' ? 'bg-red-100 text-red-700' : ($report->status === 'dismissed' ? 'bg-slate-100 text-slate-600' : 'bg-amber-100 text-amber-700') }}">
                             {{ $report->status === 'resolved' ? 'Selesai' : ($report->status === 'dismissed' ? 'Diabaikan' : 'Menunggu') }}
                         </span>
                     </td>
@@ -61,7 +61,7 @@
                                 @csrf
                                 @method('PATCH')
                                 <input type="hidden" name="status" value="resolved">
-                                <button type="submit" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition">
+                                <button type="submit" class="px-3 py-1 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-bold transition">
                                     Selesaikan
                                 </button>
                             </form>
@@ -134,7 +134,7 @@
                     </td>
                     <td class="p-4">
                         <span class="px-2.5 py-1 rounded-lg text-xs font-bold
-                            {{ $comment->status === 'approved' ? 'bg-emerald-100 text-emerald-700' : ($comment->status === 'rejected' ? 'bg-red-100 text-red-700' : 'bg-amber-100 text-amber-700') }}">
+                            {{ $comment->status === 'approved' ? 'bg-red-100 text-red-700' : ($comment->status === 'rejected' ? 'bg-slate-100 text-slate-700' : 'bg-amber-100 text-amber-700') }}">
                             {{ $comment->status === 'approved' ? 'Disetujui' : ($comment->status === 'rejected' ? 'Ditolak' : 'Menunggu') }}
                         </span>
                     </td>
@@ -145,7 +145,7 @@
                                 @csrf
                                 @method('PATCH')
                                 <input type="hidden" name="status" value="approved">
-                                <button type="submit" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition">
+                                <button type="submit" class="px-3 py-1 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-bold transition">
                                     Setujui
                                 </button>
                             </form>

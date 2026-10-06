@@ -1,7 +1,7 @@
 <aside class="w-60 min-h-screen bg-slate-900 text-white border-r border-slate-800">
 
     <div class="px-6 py-6 border-b border-slate-700">
-        <h1 class="text-2xl font-bold text-green-400">
+        <h1 class="text-2xl font-bold text-red-500">
             Edukasi Palestina
         </h1>
 
@@ -43,7 +43,7 @@
         </a>
 
         <a href="{{ route('admin.articles.index') }}"
-        class="block px-5 py-3 rounded-lg hover:bg-green-100">
+        class="block px-5 py-3 rounded-lg hover:bg-slate-800 transition">
 
         Articles
 

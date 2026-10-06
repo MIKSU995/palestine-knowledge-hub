@@ -7,7 +7,7 @@
         <input
             type="text"
             name="name"
-            class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
+            class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
             placeholder="Contoh: Sejarah, Budaya, Politik..."
             value="{{ old('name', $category->name ?? '') }}">
         @error('name')
@@ -18,7 +18,7 @@
     <div class="flex gap-3 pt-2">
         <button
             type="submit"
-            class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-bold transition shadow-lg shadow-emerald-900/20">
+            class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-bold transition shadow-lg shadow-red-900/20">
             Simpan Kategori
         </button>
         <a href="{{ route('admin.categories.index') }}"

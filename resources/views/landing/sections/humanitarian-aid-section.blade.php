@@ -54,11 +54,11 @@
 
                     <div class="pt-2 flex flex-wrap items-center gap-4 text-xs font-semibold text-rose-200">
                         <div class="flex items-center gap-1.5">
-                            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <svg class="w-4 h-4 text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                             <span>Lembaga Resmi Terdaftar RI</span>
                         </div>
                         <div class="flex items-center gap-1.5">
-                            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <svg class="w-4 h-4 text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                             <span>Penyaluran Langsung Gaza</span>
                         </div>
                     </div>
@@ -170,7 +170,7 @@
                 <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 text-xs font-bold">
+                            <span class="px-3 py-1 rounded-full bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-300 text-xs font-bold">
                                 🇮🇩 BAZNAS RI Official
                             </span>
                             <span class="text-xs text-slate-400 font-medium">Lembaga Negara</span>
@@ -185,8 +185,8 @@
                         <!-- Account Info -->
                         <div class="mt-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 text-xs space-y-1">
                             <div class="flex justify-between items-center text-slate-700 dark:text-slate-200">
-                                <span>BSI: <strong class="font-mono text-emerald-600 dark:text-emerald-400">100.100.2002</strong></span>
-                                <button onclick="copyToClipboard('1001002002', this)" class="text-[11px] font-bold text-emerald-600 hover:underline">Salin</button>
+                                <span>BSI: <strong class="font-mono text-red-600 dark:text-red-400">100.100.2002</strong></span>
+                                <button onclick="copyToClipboard('1001002002', this)" class="text-[11px] font-bold text-red-600 hover:underline">Salin</button>
                             </div>
                             <div class="text-[11px] text-slate-400">a.n. BAZNAS RI (Kemanusiaan Palestina)</div>
                         </div>
@@ -194,7 +194,7 @@
 
                     <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
                         <span class="text-xs text-slate-400 font-medium">Fokus: Logistik Pangan</span>
-                        <a href="https://baznas.go.id" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center gap-1">
+                        <a href="https://baznas.go.id" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold transition flex items-center gap-1">
                             <span>Web BAZNAS</span>
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                         </a>
@@ -287,10 +287,10 @@
         navigator.clipboard.writeText(val).then(() => {
             const orig = btn.innerText;
             btn.innerText = '✅ Tersalin';
-            btn.classList.add('bg-emerald-600');
+            btn.classList.add('bg-red-600');
             setTimeout(() => {
                 btn.innerText = orig;
-                btn.classList.remove('bg-emerald-600');
+                btn.classList.remove('bg-red-600');
             }, 2000);
         });
     }

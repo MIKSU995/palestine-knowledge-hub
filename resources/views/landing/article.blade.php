@@ -7,11 +7,11 @@
 
 {{-- ================= HERO HEADER ================= --}}
 <section class="bg-slate-900 text-white py-16 border-b border-slate-800 relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-900/30 via-slate-900 to-slate-950"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-red-900/30 via-slate-900 to-slate-950"></div>
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div class="max-w-3xl">
-            <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs uppercase tracking-wider">
+            <span class="px-3.5 py-1.5 rounded-full bg-red-500/20 text-red-300 font-bold text-xs uppercase tracking-wider">
                 Knowledge Archive
             </span>
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mt-3">
@@ -25,7 +25,7 @@
         {{-- Search Bar --}}
         <div class="mt-8 max-w-2xl">
             <form action="{{ route('articles') }}" method="GET" class="relative">
-                <div class="flex items-center bg-slate-800/90 border border-slate-700 rounded-2xl p-2 shadow-2xl focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-500/20 transition">
+                <div class="flex items-center bg-slate-800/90 border border-slate-700 rounded-2xl p-2 shadow-2xl focus-within:border-red-500 focus-within:ring-2 focus-within:ring-red-500/20 transition">
                     <svg class="w-6 h-6 text-slate-400 ml-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                     </svg>
@@ -37,7 +37,7 @@
                     @if(request('category'))
                         <input type="hidden" name="category" value="{{ request('category') }}">
                     @endif
-                    <button type="submit" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold transition flex-shrink-0 shadow-lg shadow-emerald-900/40">
+                    <button type="submit" class="px-6 py-3 bg-red-600 hover:bg-red-500 text-white rounded-xl text-xs font-bold transition flex-shrink-0 shadow-lg shadow-red-900/40">
                         Search
                     </button>
                 </div>
@@ -54,12 +54,12 @@
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
             <div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
                 <a href="{{ route('articles', ['search' => request('search')]) }}"
-                   class="px-4 py-2 rounded-2xl text-xs font-bold transition flex-shrink-0 {{ !request('category') ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-900/20' : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-emerald-500' }}">
+                   class="px-4 py-2 rounded-2xl text-xs font-bold transition flex-shrink-0 {{ !request('category') ? 'bg-red-600 text-white shadow-lg shadow-red-900/20' : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-red-500' }}">
                     All Categories
                 </a>
                 @foreach($categories as $category)
                 <a href="{{ route('articles', ['category' => $category->id, 'search' => request('search')]) }}"
-                   class="px-4 py-2 rounded-2xl text-xs font-bold transition flex-shrink-0 {{ request('category') == $category->id ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-900/20' : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-emerald-500' }}">
+                   class="px-4 py-2 rounded-2xl text-xs font-bold transition flex-shrink-0 {{ request('category') == $category->id ? 'bg-red-600 text-white shadow-lg shadow-red-900/20' : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-red-500' }}">
                     {{ $category->name }}
                 </a>
                 @endforeach
@@ -80,7 +80,7 @@
             <div class="lg:col-span-7 relative min-h-[320px] lg:min-h-[420px] bg-slate-900">
                 <img loading="lazy" src="{{ $featuredImg }}" alt="{{ $featured->title }}" class="w-full h-full object-cover">
                 <div class="absolute top-4 left-4">
-                    <span class="px-3 py-1 rounded-full bg-emerald-600 text-white text-xs font-extrabold uppercase tracking-wider shadow-md inline-flex items-center gap-1">
+                    <span class="px-3 py-1 rounded-full bg-red-600 text-white text-xs font-extrabold uppercase tracking-wider shadow-md inline-flex items-center gap-1">
                         <svg class="w-3.5 h-3.5 text-amber-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         Featured Article
                     </span>
@@ -89,7 +89,7 @@
             <div class="lg:col-span-5 p-8 lg:p-10 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
+                        <span class="text-xs font-bold text-red-600 dark:text-red-400 uppercase tracking-wider">
                             {{ $featured->category->name ?? 'General' }}
                         </span>
                         <span class="text-slate-300 dark:text-slate-700">•</span>
@@ -98,7 +98,7 @@
                         </span>
                     </div>
                     <h2 class="text-2xl lg:text-3xl font-extrabold text-slate-900 dark:text-white leading-snug">
-                        <a href="{{ route('articles.show', $featured->slug) }}" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition">
+                        <a href="{{ route('articles.show', $featured->slug) }}" class="hover:text-red-600 dark:hover:text-red-400 transition">
                             {{ $featured->title }}
                         </a>
                     </h2>
@@ -118,7 +118,7 @@
                             {{ $featuredReadTime }} min read
                         </span>
                     </div>
-                    <a href="{{ route('articles.show', $featured->slug) }}" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-900/30 transition flex items-center gap-2">
+                    <a href="{{ route('articles.show', $featured->slug) }}" class="px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-red-900/30 transition flex items-center gap-2">
                         Read Article →
                     </a>
                 </div>
@@ -150,12 +150,12 @@
                     <div class="relative h-52 overflow-hidden bg-slate-900">
                         <img loading="lazy" src="{{ $imgUrl }}" alt="{{ $article->title }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-3 left-3">
-                            <span class="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-emerald-400 text-[11px] font-bold">
+                            <span class="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-red-400 text-[11px] font-bold">
                                 {{ $article->category->name ?? 'General' }}
                             </span>
                         </div>
                         <button onclick="toggleBookmark({{ $article->id }}, 'article', this)"
-                                class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-950/80 backdrop-blur-md text-slate-300 hover:text-emerald-400 flex items-center justify-center transition shadow-md">
+                                class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-950/80 backdrop-blur-md text-slate-300 hover:text-red-400 flex items-center justify-center transition shadow-md">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
                         </button>
                     </div>
@@ -171,7 +171,7 @@
                             </span>
                         </div>
 
-                        <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2 leading-snug">
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition line-clamp-2 leading-snug">
                             <a href="{{ route('articles.show', $article->slug) }}">
                                 {{ $article->title }}
                             </a>
@@ -189,7 +189,7 @@
                         <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
                         {{ number_format($article->views) }} views
                     </span>
-                    <a href="{{ route('articles.show', $article->slug) }}" class="font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
+                    <a href="{{ route('articles.show', $article->slug) }}" class="font-bold text-red-600 dark:text-red-400 group-hover:underline flex items-center gap-1">
                         Read →
                     </a>
                 </div>
@@ -208,7 +208,7 @@
             </div>
             <h2 class="text-2xl font-bold text-slate-900 dark:text-white">No Articles Found</h2>
             <p class="text-slate-400 text-sm mt-2 max-w-md mx-auto">No articles matched your current search or category filter. Try clearing filters to view all content.</p>
-            <a href="{{ route('articles') }}" class="inline-block mt-6 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl text-xs font-bold transition">
+            <a href="{{ route('articles') }}" class="inline-block mt-6 px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-2xl text-xs font-bold transition">
                 Clear Filters
             </a>
         </div>

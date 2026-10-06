@@ -50,7 +50,7 @@
             @foreach($quizzes as $quiz)
             @php
                 $difficultyColors = [
-                    'easy' => 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300',
+                    'easy' => 'bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300',
                     'medium' => 'bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300',
                     'hard' => 'bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-300',
                 ];
@@ -72,7 +72,7 @@
                         <span class="text-white/80 text-sm font-semibold">{{ $quiz->questions_count ?? 0 }} Questions</span>
                     </div>
                     @if($userScore !== null)
-                    <div class="absolute top-3 right-3 flex items-center gap-1.5 bg-emerald-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
+                    <div class="absolute top-3 right-3 flex items-center gap-1.5 bg-red-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                         {{ $userScore }}% Scored
                     </div>

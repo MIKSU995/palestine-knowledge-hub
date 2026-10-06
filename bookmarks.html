@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="DpElVsMKiEqlQxV3XgXkyvtQh4b7567e8OiaSREA">
+    <meta name="csrf-token" content="byNaA4PSCnkAbd1zTWSJUmOSzeiRHKIUIcADybT1">
 
     <title>My Bookmarks | Palestine Knowledge Hub</title>
 
@@ -98,7 +98,7 @@
             animation: shimmerBorder 6s linear infinite;
         }
     </style>
-    <link rel="stylesheet" href="build/assets/app-DBIyAGNE.css">
+    <link rel="stylesheet" href="build/assets/app-D68krcbG.css">
 <script type="module" src="build/assets/app-BfpX1doZ.js"></script>
 </head>
 
@@ -244,7 +244,7 @@
 
 <section class="bg-slate-900 text-white py-14 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs uppercase tracking-wider">🔖 Saved Content</span>
+        <span class="px-3.5 py-1.5 rounded-full bg-red-500/20 text-red-300 font-bold text-xs uppercase tracking-wider">🔖 Saved Content</span>
         <h1 class="text-4xl font-extrabold mt-3">My Bookmarks</h1>
         <p class="text-slate-400 mt-2 text-base">Your personally saved articles and resources for quick access.</p>
     </div>
@@ -254,16 +254,16 @@
     <div class="max-w-5xl mx-auto px-6 lg:px-8">
 
                 <div class="flex flex-col items-center justify-center py-24 text-center">
-            <div class="w-24 h-24 rounded-3xl bg-emerald-100 dark:bg-emerald-950/50 flex items-center justify-center text-5xl mb-6">🔖</div>
+            <div class="w-24 h-24 rounded-3xl bg-red-100 dark:bg-red-950/50 flex items-center justify-center text-5xl mb-6">🔖</div>
             <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">Sign In to View Your Bookmarks</h2>
             <p class="text-slate-500 dark:text-slate-400 max-w-md leading-relaxed mb-8">
                 Create a free account to save articles, resources, and timeline events for later reading. Your bookmarks sync across all devices.
             </p>
             <div class="flex gap-3">
-                <a href="http://localhost/login" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-bold text-sm transition">
+                <a href="http://localhost/login" class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-2xl font-bold text-sm transition">
                     Sign In
                 </a>
-                <a href="http://localhost/register" class="px-6 py-3 border border-slate-300 dark:border-slate-600 hover:border-emerald-500 text-slate-700 dark:text-slate-300 hover:text-emerald-600 rounded-2xl font-bold text-sm transition">
+                <a href="http://localhost/register" class="px-6 py-3 border border-slate-300 dark:border-slate-600 hover:border-red-500 text-slate-700 dark:text-slate-300 hover:text-red-600 rounded-2xl font-bold text-sm transition">
                     Create Account
                 </a>
             </div>
@@ -343,7 +343,12 @@
         </div>
 
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-            <p>© 2026 Palestine Knowledge Hub. Platform Edukasi, Live Gaza Feed & Akses Kemanusiaan.</p>
+            <div class="flex flex-wrap items-center gap-3">
+                <p>© 2026 Palestine Knowledge Hub. Platform Edukasi, Live Gaza Feed & Akses Kemanusiaan.</p>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600/20 border border-red-500/40 text-red-300 font-bold text-xs">
+                    🇮🇩 Karya Anak Indonesia
+                </span>
+            </div>
             <div class="flex items-center gap-6">
                 <span>Edukasi</span>
                 <span>•</span>
@@ -491,19 +496,19 @@
                     const key = type + '_' + id;
                     if (localBookmarks.includes(key)) {
                         localBookmarks = localBookmarks.filter(k => k !== key);
-                        btn.classList.remove('text-emerald-600', 'fill-current');
+                        btn.classList.remove('text-red-600', 'fill-current');
                         alert('Bookmark removed from local storage');
                     } else {
                         localBookmarks.push(key);
-                        btn.classList.add('text-emerald-600', 'fill-current');
+                        btn.classList.add('text-red-600', 'fill-current');
                         alert('Bookmarked in local storage');
                     }
                     localStorage.setItem('p_bookmarks', JSON.stringify(localBookmarks));
                 } else {
                     if (data.bookmarked) {
-                        btn.classList.add('text-emerald-600', 'fill-emerald-600');
+                        btn.classList.add('text-red-600', 'fill-red-600');
                     } else {
-                        btn.classList.remove('text-emerald-600', 'fill-emerald-600');
+                        btn.classList.remove('text-red-600', 'fill-red-600');
                     }
                     alert(data.message);
                 }

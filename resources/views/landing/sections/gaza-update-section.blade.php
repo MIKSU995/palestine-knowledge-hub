@@ -1,7 +1,7 @@
 <section id="gaza-update" class="py-20 bg-slate-900 text-white relative overflow-hidden border-b border-slate-800">
 
     <!-- Ambient Glowing Background Elements -->
-    <div class="absolute top-0 right-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
     <div class="absolute bottom-0 left-10 w-96 h-96 bg-rose-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -15,7 +15,7 @@
                     <!-- Instagram Gradient Ring Avatar -->
                     <div class="relative p-1 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 shrink-0">
                         <img src="https://images.unsplash.com/photo-1547981609-4b6bf67db7ff?w=150&auto=format&fit=crop" alt="The Palestine Circle" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-slate-900">
-                        <span class="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-emerald-500 border-2 border-slate-900 flex items-center justify-center text-[10px]" title="Live Feed Connected">
+                        <span class="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-red-500 border-2 border-slate-900 flex items-center justify-center text-[10px]" title="Live Feed Connected">
                             <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
                         </span>
                     </div>
@@ -28,7 +28,7 @@
                                 <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
                                 Verified Instagram Feed
                             </span>
-                            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold">
+                            <span class="px-2.5 py-0.5 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-semibold">
                                 Live Social API
                             </span>
                         </div>
@@ -37,7 +37,7 @@
                             <span>•</span>
                             <span class="text-slate-300 font-semibold">3.8M Pengikut</span>
                             <span>•</span>
-                            <span class="text-emerald-400 font-medium">Pembaruan Lapangan 24/7</span>
+                            <span class="text-red-400 font-medium">Pembaruan Lapangan 24/7</span>
                         </p>
                         <p class="text-slate-300 text-xs sm:text-sm mt-2 line-clamp-2 max-w-2xl">
                             Dokumentasi visual, laporan lapangan, dan informasi terverifikasi langsung dari komunitas kemanusiaan Palestina.
@@ -48,7 +48,7 @@
                 <!-- Right Action Buttons -->
                 <div class="flex items-center gap-3 w-full lg:w-auto justify-stretch lg:justify-end">
                     <button onclick="refreshGazaUpdates()" class="flex-1 lg:flex-none px-4 py-3 rounded-2xl bg-slate-700/80 hover:bg-slate-700 text-white font-semibold text-xs sm:text-sm transition flex items-center justify-center gap-2 border border-slate-600/60">
-                        <svg id="refresh-icon" class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                        <svg id="refresh-icon" class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
                         <span>Sinkronkan Live</span>
                     </button>
 
@@ -64,7 +64,7 @@
         <!-- Category Tabs Filter -->
         <div class="flex items-center justify-between gap-4 mb-8 flex-wrap">
             <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none w-full sm:w-auto">
-                <button onclick="filterGazaCategory('all')" class="gaza-cat-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-emerald-600 text-white shadow-md">
+                <button onclick="filterGazaCategory('all')" class="gaza-cat-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-red-600 text-white shadow-md">
                     ✨ Semua Update
                 </button>
                 <button onclick="filterGazaCategory('Laporan Lapangan')" class="gaza-cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-slate-800 text-slate-300 hover:bg-slate-700">
@@ -82,7 +82,7 @@
             </div>
 
             <div class="text-xs text-slate-400 flex items-center gap-1.5 font-medium">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="w-2 h-2 rounded-full bg-red-400"></span>
                 <span>Terhubung API Instagram @thepalestinecircle</span>
             </div>
         </div>
@@ -134,7 +134,7 @@
                         <!-- Card Caption -->
                         <div class="p-5">
                             <div class="flex items-center gap-2 mb-2">
-                                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-emerald-950 text-emerald-400 border border-emerald-800/80">
+                                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-red-950 text-red-400 border border-red-800/80">
                                     {{ $post['category'] }}
                                 </span>
                             </div>
@@ -189,11 +189,11 @@
 <script>
     function filterGazaCategory(cat) {
         document.querySelectorAll('.gaza-cat-btn').forEach(btn => {
-            btn.classList.remove('bg-emerald-600', 'text-white', 'shadow-md', 'active');
+            btn.classList.remove('bg-red-600', 'text-white', 'shadow-md', 'active');
             btn.classList.add('bg-slate-800', 'text-slate-300');
         });
         event.target.classList.remove('bg-slate-800', 'text-slate-300');
-        event.target.classList.add('bg-emerald-600', 'text-white', 'shadow-md', 'active');
+        event.target.classList.add('bg-red-600', 'text-white', 'shadow-md', 'active');
 
         const cards = document.querySelectorAll('.gaza-card');
         cards.forEach(card => {

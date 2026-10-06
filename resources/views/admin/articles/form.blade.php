@@ -10,7 +10,7 @@
             type="text"
             name="title"
             value="{{ old('title', $article->title ?? '') }}"
-            class="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-600 border-slate-200"
+            class="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-red-600 border-slate-200"
             placeholder="Masukkan judul artikel">
 
         @error('title')
@@ -26,7 +26,7 @@
 
         <select
             name="category_id"
-            class="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-600 border-slate-200">
+            class="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-red-600 border-slate-200">
 
             <option value="">-- Pilih Kategori --</option>
 
@@ -78,7 +78,7 @@
         <textarea
             name="excerpt"
             rows="3"
-            class="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-600 border-slate-200"
+            class="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-red-600 border-slate-200"
             placeholder="Ringkasan singkat artikel...">{{ old('excerpt', $article->excerpt ?? '') }}</textarea>
 
         @error('excerpt')
@@ -96,7 +96,7 @@
             id="content"
             name="content"
             rows="12"
-            class="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-600 border-slate-200">{{ old('content', $article->content ?? '') }}</textarea>
+            class="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-red-600 border-slate-200">{{ old('content', $article->content ?? '') }}</textarea>
 
         @error('content')
             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
@@ -111,7 +111,7 @@
 
         <select
             name="status"
-            class="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-600 border-slate-200">
+            class="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-red-600 border-slate-200">
 
             <option value="draft"
                 @selected(old('status', $article->status ?? 'draft') == 'draft')>
@@ -130,7 +130,7 @@
     <div class="flex gap-3 pt-4">
         <button
             type="submit"
-            class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-bold transition">
+            class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-bold transition">
             Simpan Artikel
         </button>
 

@@ -85,7 +85,7 @@
                     'journal' => ['color' => 'bg-purple-100 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300', 'label' => 'Academic Journal'],
                     'report' => ['color' => 'bg-cyan-100 dark:bg-cyan-950/60 text-cyan-700 dark:text-cyan-300', 'label' => 'Report'],
                     'documentary' => ['color' => 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300', 'label' => 'Documentary'],
-                    'infographic' => ['color' => 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300', 'label' => 'Infographic'],
+                    'infographic' => ['color' => 'bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300', 'label' => 'Infographic'],
                 ];
                 $config = $typeConfig[$resource->type ?? 'pdf'] ?? $typeConfig['pdf'];
             @endphp

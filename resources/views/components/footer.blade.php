@@ -65,7 +65,12 @@
         </div>
 
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-            <p>© {{ date('Y') }} Palestine Knowledge Hub. Platform Edukasi, Live Gaza Feed & Akses Kemanusiaan.</p>
+            <div class="flex flex-wrap items-center gap-3">
+                <p>© {{ date('Y') }} Palestine Knowledge Hub. Platform Edukasi, Live Gaza Feed & Akses Kemanusiaan.</p>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600/20 border border-red-500/40 text-red-300 font-bold text-xs">
+                    🇮🇩 Karya Anak Indonesia
+                </span>
+            </div>
             <div class="flex items-center gap-6">
                 <span>Edukasi</span>
                 <span>•</span>

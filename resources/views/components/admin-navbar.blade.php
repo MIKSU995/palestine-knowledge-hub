@@ -4,7 +4,7 @@
 
         <div>
 
-            <h2 class="text-3xl font-bold text-green-500">
+            <h2 class="text-3xl font-bold text-red-600">
                 @yield('title', 'Dashboard')
             </h2>
 

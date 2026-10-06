@@ -32,13 +32,13 @@
                 @forelse($users as $user)
                 <tr class="hover:bg-slate-50 transition">
                     <td class="p-4 pl-6 flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-full bg-emerald-600 flex items-center justify-center text-white font-extrabold text-sm flex-shrink-0">
+                        <div class="w-9 h-9 rounded-full bg-red-600 flex items-center justify-center text-white font-extrabold text-sm flex-shrink-0">
                             {{ strtoupper(substr($user->name, 0, 1)) }}
                         </div>
                         <div>
                             <p class="font-semibold text-slate-900">{{ $user->name }}</p>
                             @if($user->id === auth()->id())
-                            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Anda</span>
+                            <span class="text-[10px] font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded-full">Anda</span>
                             @endif
                         </div>
                     </td>
@@ -49,7 +49,7 @@
                         <form action="{{ route('admin.users.role', $user->id) }}" method="POST" class="flex items-center gap-2">
                             @csrf
                             @method('PATCH')
-                            <select name="role" onchange="this.form.submit()" class="text-xs font-bold border border-slate-200 rounded-xl px-2.5 py-1.5 bg-slate-50 focus:ring-2 focus:ring-emerald-500">
+                            <select name="role" onchange="this.form.submit()" class="text-xs font-bold border border-slate-200 rounded-xl px-2.5 py-1.5 bg-slate-50 focus:ring-2 focus:ring-red-500">
                                 @foreach($roles as $role)
                                 <option value="{{ $role->name }}" @selected($user->hasRole($role->name))>
                                     {{ ucfirst($role->name) }}

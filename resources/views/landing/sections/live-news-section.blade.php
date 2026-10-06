@@ -5,8 +5,8 @@
         <!-- Header -->
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
             <div>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3">
-                    <span class="w-2 h-2 rounded-full bg-emerald-600 animate-ping"></span>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-400 text-xs font-bold uppercase tracking-wider mb-3">
+                    <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
                     Pembaruan Real-Time
                 </div>
                 <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
@@ -17,7 +17,7 @@
                 </p>
             </div>
 
-            <a href="{{ route('news.index') }}" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700">
+            <a href="{{ route('news.index') }}" class="inline-flex items-center gap-2 text-sm font-bold text-red-600 dark:text-red-400 hover:text-red-700">
                 <span>Pusat Berita Selengkapnya</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
@@ -28,11 +28,11 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             @foreach($liveNews->take(6) as $news)
-            <div class="bg-slate-50 dark:bg-slate-800/60 rounded-3xl p-6 border border-slate-200 dark:border-slate-700/60 hover:border-emerald-500 dark:hover:border-emerald-500 transition duration-300 flex flex-col justify-between group">
+            <div class="bg-slate-50 dark:bg-slate-800/60 rounded-3xl p-6 border border-slate-200 dark:border-slate-700/60 hover:border-red-500 dark:hover:border-red-500 transition duration-300 flex flex-col justify-between group">
                 <div>
                     <div class="flex items-center justify-between gap-2 text-xs mb-3">
                         <div class="flex items-center gap-1.5">
-                            <span class="px-2.5 py-1 rounded-lg bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 font-bold">
+                            <span class="px-2.5 py-1 rounded-lg bg-red-100 dark:bg-red-950/80 text-red-800 dark:text-red-300 font-bold">
                                 {{ $news->source ?? 'Berita' }}
                             </span>
                             @if(($news->category ?? '') == 'Berita Indonesia')
@@ -46,7 +46,7 @@
                         </span>
                     </div>
 
-                    <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition line-clamp-2">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition line-clamp-2">
                         <a href="{{ $news->url }}" target="_blank" rel="noopener">
                             {{ $news->title }}
                         </a>
@@ -59,7 +59,7 @@
 
                 <div class="mt-6 pt-4 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center justify-between">
                     <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Kategori: {{ $news->category ?? 'Umum' }}</span>
-                    <a href="{{ $news->url }}" target="_blank" rel="noopener" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">
+                    <a href="{{ $news->url }}" target="_blank" rel="noopener" class="text-xs font-bold text-red-600 dark:text-red-400 hover:underline flex items-center gap-1">
                         <span>Baca Sumber</span>
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                     </a>

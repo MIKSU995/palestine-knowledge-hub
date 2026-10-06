@@ -34,18 +34,18 @@
 
             <!-- Category Filter Tabs -->
             <div class="flex flex-wrap gap-2">
-                <a href="{{ route('news.index') }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition {{ !request('category') || request('category') == 'All' ? 'bg-emerald-600 text-white shadow-md' : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
+                <a href="{{ route('news.index') }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition {{ !request('category') || request('category') == 'All' ? 'bg-red-600 text-white shadow-md' : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
                     Semua Berita (All)
                 </a>
-                <a href="{{ route('news.index', ['category' => 'Berita Indonesia', 'search' => request('search')]) }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-1.5 {{ request('category') == 'Berita Indonesia' ? 'bg-emerald-600 text-white shadow-md' : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
+                <a href="{{ route('news.index', ['category' => 'Berita Indonesia', 'search' => request('search')]) }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-1.5 {{ request('category') == 'Berita Indonesia' ? 'bg-red-600 text-white shadow-md' : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
                     <span>🇮🇩 Berita Indonesia</span>
                 </a>
-                <a href="{{ route('news.index', ['category' => 'Berita Internasional', 'search' => request('search')]) }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-1.5 {{ request('category') == 'Berita Internasional' ? 'bg-emerald-600 text-white shadow-md' : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
+                <a href="{{ route('news.index', ['category' => 'Berita Internasional', 'search' => request('search')]) }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-1.5 {{ request('category') == 'Berita Internasional' ? 'bg-red-600 text-white shadow-md' : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
                     <span>🌐 Berita Internasional</span>
                 </a>
                 @foreach($categories as $cat)
                 @if(!in_array($cat, ['Berita Indonesia', 'Berita Internasional']))
-                <a href="{{ route('news.index', ['category' => $cat, 'search' => request('search')]) }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition {{ request('category') == $cat ? 'bg-emerald-600 text-white shadow-md' : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
+                <a href="{{ route('news.index', ['category' => $cat, 'search' => request('search')]) }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition {{ request('category') == $cat ? 'bg-red-600 text-white shadow-md' : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
                     {{ $cat }}
                 </a>
                 @endif
@@ -59,10 +59,10 @@
                     <input type="hidden" name="category" value="{{ request('category') }}">
                     @endif
                     <div class="relative">
-                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Search live news..." class="pl-10 pr-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm text-slate-900 dark:text-white placeholder-slate-400 outline-none focus:border-emerald-500 w-60">
+                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Search live news..." class="pl-10 pr-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm text-slate-900 dark:text-white placeholder-slate-400 outline-none focus:border-red-500 w-60">
                         <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                     </div>
-                    <button type="submit" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition">
+                    <button type="submit" class="px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold text-sm transition">
                         Search
                     </button>
                 </form>
@@ -83,7 +83,7 @@
                     <!-- Meta Badge & Date -->
                     <div class="flex items-center justify-between gap-2 text-xs mb-4">
                         <div class="flex items-center gap-2">
-                            <span class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold">
+                            <span class="px-3 py-1 rounded-full bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-300 font-bold">
                                 {{ $news->source }}
                             </span>
                             @if($news->category == 'Berita Indonesia')
@@ -98,7 +98,7 @@
                     </div>
 
                     <!-- News Title -->
-                    <h2 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition leading-snug">
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition leading-snug">
                         <a href="{{ $news->url }}" target="_blank" rel="noopener">
                             {{ $news->title }}
                         </a>
@@ -113,7 +113,7 @@
                 <!-- Footer Link & Share -->
                 <div class="mt-8 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
                     <span class="text-xs text-slate-400">Category: {{ $news->category }}</span>
-                    <a href="{{ $news->url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold text-xs hover:bg-emerald-100 transition">
+                    <a href="{{ $news->url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-red-50 dark:bg-red-950/60 text-red-700 dark:text-red-300 font-bold text-xs hover:bg-red-100 transition">
                         <span>Read Full Story</span>
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                     </a>
@@ -130,7 +130,7 @@
         <div class="bg-white dark:bg-slate-900 rounded-3xl p-16 text-center border border-slate-200 dark:border-slate-800">
             <h3 class="text-2xl font-bold text-slate-800 dark:text-white">No News Found</h3>
             <p class="text-slate-500 mt-2">Try adjusting your search keywords or click refresh to sync live API news.</p>
-            <a href="{{ route('news.index', ['refresh' => 1]) }}" class="inline-block mt-6 px-6 py-3 rounded-xl bg-emerald-600 text-white font-bold">
+            <a href="{{ route('news.index', ['refresh' => 1]) }}" class="inline-block mt-6 px-6 py-3 rounded-xl bg-red-600 text-white font-bold">
                 Sync Live API News
             </a>
         </div>

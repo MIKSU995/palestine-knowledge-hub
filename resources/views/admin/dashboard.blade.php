@@ -11,10 +11,10 @@
 
     <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition">
         <div class="flex items-center justify-between mb-4">
-            <div class="w-11 h-11 rounded-2xl bg-emerald-100 flex items-center justify-center">
-                <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <div class="w-11 h-11 rounded-2xl bg-red-100 flex items-center justify-center">
+                <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
             </div>
-            <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-lg">Artikel</span>
+            <span class="text-xs font-semibold text-red-600 bg-red-50 px-2 py-1 rounded-lg">Artikel</span>
         </div>
         <p class="text-4xl font-extrabold text-slate-900">{{ $totalArticles }}</p>
         <p class="text-sm text-slate-400 mt-1.5">Total artikel dipublikasikan</p>
@@ -62,10 +62,10 @@
     <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
         <div class="flex items-center justify-between px-6 py-5 border-b border-slate-100">
             <h2 class="font-bold text-slate-900 flex items-center gap-2">
-                <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                 Artikel Terbaru
             </h2>
-            <a href="{{ route('admin.articles.create') }}" class="text-xs font-bold text-emerald-600 hover:text-emerald-700 hover:underline">+ Artikel Baru</a>
+            <a href="{{ route('admin.articles.create') }}" class="text-xs font-bold text-red-600 hover:text-red-700 hover:underline">+ Artikel Baru</a>
         </div>
         <div class="divide-y divide-slate-50">
             @forelse($recentArticles as $article)
@@ -78,7 +78,7 @@
                     </p>
                 </div>
                 <span class="flex-shrink-0 px-2.5 py-1 rounded-lg text-xs font-bold
-                    {{ $article->status === 'published' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700' }}">
+                    {{ $article->status === 'published' ? 'bg-red-100 text-red-700' : 'bg-amber-100 text-amber-700' }}">
                     {{ $article->status === 'published' ? 'Terbit' : 'Draf' }}
                 </span>
                 <div class="flex gap-2 flex-shrink-0">
@@ -87,13 +87,13 @@
             </div>
             @empty
             <div class="px-6 py-10 text-center text-slate-400 text-sm">
-                Belum ada artikel. <a href="{{ route('admin.articles.create') }}" class="text-emerald-600 font-semibold hover:underline">Buat artikel pertama →</a>
+                Belum ada artikel. <a href="{{ route('admin.articles.create') }}" class="text-red-600 font-semibold hover:underline">Buat artikel pertama →</a>
             </div>
             @endforelse
         </div>
         @if($recentArticles->isNotEmpty())
         <div class="px-6 py-3 border-t border-slate-100">
-            <a href="{{ route('admin.articles.index') }}" class="text-xs font-semibold text-slate-400 hover:text-emerald-600 transition">Lihat semua artikel →</a>
+            <a href="{{ route('admin.articles.index') }}" class="text-xs font-semibold text-slate-400 hover:text-red-600 transition">Lihat semua artikel →</a>
         </div>
         @endif
     </div>
@@ -135,11 +135,20 @@
 
 {{-- Quick Actions --}}
 <div class="mt-6 grid sm:grid-cols-3 gap-4">
-    <a href="{{ route('admin.articles.create') }}" class="flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl px-5 py-4 font-bold text-sm transition shadow-lg shadow-emerald-900/20 group">
+    <a href="{{ route('admin.articles.create') }}" class="flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white rounded-2xl px-5 py-4 font-bold text-sm transition shadow-lg shadow-red-900/20 group">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         Tulis Artikel Baru
         <svg class="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
     </a>
+    <a href="{{ route('admin.categories.create') }}" class="flex items-center gap-3 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-2xl px-5 py-4 font-bold text-sm transition shadow-sm">
+        <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a2 2 0 012-2z"/></svg>
+        Tambah Kategori
+    </a>
+    <a href="{{ route('home') }}" target="_blank" class="flex items-center gap-3 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-2xl px-5 py-4 font-bold text-sm transition shadow-sm">
+        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        Lihat Situs Publik
+    </a>
+</div>
     <a href="{{ route('admin.categories.create') }}" class="flex items-center gap-3 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-2xl px-5 py-4 font-bold text-sm transition shadow-sm">
         <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a2 2 0 012-2z"/></svg>
         Tambah Kategori

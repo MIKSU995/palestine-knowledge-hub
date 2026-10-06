@@ -10,14 +10,14 @@
 
 {{-- ================= HERO ================= --}}
 
-<section class="relative overflow-hidden bg-gradient-to-r from-green-800 via-green-700 to-emerald-600">
+<section class="relative overflow-hidden bg-gradient-to-r from-red-900 via-red-800 to-rose-700">
 
     <div class="absolute inset-0 bg-black/30"></div>
 
     <div class="relative max-w-7xl mx-auto px-6 py-20">
 
         {{-- Breadcrumb --}}
-        <nav class="text-green-100 text-sm mb-8">
+        <nav class="text-red-100 text-sm mb-8">
 
             <a href="{{ route('home') }}" class="hover:text-white">
                 Home
@@ -54,7 +54,7 @@
         </h1>
 
         {{-- Meta --}}
-        <div class="flex flex-wrap items-center gap-6 mt-10 text-green-100">
+        <div class="flex flex-wrap items-center gap-6 mt-10 text-red-100">
 
             <div class="flex items-center gap-2">
 
@@ -127,7 +127,7 @@ class="w-full h-[550px] object-cover hover:scale-105 duration-700">
 
 <div class="flex flex-wrap gap-3 mb-8">
 
-<span class="px-4 py-2 rounded-full bg-green-100 text-green-700">
+<span class="px-4 py-2 rounded-full bg-red-100 text-red-700 font-semibold">
 
 {{ $article->category->name }}
 
@@ -188,7 +188,7 @@ Tags :
 </span>
 
 <a href="#"
-class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hover:text-white transition">
+class="px-4 py-2 rounded-full bg-red-100 text-red-700 hover:bg-red-600 hover:text-white transition font-medium">
 
 {{ $article->category->name }}
 
@@ -220,7 +220,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
         </h3>
 
-        <span class="text-sm text-green-600 font-semibold">
+        <span class="text-sm text-red-600 font-semibold">
 
             Trending
 
@@ -243,7 +243,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
             <div class="flex-1">
 
-                <h4 class="font-semibold text-slate-800 group-hover:text-green-600 transition">
+                <h4 class="font-semibold text-slate-800 group-hover:text-red-600 transition">
 
                     {{ $popular->title }}
 
@@ -298,10 +298,10 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
             <a href="{{ route('articles',['category'=>$category->id]) }}"
 
                class="px-5 py-3 rounded-full
-               bg-green-100
-               text-green-700
+               bg-red-100
+               text-red-700
                font-medium
-               hover:bg-green-600
+               hover:bg-red-600
                hover:text-white
                hover:scale-105
                duration-300">
@@ -330,9 +330,9 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
         <a target="_blank"
            href="https://wa.me/?text={{ urlencode(request()->fullUrl()) }}"
-           class="flex items-center justify-center gap-3 py-4 rounded-xl bg-green-500 text-white hover:bg-green-600 duration-300">
+           class="flex items-center justify-center gap-3 py-4 rounded-xl bg-red-600 text-white hover:bg-red-700 duration-300 font-bold">
 
-            <span class="text-xl">🟢</span>
+            <span class="text-xl">🔴</span>
 
             WhatsApp
 
@@ -374,7 +374,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
 {{-- ================= QUICK INFO ================= --}}
 
-<div class="bg-gradient-to-br from-green-700 to-emerald-600 rounded-3xl text-white p-8">
+<div class="bg-gradient-to-br from-red-800 to-rose-700 rounded-3xl text-white p-8">
 
     <h3 class="text-2xl font-bold">
 
@@ -382,7 +382,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
     </h3>
 
-    <p class="mt-4 text-green-100 leading-7">
+    <p class="mt-4 text-red-100 leading-7">
 
         Learn history, geography and humanitarian issues through trusted educational content.
 
@@ -398,7 +398,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
             </div>
 
-            <div class="text-sm text-green-100">
+            <div class="text-sm text-red-100">
 
                 Views
 
@@ -414,7 +414,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
             </div>
 
-            <div class="text-sm text-green-100">
+            <div class="text-sm text-red-100">
 
                 Min Read
 
@@ -458,7 +458,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
                 </p>
 
-                <h3 class="text-2xl font-bold mt-3 group-hover:text-green-600">
+                <h3 class="text-2xl font-bold mt-3 group-hover:text-red-600">
 
                     {{ $previousArticle->title }}
 
@@ -485,7 +485,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 
                 </p>
 
-                <h3 class="text-2xl font-bold mt-3 group-hover:text-green-600">
+                <h3 class="text-2xl font-bold mt-3 group-hover:text-red-600">
 
                     {{ $nextArticle->title }}
 
@@ -515,7 +515,7 @@ class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-600 hov
 <div class="flex items-center gap-6">
 
 <div
-class="w-20 h-20 rounded-full bg-green-600 text-white flex items-center justify-center text-3xl font-bold">
+class="w-20 h-20 rounded-full bg-red-600 text-white flex items-center justify-center text-3xl font-bold">
 
 {{ strtoupper(substr($article->user->name,0,1)) }}
 
@@ -571,7 +571,7 @@ Related Articles
 
 <a
 href="{{ route('articles') }}"
-class="text-green-600 font-semibold">
+class="text-red-600 font-semibold">
 
 View All →
 
@@ -601,7 +601,7 @@ class="w-full h-56 object-cover group-hover:scale-110 duration-500">
 <div class="p-6">
 
 <span
-class="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs">
+class="inline-block bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs">
 
 {{ $related->category->name }}
 
@@ -623,7 +623,7 @@ class="mt-4 text-gray-600 leading-7">
 
 <a
 href="{{ route('articles.show',$related->slug) }}"
-class="inline-flex mt-6 text-green-600 font-semibold">
+class="inline-flex mt-6 text-red-600 font-semibold">
 
 Read More →
 

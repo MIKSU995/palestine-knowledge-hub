@@ -59,6 +59,24 @@
                 Kategori Artikel
             </a>
 
+            <a href="{{ route('admin.glossary.index') }}"
+               class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition {{ request()->routeIs('admin.glossary*') ? 'bg-red-600 text-white shadow-lg shadow-red-950/40' : 'text-slate-300 hover:bg-slate-800 hover:text-white' }}">
+                <span class="text-base flex-shrink-0">📚</span>
+                Glosarium Istilah
+            </a>
+
+            <a href="{{ route('admin.culture.index') }}"
+               class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition {{ request()->routeIs('admin.culture*') ? 'bg-red-600 text-white shadow-lg shadow-red-950/40' : 'text-slate-300 hover:bg-slate-800 hover:text-white' }}">
+                <span class="text-base flex-shrink-0">🎨</span>
+                Budaya & Warisan
+            </a>
+
+            <a href="{{ route('admin.petition.index') }}"
+               class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition {{ request()->routeIs('admin.petition*') ? 'bg-red-600 text-white shadow-lg shadow-red-950/40' : 'text-slate-300 hover:bg-slate-800 hover:text-white' }}">
+                <span class="text-base flex-shrink-0">✍️</span>
+                Petisi Solidaritas
+            </a>
+
             <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest px-3 mt-5 mb-2">Komunitas & Pengguna</p>
 
             <a href="{{ route('admin.moderation.index') }}"

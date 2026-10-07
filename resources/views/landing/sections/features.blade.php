@@ -6,10 +6,10 @@
                 Pilar Pengetahuan Utama
             </span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                Jelajahi 6 Modul Pembelajaran
+                Jelajahi 8 Modul Pembelajaran
             </h2>
             <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
-                Pelajari sejarah, geografi, warisan budaya, berita terkini, kuis interaktif, dan arsip dokumen otentik dalam satu platform edukasi.
+                Pelajari sejarah, geografi, warisan budaya, berita terkini, kuis interaktif, glosarium, petisi solidaritas, dan arsip dokumen otentik dalam satu platform.
             </p>
         </div>
 
@@ -113,6 +113,45 @@
                 </div>
                 <a href="{{ route('gallery') }}" class="inline-flex items-center gap-2 text-sm font-extrabold text-rose-600 dark:text-rose-400 mt-6 group-hover:translate-x-1 transition-transform">
                     <span>Lihat Galeri</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+
+        </div>
+
+        {{-- Row 2: New Modules --}}
+        <div class="grid md:grid-cols-2 gap-8 mt-8">
+
+            <!-- Card 7: Budaya & Warisan -->
+            <div class="group relative rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 shadow-sm hover:shadow-xl hover:border-red-500/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 dark:bg-red-950/60 text-red-600 dark:text-red-400 flex items-center justify-center mb-6 shadow-inner text-2xl">
+                        🎨
+                    </div>
+                    <h3 class="text-lg font-extrabold text-slate-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">7. Budaya & Warisan Palestina</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed">
+                        Kenali Tatreez (sulaman UNESCO), Kuffiyeh, Maqluba, tarian Dabke, tradisi panen zaitun, dan 1.000 tahun warisan kebudayaan Palestina.
+                    </p>
+                </div>
+                <a href="{{ route('culture') }}" class="inline-flex items-center gap-2 text-sm font-extrabold text-red-600 dark:text-red-400 mt-6 group-hover:translate-x-1 transition-transform">
+                    <span>Jelajahi Budaya</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Card 8: Petisi Solidaritas -->
+            <div class="group relative rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 shadow-sm hover:shadow-xl hover:border-red-500/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-green-500/10 dark:bg-green-950/60 text-green-600 dark:text-green-400 flex items-center justify-center mb-6 shadow-inner text-2xl">
+                        ✍️
+                    </div>
+                    <h3 class="text-lg font-extrabold text-slate-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">8. Petisi & Solidaritas</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed">
+                        Bergabunglah dengan ribuan warga Indonesia dalam petisi solidaritas digital yang nyata. Setiap tanda tangan adalah suara kemanusiaan.
+                    </p>
+                </div>
+                <a href="{{ route('petition') }}" class="inline-flex items-center gap-2 text-sm font-extrabold text-green-600 dark:text-green-400 mt-6 group-hover:translate-x-1 transition-transform">
+                    <span>Tandatangani Petisi</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
             </div>

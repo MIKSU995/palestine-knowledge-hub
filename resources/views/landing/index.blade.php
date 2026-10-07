@@ -31,4 +31,10 @@
     {{-- 9. Interactive Quiz CTA & Evaluation --}}
     @include('landing.sections.cta')
 
+    {{-- 10. Important Dates & Solidarity --}}
+    @include('landing.sections.important-dates')
+
+    {{-- 11. Culture & Petition CTA --}}
+    @include('landing.sections.culture-petition-cta')
+
 @endsection

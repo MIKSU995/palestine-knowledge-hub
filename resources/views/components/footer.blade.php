@@ -13,7 +13,7 @@
                     </h2>
                 </div>
                 <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
-                    Platform edukasi terbuka, live feed Instagram @thegaza.update, dan saluran bantuan kemanusaiaan terverifikasi untuk rakyat Palestina.
+                    Platform edukasi terbuka, live feed Instagram @thegaza.update, dan saluran bantuan kemanusiaan terverifikasi untuk rakyat Palestina.
                 </p>
                 <div class="pt-2 flex flex-wrap items-center gap-2">
                     <a href="https://www.instagram.com/thegaza.update/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-semibold hover:bg-rose-500/20 transition">
@@ -35,6 +35,7 @@
                     <li><a href="{{ route('articles') }}" class="hover:text-red-400 transition">Artikel & Essay</a></li>
                     <li><a href="{{ route('timeline') }}" class="hover:text-red-400 transition">Linimasa Sejarah</a></li>
                     <li><a href="{{ route('maps') }}" class="hover:text-red-400 transition">Peta & Geografi</a></li>
+                    <li><a href="{{ route('culture') }}" class="hover:text-red-400 transition">🎨 Budaya & Warisan</a></li>
                 </ul>
             </div>
 
@@ -46,6 +47,8 @@
                     <li><a href="{{ route('gallery') }}" class="hover:text-red-400 transition">Galeri Foto Sejarah</a></li>
                     <li><a href="{{ route('resources') }}" class="hover:text-red-400 transition">Materi Pembelajaran</a></li>
                     <li><a href="{{ route('quiz') }}" class="hover:text-red-400 transition">Kuis Interaktif</a></li>
+                    <li><a href="{{ route('glossary') }}" class="hover:text-red-400 transition">Glosarium Istilah</a></li>
+                    <li><a href="{{ route('petition') }}" class="hover:text-red-400 transition text-red-400 font-semibold">✍️ Petisi Solidaritas</a></li>
                     <li><a href="{{ route('sitemap') }}" class="hover:text-red-400 transition">Peta Situs (Sitemap)</a></li>
                 </ul>
             </div>
@@ -53,7 +56,7 @@
             <!-- Col 4: Buletin Edukasi -->
             <div>
                 <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Buletin Edukasi</h3>
-                <p class="text-xs text-slate-400 mb-3">Dapatkan rangkuman laporan kemanusaiaan mingguan dan rilis materi edukasi langsung ke email Anda.</p>
+                <p class="text-xs text-slate-400 mb-3">Dapatkan rangkuman laporan kemanusiaan mingguan dan rilis materi edukasi langsung ke email Anda.</p>
                 <form onsubmit="event.preventDefault(); alert('Terima kasih telah berlangganan di Palestine Knowledge Hub!');" class="space-y-2">
                     <input type="email" required placeholder="Masukkan email Anda..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-sm text-white placeholder-slate-500 outline-none focus:border-red-500">
                     <button type="submit" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:opacity-95 text-white font-bold text-sm transition shadow-md">

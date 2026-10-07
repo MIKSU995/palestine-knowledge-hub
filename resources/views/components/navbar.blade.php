@@ -64,6 +64,14 @@
                     Kuis
                 </a>
 
+                <a href="{{ route('culture') }}" class="px-2.5 py-1.5 rounded-xl transition {{ request()->routeIs('culture*') ? 'bg-slate-100 dark:bg-slate-800 text-red-600 dark:text-red-400 font-bold' : 'text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 hover:bg-slate-100 dark:hover:bg-slate-800/60' }}">
+                    Budaya
+                </a>
+
+                <a href="{{ route('petition') }}" class="px-2.5 py-1.5 rounded-xl transition {{ request()->routeIs('petition*') ? 'bg-slate-100 dark:bg-slate-800 text-red-600 dark:text-red-400 font-bold' : 'text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 hover:bg-slate-100 dark:hover:bg-slate-800/60' }}">
+                    Petisi
+                </a>
+
             </div>
 
             <!-- Right Tools & User Actions -->
@@ -156,6 +164,8 @@
         <a href="{{ route('gallery') }}" class="block px-3 py-2 rounded-xl text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Galeri Media</a>
         <a href="{{ route('resources') }}" class="block px-3 py-2 rounded-xl text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Materi Pembelajaran</a>
         <a href="{{ route('quiz') }}" class="block px-3 py-2 rounded-xl text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Kuis Interaktif</a>
+        <a href="{{ route('culture') }}" class="block px-3 py-2 rounded-xl text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">🎨 Budaya Palestina</a>
+        <a href="{{ route('petition') }}" class="block px-3 py-2 rounded-xl text-red-700 dark:text-red-400 font-bold hover:bg-red-50 dark:hover:bg-red-950/30">✍️ Petisi Solidaritas</a>
         <div class="pt-2 border-t border-slate-100 dark:border-slate-800">
             <a href="/#humanitarian-hub" class="block text-center w-full py-2.5 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 text-white font-extrabold text-xs">❤️ Saluran Donasi Resmi</a>
         </div>

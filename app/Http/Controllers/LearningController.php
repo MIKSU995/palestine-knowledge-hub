@@ -79,7 +79,18 @@ class LearningController extends Controller
             ]);
         }
 
-        return view('landing.quiz-result', compact('quiz', 'percentage', 'passed', 'score', 'total', 'results'));
+        return view('landing.quiz-result', compact('quiz', 'percentage', 'passed', 'score', 'total', 'results', 'attempt'));
+    }
+
+    public function certificate($attemptId)
+    {
+        $attempt = QuizAttempt::with(['quiz', 'user'])->findOrFail($attemptId);
+
+        if (!$attempt->passed && $attempt->score < 70) {
+            return redirect()->route('quiz')->with('error', 'Sertifikat hanya tersedia untuk kuis yang telah lulus dengan skor minimal 70%.');
+        }
+
+        return view('landing.certificate', compact('attempt'));
     }
 
     public function userDashboard()
@@ -104,7 +115,7 @@ class LearningController extends Controller
                 'title' => 'First Step Scholar',
                 'description' => 'Completed your first Palestinian knowledge quiz.',
                 'icon' => '🎓',
-                'color' => 'bg-emerald-100 text-emerald-800'
+                'color' => 'bg-red-100 text-red-800'
             ];
         }
 

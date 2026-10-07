@@ -11,6 +11,8 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LearningController;
 use App\Http\Controllers\UserExperienceController;
 use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\CultureController;
+use App\Http\Controllers\PetitionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,9 +35,18 @@ Route::get('/gallery', [LandingController::class, 'gallery'])->name('gallery');
 Route::get('/resources', [LandingController::class, 'resources'])->name('resources');
 Route::get('/resources/{id}/download', [LandingController::class, 'downloadResource'])->name('resources.download');
 
+Route::get('/glossary', [\App\Http\Controllers\GlossaryController::class, 'index'])->name('glossary');
+
+Route::get('/culture', [CultureController::class, 'index'])->name('culture');
+Route::get('/culture/{culture}', [CultureController::class, 'show'])->name('culture.show');
+
+Route::get('/petition', [PetitionController::class, 'index'])->name('petition');
+Route::post('/petition/{petition}/sign', [PetitionController::class, 'sign'])->name('petition.sign');
+
 Route::get('/quiz', [LearningController::class, 'index'])->name('quiz');
 Route::get('/quiz/{slug}', [LearningController::class, 'showQuiz'])->name('quiz.show');
 Route::post('/quiz/{slug}/submit', [LearningController::class, 'submitQuiz'])->name('quiz.submit');
+Route::get('/quiz/certificate/{attempt}', [LearningController::class, 'certificate'])->name('quiz.certificate');
 
 Route::get('/bookmarks', [UserExperienceController::class, 'bookmarksIndex'])->name('bookmarks');
 
@@ -76,18 +87,22 @@ Route::middleware(['auth'])
     ->group(function () {
 
         Route::get('/dashboard', function () {
-            $totalArticles = \App\Models\Article::count();
-            $totalUsers = \App\Models\User::count();
-            $totalQuizzes = \App\Models\Quiz::count();
-            $pendingReports = \App\Models\Report::where('status', 'pending')->count();
-            $recentArticles = \App\Models\Article::latest()->take(5)->get();
-            $recentReports = \App\Models\Report::with('user')->latest()->take(5)->get();
+            $totalArticles   = \App\Models\Article::count();
+            $totalUsers      = \App\Models\User::count();
+            $totalQuizzes    = \App\Models\Quiz::count();
+            $pendingReports  = \App\Models\Report::where('status', 'pending')->count();
+            $totalCultures   = \App\Models\Culture::count();
+            $totalSignatures = \App\Models\PetitionSignature::count();
+            $recentArticles  = \App\Models\Article::latest()->take(5)->get();
+            $recentReports   = \App\Models\Report::with('user')->latest()->take(5)->get();
 
             return view('admin.dashboard', compact(
                 'totalArticles',
                 'totalUsers',
                 'totalQuizzes',
                 'pendingReports',
+                'totalCultures',
+                'totalSignatures',
                 'recentArticles',
                 'recentReports'
             ));
@@ -95,6 +110,10 @@ Route::middleware(['auth'])
 
         Route::resource('categories', CategoryController::class);
         Route::resource('articles', ArticleController::class);
+        Route::resource('glossary', \App\Http\Controllers\Admin\GlossaryController::class);
+        Route::resource('culture', \App\Http\Controllers\Admin\CultureController::class);
+        Route::resource('petition', \App\Http\Controllers\Admin\PetitionController::class);
+        Route::get('/petition/{petition}/signatures', [\App\Http\Controllers\Admin\PetitionController::class, 'signatures'])->name('petition.signatures');
 
         // Moderation
         Route::get('/moderation', [ModerationController::class, 'index'])->name('moderation.index');

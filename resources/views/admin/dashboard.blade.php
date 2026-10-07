@@ -55,6 +55,33 @@
 
 </div>
 
+{{-- Second Stats Row --}}
+<div class="grid grid-cols-2 gap-5 mb-8">
+
+    <a href="{{ route('admin.culture.index') }}" class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-red-300 transition group">
+        <div class="flex items-center justify-between mb-4">
+            <div class="w-11 h-11 rounded-2xl bg-rose-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                🎨
+            </div>
+            <span class="text-xs font-semibold text-rose-600 bg-rose-50 px-2 py-1 rounded-lg">Budaya</span>
+        </div>
+        <p class="text-4xl font-extrabold text-slate-900">{{ $totalCultures }}</p>
+        <p class="text-sm text-slate-400 mt-1.5">Warisan budaya tercatat</p>
+    </a>
+
+    <a href="{{ route('admin.petition.index') }}" class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-green-300 transition group">
+        <div class="flex items-center justify-between mb-4">
+            <div class="w-11 h-11 rounded-2xl bg-green-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                ✍️
+            </div>
+            <span class="text-xs font-semibold text-green-600 bg-green-50 px-2 py-1 rounded-lg">Tanda Tangan</span>
+        </div>
+        <p class="text-4xl font-extrabold text-slate-900">{{ number_format($totalSignatures) }}</p>
+        <p class="text-sm text-slate-400 mt-1.5">Total tanda tangan petisi</p>
+    </a>
+
+</div>
+
 {{-- Main Panels --}}
 <div class="grid lg:grid-cols-2 gap-6">
 

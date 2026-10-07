@@ -36,13 +36,18 @@
                 {{ $passed ? 'You passed! Well done on expanding your knowledge of Palestine.' : 'You need ' . ($quiz->pass_score ?? 70) . '% to pass. Review the answers below and try again.' }}
             </p>
 
-            <div class="flex items-center justify-center gap-3 mt-6">
+            <div class="flex items-center justify-center flex-wrap gap-3 mt-6">
                 <a href="{{ route('quiz') }}" class="px-5 py-2.5 border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white rounded-2xl text-sm font-semibold transition">
                     ← All Quizzes
                 </a>
-                <a href="{{ route('quiz.show', $quiz->slug) }}" class="px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-2xl text-sm font-semibold transition">
+                <a href="{{ route('quiz.show', $quiz->slug) }}" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-2xl text-sm font-semibold transition">
                     🔄 Retake Quiz
                 </a>
+                @if($passed && isset($attempt) && $attempt)
+                <a href="{{ route('quiz.certificate', $attempt->id) }}" target="_blank" class="px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white rounded-2xl text-sm font-bold transition shadow-lg shadow-red-900/50 flex items-center gap-1.5">
+                    📜 Unduh Sertifikat
+                </a>
+                @endif
                 @auth
                 <a href="{{ route('learning.dashboard') }}" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-2xl text-sm font-semibold transition">
                     📊 My Dashboard

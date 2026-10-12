@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Open Book Base -->
+  <g transform="translate(100, 115)">
+    <!-- Left page -->
+    <path d="M-55 10 Q-30 -5 0 0 L0 38 Q-30 25 -55 38 Z" fill="#1a1a1a" />
+    <!-- Right page -->
+    <path d="M55 10 Q30 -5 0 0 L0 38 Q30 25 55 38 Z" fill="#1a1a1a" />
+    <!-- Book spine -->
+    <rect x="-2" y="0" width="4" height="38" fill="#2d2d2d" />
+  </g>
+
+  <!-- Sun / Red glow behind sprout -->
+  <ellipse cx="100" cy="112" rx="22" ry="14" fill="#c0392b" />
+  <!-- Sun rays -->
+  <g transform="translate(100, 112)" stroke="#c0392b" stroke-width="2.5" stroke-linecap="round">
+    <line x1="-28" y1="0" x2="-38" y2="-8" />
+    <line x1="-25" y1="-8" x2="-33" y2="-18" />
+    <line x1="-18" y1="-14" x2="-24" y2="-26" />
+    <line x1="-8" y1="-18" x2="-10" y2="-30" />
+    <line x1="28" y1="0" x2="38" y2="-8" />
+    <line x1="25" y1="-8" x2="33" y2="-18" />
+    <line x1="18" y1="-14" x2="24" y2="-26" />
+    <line x1="8" y1="-18" x2="10" y2="-30" />
+  </g>
+
+  <!-- Sprout stem -->
+  <line x1="100" y1="112" x2="100" y2="78" stroke="#1a7a3a" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Left leaf -->
+  <path d="M100 92 Q82 80 78 65 Q90 70 100 82 Z" fill="#1a7a3a" />
+  <!-- Right leaf -->
+  <path d="M100 88 Q118 76 122 61 Q110 66 100 78 Z" fill="#27ae60" />
+
+  <!-- Book green stripe accent -->
+  <path d="M45 125 Q100 112 155 125 L155 130 Q100 117 45 130 Z" fill="#1a7a3a" opacity="0.8" />
+</svg>

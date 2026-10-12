@@ -1,0 +1,80 @@
+<section class="py-20 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors relative overflow-hidden w-full max-w-full">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-400 text-xs font-bold uppercase tracking-wider mb-3">
+                    <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
+                    Pembaruan Real-Time
+                </div>
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    Berita Terkini Palestina
+                </h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+                    Aliran berita terkini yang diperbarui secara langsung dari sumber berita terverifikasi nasional & internasional.
+                </p>
+            </div>
+
+            <a href="{{ route('news.index') }}" class="inline-flex items-center gap-2 text-sm font-bold text-red-600 dark:text-red-400 hover:text-red-700">
+                <span>Pusat Berita Selengkapnya</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+        </div>
+
+        <!-- News Cards Grid -->
+        @if(isset($liveNews) && count($liveNews) > 0)
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            @foreach($liveNews->take(6) as $news)
+            <div class="bg-slate-50 dark:bg-slate-800/60 rounded-3xl p-6 border border-slate-200 dark:border-slate-700/60 hover:border-red-500 dark:hover:border-red-500 transition duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex items-center justify-between gap-2 text-xs mb-3">
+                        <div class="flex items-center gap-1.5">
+                            <span class="px-2.5 py-1 rounded-lg bg-red-100 dark:bg-red-950/80 text-red-800 dark:text-red-300 font-bold">
+                                {{ $news->source ?? 'Berita' }}
+                            </span>
+                            @if(($news->category ?? '') == 'Berita Indonesia')
+                            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-red-500/10 text-red-700 dark:text-red-300 font-semibold text-[10px] border border-red-500/20"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>Indonesia</span>
+                            @else
+                            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-blue-500/10 text-blue-700 dark:text-blue-300 font-semibold text-[10px] border border-blue-500/20"><svg class="w-3 h-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Global</span>
+                            @endif
+                        </div>
+                        <span class="text-slate-400">
+                            {{ optional($news->published_at)->diffForHumans() }}
+                        </span>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition line-clamp-2">
+                        <a href="{{ $news->url }}" target="_blank" rel="noopener">
+                            {{ $news->title }}
+                        </a>
+                    </h3>
+
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 line-clamp-3 leading-relaxed">
+                        {{ $news->summary }}
+                    </p>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center justify-between">
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Kategori: {{ $news->category ?? 'Umum' }}</span>
+                    <a href="{{ $news->url }}" target="_blank" rel="noopener" class="text-xs font-bold text-red-600 dark:text-red-400 hover:underline flex items-center gap-1">
+                        <span>Baca Sumber</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                    </a>
+                </div>
+            </div>
+            @endforeach
+
+        </div>
+        @else
+        <div class="text-center py-12 bg-slate-50 dark:bg-slate-800 rounded-3xl">
+            <p class="text-slate-500">Pembaruan berita terkini sedang dimuat...</p>
+        </div>
+        @endif
+
+    </div>
+
+</section>
+

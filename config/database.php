@@ -97,6 +97,10 @@ return [
             'prefix_indexes' => true,
             'search_path' => 'public',
             'sslmode' => env('DB_SSLMODE', 'prefer'),
+            'options' => [
+                // Force IPv4 to avoid IPv6 issues on Vercel
+                \PDO::ATTR_PERSISTENT => false,
+            ],
         ],
 
         'sqlsrv' => [

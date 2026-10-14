@@ -9,25 +9,30 @@ if (file_exists($maintenance = __DIR__ . '/../storage/framework/maintenance.php'
     require $maintenance;
 }
 
-// Fix storage path for Vercel serverless (read-only filesystem except /tmp)
-if (!is_dir('/tmp/storage/framework/views')) {
-    mkdir('/tmp/storage/framework/views', 0755, true);
-}
-if (!is_dir('/tmp/storage/framework/cache/data')) {
-    mkdir('/tmp/storage/framework/cache/data', 0755, true);
-}
-if (!is_dir('/tmp/storage/framework/sessions')) {
-    mkdir('/tmp/storage/framework/sessions', 0755, true);
-}
-if (!is_dir('/tmp/storage/logs')) {
-    mkdir('/tmp/storage/logs', 0755, true);
-}
-if (!is_dir('/tmp/bootstrap/cache')) {
-    mkdir('/tmp/bootstrap/cache', 0755, true);
+// Vercel serverless: filesystem is read-only except /tmp
+// Create all required writable directories in /tmp
+$tmpDirs = [
+    '/tmp/storage/app/public',
+    '/tmp/storage/framework/views',
+    '/tmp/storage/framework/cache/data',
+    '/tmp/storage/framework/sessions',
+    '/tmp/storage/framework/testing',
+    '/tmp/storage/logs',
+    '/tmp/bootstrap/cache',
+    '/tmp/views',
+];
+
+foreach ($tmpDirs as $dir) {
+    if (!is_dir($dir)) {
+        mkdir($dir, 0755, true);
+    }
 }
 
 require __DIR__ . '/../vendor/autoload.php';
 
 $app = require_once __DIR__ . '/../bootstrap/app.php';
+
+// Override storage path to /tmp for Vercel
+$app->useStoragePath('/tmp/storage');
 
 $app->handleRequest(Request::capture());

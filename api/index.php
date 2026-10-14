@@ -28,6 +28,30 @@ foreach ($tmpDirs as $dir) {
     }
 }
 
+// Force IPv4 for database connections on Vercel
+// Vercel Singapore resolves Supabase to IPv6 which is not supported
+$dbHost = $_ENV['DB_HOST'] ?? getenv('DB_HOST') ?? null;
+if ($dbHost && strpos($dbHost, ':') === false) { // not already an IPv6/IPv4 literal
+    $resolved = gethostbynamel($dbHost);
+    if ($resolved) {
+        // Find first IPv4 address (not IPv6)
+        foreach ($resolved as $ip) {
+            if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
+                $_ENV['DB_HOST'] = $ip;
+                putenv("DB_HOST=$ip");
+                // Also update DB_URL if present
+                $dbUrl = $_ENV['DB_URL'] ?? getenv('DB_URL') ?? null;
+                if ($dbUrl) {
+                    $newUrl = str_replace($dbHost, $ip, $dbUrl);
+                    $_ENV['DB_URL'] = $newUrl;
+                    putenv("DB_URL=$newUrl");
+                }
+                break;
+            }
+        }
+    }
+}
+
 require __DIR__ . '/../vendor/autoload.php';
 
 $app = require_once __DIR__ . '/../bootstrap/app.php';

@@ -57,9 +57,12 @@
                     </p>
                 </div>
 
-                <div class="mt-6 pt-4 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center justify-between">
-                    <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Kategori: {{ $news->category ?? 'Umum' }}</span>
-                    <a href="{{ $news->url }}" target="_blank" rel="noopener" class="text-xs font-bold text-red-600 dark:text-red-400 hover:underline flex items-center gap-1">
+                <div class="mt-6 pt-4 border-t border-slate-700/60 flex items-center justify-between gap-2">
+                    <a href="#humanitarian-hub" class="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-400 hover:text-emerald-300 transition">
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/></svg>
+                        <span>Donasi Terkait</span>
+                    </a>
+                    <a href="{{ $news->url }}" target="_blank" rel="noopener" class="text-xs font-bold text-red-400 hover:underline flex items-center gap-1">
                         <span>Baca Sumber</span>
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                     </a>

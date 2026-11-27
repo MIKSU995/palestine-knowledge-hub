@@ -120,16 +120,23 @@
         </div>
 
         <!-- 2. Verified Humanitarian Organizations Grid -->
-        <div id="verified-orgs" class="mb-16">
-            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-                <svg class="w-5 h-5 text-red-600 dark:text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                <span>Lembaga & Rekening Kemanusiaan Resmi Lainnya</span>
-            </h3>
+        <div id="verified-orgs" class="mb-16" x-data="{ orgFilter: 'all' }">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                <h3 class="text-xl font-extrabold text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Lembaga &amp; Rekening Kemanusiaan Resmi Lainnya</span>
+                </h3>
+                <div class="flex items-center gap-2 text-xs font-bold">
+                    <button @click="orgFilter = 'all'" :class="orgFilter === 'all' ? 'bg-red-600 text-white' : 'bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800'" class="px-3.5 py-1.5 rounded-xl transition">Semua</button>
+                    <button @click="orgFilter = 'national'" :class="orgFilter === 'national' ? 'bg-red-600 text-white' : 'bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800'" class="px-3.5 py-1.5 rounded-xl transition">Nasional RI</button>
+                    <button @click="orgFilter = 'global'" :class="orgFilter === 'global' ? 'bg-red-600 text-white' : 'bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800'" class="px-3.5 py-1.5 rounded-xl transition">Internasional</button>
+                </div>
+            </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- MER-C Indonesia -->
-                <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
+                <div x-show="orgFilter === 'all' || orgFilter === 'national'" class="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300 text-xs font-bold">
@@ -168,7 +175,7 @@
                 </div>
 
                 <!-- BAZNAS RI -->
-                <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
+                <div x-show="orgFilter === 'all' || orgFilter === 'national'" class="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-300 text-xs font-bold">
@@ -204,7 +211,7 @@
                 </div>
 
                 <!-- UNRWA / UN Emergency -->
-                <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
+                <div x-show="orgFilter === 'all' || orgFilter === 'global'" class="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-xs font-bold">
@@ -231,7 +238,7 @@
                 </div>
 
                 <!-- Palestine Red Crescent Society -->
-                <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
+                <div x-show="orgFilter === 'all' || orgFilter === 'global'" class="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950 text-rose-800 dark:text-rose-300 text-xs font-bold">

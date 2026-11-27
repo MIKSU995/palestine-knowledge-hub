@@ -220,6 +220,65 @@
             </a>
         </div>
 
+        <!-- Trusted Social Media Network Directory -->
+        <div id="trusted-social-sources" class="mt-16 pt-12 border-t border-slate-800/80">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+                <div>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-400 text-[11px] font-extrabold uppercase tracking-wider mb-2">
+                        Jaringan Media Sosial Terpercaya
+                    </span>
+                    <h3 class="text-2xl font-extrabold text-white tracking-tight">
+                        Akun Berita Palestina &amp; Kemanusiaan di Media Sosial
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-1">
+                        Sumber dokumentasi lapangan dan lembaga resmi yang terhubung langsung dengan informasi penyaluran donasi.
+                    </p>
+                </div>
+                <a href="#humanitarian-hub" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/30 text-emerald-300 text-xs font-bold transition shrink-0">
+                    <span>Salurkan Donasi Terverifikasi</span>
+                    <span>→</span>
+                </a>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <a href="https://www.instagram.com/thepalestinecircle/" target="_blank" rel="noopener" class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-rose-500/50 transition group">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-extrabold text-rose-400">Instagram</span>
+                        <span class="px-2 py-0.5 rounded bg-blue-500/15 text-blue-400 text-[10px] font-bold">Verified</span>
+                    </div>
+                    <div class="font-bold text-white group-hover:text-rose-400 transition">@thepalestinecircle</div>
+                    <p class="text-xs text-slate-400 mt-1">Laporan lapangan harian Gaza &amp; dokumentasi warga sipil.</p>
+                </a>
+
+                <a href="https://www.instagram.com/middleeasteye/" target="_blank" rel="noopener" class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-amber-500/50 transition group">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-extrabold text-amber-400">Instagram / X</span>
+                        <span class="px-2 py-0.5 rounded bg-blue-500/15 text-blue-400 text-[10px] font-bold">Jurnalisme</span>
+                    </div>
+                    <div class="font-bold text-white group-hover:text-amber-400 transition">@middleeasteye</div>
+                    <p class="text-xs text-slate-400 mt-1">Liputan investigasi independen Timur Tengah &amp; Palestina.</p>
+                </a>
+
+                <a href="https://www.instagram.com/ajplus/" target="_blank" rel="noopener" class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-red-500/50 transition group">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-extrabold text-red-400">Instagram / YouTube</span>
+                        <span class="px-2 py-0.5 rounded bg-blue-500/15 text-blue-400 text-[10px] font-bold">Media Global</span>
+                    </div>
+                    <div class="font-bold text-white group-hover:text-red-400 transition">@ajplus</div>
+                    <p class="text-xs text-slate-400 mt-1">Berita visual cepat dan analisis kondisi kemanusiaan global.</p>
+                </a>
+
+                <a href="https://www.instagram.com/npc.or.id/" target="_blank" rel="noopener" class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-emerald-500/50 transition group">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-extrabold text-emerald-400">Instagram RI</span>
+                        <span class="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 text-[10px] font-bold">Penyalur Resmi</span>
+                    </div>
+                    <div class="font-bold text-white group-hover:text-emerald-400 transition">@npc.or.id</div>
+                    <p class="text-xs text-slate-400 mt-1">Update penyaluran bantuan langsung Nusantara Palestina Center.</p>
+                </a>
+            </div>
+        </div>
+
     </div>
 </section>
 

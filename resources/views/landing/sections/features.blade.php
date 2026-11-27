@@ -1,14 +1,51 @@
-<section class="relative py-20 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 transition-colors overflow-hidden">
+<section id="pilar-edukasi" class="relative py-20 bg-slate-950 border-b border-slate-800/80 overflow-hidden">
     <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
 
-        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-red-100 dark:bg-red-950/80 text-red-700 dark:text-red-300 font-extrabold text-xs uppercase tracking-widest border border-red-200 dark:border-red-900/60 shadow-sm">
+        <!-- Dual Pillar Overview: Edukasi Palestina & Edukasi Kemanusiaan -->
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
+            <div class="p-7 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-red-950/30 border border-red-500/25 shadow-xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/15 text-red-400 text-[11px] font-extrabold uppercase tracking-wider mb-3">
+                    <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                    Pilar 01 · Edukasi Palestina
+                </div>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-white">Pelopor Literasi Sejarah, Budaya &amp; Geografi</h3>
+                <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                    Menyajikan referensi otentik mulai dari kronologi peristiwa 1917–kini, peta kota bersejarah, warisan budaya Tatreez, glosarium istilah, hingga kuis bersertifikat.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="{{ route('articles') }}" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 border border-slate-700 transition">Artikel</a>
+                    <a href="{{ route('timeline') }}" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 border border-slate-700 transition">Linimasa</a>
+                    <a href="{{ route('maps') }}" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 border border-slate-700 transition">Peta</a>
+                    <a href="{{ route('quiz') }}" class="px-3 py-1.5 rounded-lg bg-red-600/20 hover:bg-red-600/30 text-xs font-bold text-red-300 border border-red-500/30 transition">Kuis &amp; Sertifikat</a>
+                </div>
+            </div>
+
+            <div class="p-7 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950/30 border border-emerald-500/25 shadow-xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-[11px] font-extrabold uppercase tracking-wider mb-3">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    Pilar 02 · Edukasi Kemanusiaan
+                </div>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-white">Jembatan Berita Terpercaya &amp; Donasi Resmi</h3>
+                <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                    Menghubungkan informasi krisis dari media nasional–internasional dan akun sosial media terverifikasi langsung ke saluran donasi lembaga resmi yang akuntabel.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="{{ route('news.index') }}" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 border border-slate-700 transition">Berita Terpercaya</a>
+                    <a href="#gaza-update" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 border border-slate-700 transition">Sosmed Lapangan</a>
+                    <a href="#humanitarian-hub" class="px-3 py-1.5 rounded-lg bg-emerald-600/20 hover:bg-emerald-600/30 text-xs font-bold text-emerald-300 border border-emerald-500/30 transition">Saluran Donasi</a>
+                    <a href="{{ route('petition') }}" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 border border-slate-700 transition">Petisi</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-red-950/80 text-red-300 font-extrabold text-xs uppercase tracking-widest border border-red-900/60 shadow-sm">
                 Pilar Pengetahuan Utama
             </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                Jelajahi 8 Modul Pembelajaran
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                Jelajahi Modul Pembelajaran &amp; Aksi
             </h2>
-            <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+            <p class="text-slate-400 text-base leading-relaxed">
                 Pelajari sejarah, geografi, warisan budaya, berita terkini, kuis interaktif, glosarium, petisi solidaritas, dan arsip dokumen otentik dalam satu platform.
             </p>
         </div>

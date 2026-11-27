@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full dark">
 
 <head>
     <meta charset="UTF-8">
@@ -26,13 +26,10 @@
     <!-- Leaflet CSS for Maps -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 
-    <!-- Dark Mode Init Script (Prevents flash) -->
+    <!-- Permanent Dark Theme Enforced (No light/dark toggle) -->
     <script>
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
+        document.documentElement.classList.add('dark');
+        try { localStorage.setItem('theme', 'dark'); } catch (e) {}
     </script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -48,12 +45,8 @@
             overflow-x: hidden !important;
         }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-        }
-        .dark .glass-panel {
-            background: rgba(17, 24, 39, 0.85);
-            backdrop-filter: blur(12px);
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(14px);
         }
 
         /* Continuous Ambient Motion Animations */
@@ -102,7 +95,7 @@
     @stack('styles')
 </head>
 
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-200 overflow-x-hidden max-w-full">
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col overflow-x-hidden max-w-full antialiased selection:bg-red-600 selection:text-white">
 
     <!-- Reading Progress Bar -->
     <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-red-600 via-rose-600 to-red-700 z-[9999] transition-all duration-150" style="width: 0%"></div>
@@ -158,17 +151,6 @@
             const el = document.getElementById("reading-progress");
             if (el) el.style.width = scrolled + "%";
         });
-
-        // Dark Mode Toggle Logic
-        function toggleDarkMode() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        }
 
         // Global Search Modal Logic
         const searchModal = document.getElementById('global-search-modal');

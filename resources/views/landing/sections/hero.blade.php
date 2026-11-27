@@ -1,4 +1,4 @@
-<section class="relative bg-slate-900 text-white overflow-hidden py-16 lg:py-24 border-b border-slate-800">
+<section class="relative bg-slate-950 text-white overflow-hidden py-16 lg:py-24 border-b border-slate-800/80">
 
     <!-- Background Subtle Ambient Glow -->
     <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-red-950/40 pointer-events-none"></div>
@@ -41,16 +41,16 @@
 
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs sm:text-sm font-semibold">
                     <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                    <span>Palestine Knowledge & Humanitarian Hub</span>
+                    <span>Pelopor Edukasi Palestina &amp; Kemanusiaan</span>
                 </div>
 
                 <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
-                    Edukasi Sejarah & <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-red-600">Solidaritas Kemanusiaan.</span>
+                    Edukasi Palestina &amp; <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-emerald-400">Solidaritas Kemanusiaan.</span>
                 </h1>
 
                 <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
-                    Platform terpadu penyedia informasi otentik, update langsung dari Gaza via API Instagram, peta sejarah interaktif, dan saluran bantuan kemanusaiaan terverifikasi.
+                    Portal edukasi sejarah &amp; kemanusiaan yang menghubungkan informasi otentik, berita terpercaya nasional–internasional, pantauan media sosial lapangan, serta saluran donasi resmi terverifikasi.
                 </p>
 
                 <!-- Hero Action Buttons -->
@@ -60,9 +60,9 @@
                         <span>Saluran Donasi Resmi</span>
                     </a>
 
-                    <a href="#gaza-update" class="px-6 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-sm sm:text-base transition duration-300 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                        <span>Update Instagram Gaza</span>
+                    <a href="#pilar-edukasi" class="px-6 py-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold text-sm sm:text-base transition duration-300 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        <span>Mulai Belajar</span>
                     </a>
                 </div>
 
